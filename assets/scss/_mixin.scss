@@ -1,0 +1,12 @@
+@mixin borderbottom {
+    border-bottom: 1px solid var(--base-border);
+}
+@mixin borderleft {
+    border-left: 1px solid var(--base-border);
+}
+@mixin bordertop {
+    border-bottom: 1px solid var(--base-border);
+}
+@mixin borderright {
+    border-right: 1px solid var(--base-border);
+}

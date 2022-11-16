@@ -1,0 +1,33 @@
+html {
+    padding: 1%;
+    height: 100vh;
+}
+body {
+    background: var(--bg-dark);
+    color: var(--font-color);
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    font-family: var(--font-main);
+}
+html::before {
+    background: url("/임시이미지.svg");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: fixed;
+    content: "";
+    top: 1%;
+    left: 1%;
+    width: 98%;
+    height: 98%;
+    z-index: -1;
+    opacity: 1;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
