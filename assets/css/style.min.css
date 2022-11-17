@@ -270,6 +270,17 @@ table {
   width: 100%;
   display: block;
   border-bottom: 1px solid var(--base-border);
+  position: relative;
+}
+#header .profileWrap .logoWrap > div .logoName > span:nth-child(1) {
+  top: auto;
+  bottom: -2px;
+}
+#header .profileWrap .logoWrap > div .logoName > span:nth-child(2) {
+  top: auto;
+  left: auto;
+  bottom: -2px;
+  right: -2px;
 }
 #header .profileWrap .logoWrap > div .logoName > p {
   text-align: center;
