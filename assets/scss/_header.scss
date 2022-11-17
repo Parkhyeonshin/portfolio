@@ -4,8 +4,13 @@
 
     .profileWrap {
         width: 100%;
-        @include bordertop;
         @include borderbottom;
+        @include bordertop;
+        position: relative;
+        > span:nth-child(1) {
+            left: auto;
+            right: -2px;
+        }
         .logoWrap {
             width: 100%;
             display: flex;
@@ -13,10 +18,45 @@
             @include borderbottom;
             .logo {
                 width: 45%;
-                padding: 2.5%;
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -1px;
+                    width: 100%;
+                    height: 1px;
+                    background: var(--base-border2);
+                }
+                > span:first-child {
+                    height: 10%;
+                    display: block;
+                    position: relative;
+                    @include borderleft;
+                    @include borderright;
+                    > span:first-child {
+                        top: auto;
+                        left: auto;
+                        right: -2px;
+                        bottom: -2px;
+                    }
+                    > span:nth-child(2) {
+                        top: -2px;
+                        left: auto;
+                        right: -2px;
+                    }
+                    > span:nth-child(3) {
+                        top: -2px;
+                    }
+                    > span:nth-child(4) {
+                        top: auto;
+                        bottom: -2px;
+                        left: -2px;
+                    }
+                }
                 > div {
                     width: 100%;
                     height: 100%;
+                    height: 80%;
                     background-image: url("data:image/svg+xml,%0A%3Csvg width='500' height='500' viewBox='0 0 500 500' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='250' cy='250' r='250' fill='black'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M355.659 167.47C354.057 168.179 352.327 168.546 350.578 168.548H89.7267C88.4826 168.547 87.2657 168.179 86.2249 167.488C85.1842 166.798 84.3649 165.814 83.8673 164.659C83.3696 163.503 83.2153 162.226 83.4232 160.983C83.6311 159.74 84.1921 158.585 85.0376 157.66L140.003 97.8735C141.193 96.5749 142.634 95.5387 144.237 94.8294C145.84 94.1202 147.57 93.7532 149.319 93.7514H410.17C411.424 93.7251 412.66 94.0757 413.719 94.7591C414.778 95.4425 415.617 96.4281 416.123 97.5919C416.632 98.7557 416.787 100.046 416.573 101.3C416.359 102.554 415.784 103.715 414.921 104.639L359.894 164.426C358.704 165.724 357.262 166.761 355.659 167.47ZM359.894 211.5C358.699 210.208 357.257 209.176 355.655 208.467C354.053 207.758 352.325 207.388 350.578 207.378H89.7267C88.4826 207.379 87.2657 207.747 86.2249 208.438C85.1842 209.129 84.3649 210.112 83.8673 211.268C83.3696 212.423 83.2153 213.7 83.4232 214.943C83.6311 216.186 84.1921 217.341 85.0376 218.266L140.003 278.085C141.197 279.377 142.64 280.409 144.241 281.118C145.843 281.827 147.571 282.197 149.319 282.206H410.17C411.412 282.2 412.623 281.827 413.66 281.134C414.697 280.441 415.511 279.457 416.005 278.303C416.499 277.149 416.651 275.874 416.44 274.634C416.231 273.393 415.672 272.242 414.828 271.319L359.894 211.5ZM414.921 331.924L359.894 391.711C358.704 393.01 357.262 394.046 355.659 394.755C354.057 395.465 352.327 395.832 350.578 395.833H89.7267C88.4826 395.833 87.2657 395.465 86.2249 394.774C85.1842 394.083 84.3649 393.099 83.8673 391.944C83.3696 390.789 83.2153 389.511 83.4232 388.268C83.6311 387.025 84.1921 385.871 85.0376 384.946L140.003 325.159C141.193 323.86 142.634 322.824 144.237 322.115C145.84 321.406 147.57 321.038 149.319 321.037H410.17C411.424 321.01 412.66 321.361 413.719 322.044C414.778 322.728 415.617 323.713 416.123 324.877C416.632 326.041 416.787 327.331 416.573 328.585C416.359 329.839 415.784 331.001 414.921 331.924Z' fill='url(%23paint0_linear_201_27)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_201_27' x1='283.859' y1='526.979' x2='525.155' y2='191.345' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.08' stop-color='%239945FF'/%3E%3Cstop offset='0.3' stop-color='%238752F3'/%3E%3Cstop offset='0.5' stop-color='%235497D5'/%3E%3Cstop offset='0.6' stop-color='%2343B4CA'/%3E%3Cstop offset='0.72' stop-color='%2328E0B9'/%3E%3Cstop offset='0.97' stop-color='%2319FB9B'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
                     background-size: contain;
                     background-repeat: no-repeat;

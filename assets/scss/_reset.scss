@@ -4,7 +4,10 @@
     --black: #000;
 
     --bg-light: #f0eeeb;
-    --base-border: #66818a;
+    --base-border: #66818abe;
+    --base-border2: #89a7b1cc;
+    --base-border-cir: #98b1b9de;
+    // --base-border: #66818a;
 
     --bg-dark: #222;
     --bg-dark-border: #2e2e30;
@@ -163,4 +166,16 @@ table {
     height: 1px;
     margin: -1px;
     overflow: hidden;
+}
+
+// 외곽선 도트
+.bdcir {
+    position: absolute;
+    content: "";
+    top: -2px;
+    left: -2px;
+    width: 3px;
+    height: 3px;
+    border-radius: 5px;
+    background: var(--base-border-cir);
 }

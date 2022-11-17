@@ -5,8 +5,31 @@
     border-left: 1px solid var(--base-border);
 }
 @mixin bordertop {
-    border-bottom: 1px solid var(--base-border);
+    border-top: 1px solid var(--base-border);
 }
 @mixin borderright {
     border-right: 1px solid var(--base-border);
+}
+@mixin borderbottom2 {
+    border-bottom: 1px solid var(--base-border2);
+}
+@mixin borderleft2 {
+    border-left: 1px solid var(--base-border2);
+}
+@mixin bordertop2 {
+    border-top: 1px solid var(--base-border2);
+}
+@mixin borderright2 {
+    border-right: 1px solid var(--base-border2);
+}
+
+// 리셋으로 넘김(대비용으로 살려둠)
+@mixin cir {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    width: 3px;
+    height: 3px;
+    background: var(--base-border-cir);
 }
