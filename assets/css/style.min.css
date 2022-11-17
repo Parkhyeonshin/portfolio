@@ -560,16 +560,44 @@ table {
   height: 390px;
   border-top: 1px solid var(--base-border);
   border-bottom: 1px solid var(--base-border);
-  background: #333;
+  position: relative;
+}
+#header .headerContWrap > div:nth-child(1) {
+  padding: 10px 7px;
+  border-bottom: 1px solid var(--base-border);
+  position: relative;
+}
+#header .headerContWrap > div:nth-child(1) > p {
+  text-align: center;
+}
+#header .headerContWrap > div:nth-child(1) > p > em {
+  margin-right: 5px;
+  background: #303e41;
+  padding: 2px 4px;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 2px #54d9f7;
+}
+#header .headerContWrap > div:nth-child(1) span:nth-child(2) {
+  left: auto;
+  right: -2px;
+}
+#header .headerContWrap > div:nth-child(1) span:nth-child(3) {
+  top: auto;
+  bottom: -2px;
+}
+#header .headerContWrap > div:nth-child(1) span:nth-child(4) {
+  top: auto;
+  left: auto;
+  bottom: -2px;
+  right: -2px;
 }
 #header .headerLastWrap {
   margin-top: 20px;
   height: 160px;
   border-top: 1px solid var(--base-border);
   border-bottom: 1px solid var(--base-border);
-  background: #333;
+  position: relative;
 }
-
 #main {
   width: 65%;
   background: #000;

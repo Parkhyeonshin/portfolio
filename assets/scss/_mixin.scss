@@ -33,3 +33,12 @@
     height: 3px;
     background: var(--base-border-cir);
 }
+
+// em강조
+@mixin emdeco {
+    margin-right: 5px;
+    background: #303e41;
+    padding: 2px 4px;
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 2px #54d9f7;
+}
