@@ -263,13 +263,20 @@
                     }
                 }
                 > .humanimg {
-                    width: 85%;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 70%;
                     margin: 0 auto;
                     height: 80%;
                     display: flex;
-                    align-items: flex-end;
+                    // align-items: flex-end;
                     background: #444;
                     vertical-align: bottom;
+                    overflow: hidden;
+                    border-top-left-radius: 20%;
+                    border-top-right-radius: 20%;
                     img {
                         object-fit: cover;
                         vertical-align: bottom;
@@ -414,6 +421,83 @@
                     left: auto;
                     bottom: -2px;
                     right: -2px;
+                }
+            }
+        }
+        > div {
+            &:nth-child(2) {
+                margin-top: 10px;
+                display: flex;
+                > div {
+                    width: 25%;
+                    &:nth-child(1) {
+                        @include borderleft;
+                        @include borderright;
+                        width: 50%;
+                        padding: 10px;
+                        position: relative;
+                        > p {
+                            text-align: center;
+                            letter-spacing: 0.25rem;
+                            &:first-child {
+                                font-weight: bold;
+                                > em {
+                                    color: var(--font-color2);
+                                    font-weight: normal;
+                                    font-style: normal;
+                                }
+                            }
+                            &:nth-child(2) {
+                                letter-spacing: 0.4rem;
+                                font-size: 0.2rem;
+                            }
+                        }
+                        > div {
+                            margin-top: 13px;
+                            width: 100%;
+                            height: 5px;
+                            background: var(--base-border);
+                            @include borderleft2;
+                            @include borderright2;
+                            position: relative;
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: -11px;
+                                right: 30%;
+                                transform: translateX(5px);
+                                border-top: 8px solid var(--font-color3);
+                                border-left: 5px solid transparent;
+                                border-right: 5px solid transparent;
+                            }
+                            > div {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                width: 30%;
+                                height: 100%;
+                                background: var(--font-color2);
+                                @include borderleft2;
+                                border-color: var(--font-color3);
+                            }
+                        }
+                        > span {
+                            &:nth-of-type(2) {
+                                left: auto;
+                                right: -2px;
+                            }
+                            &:nth-of-type(3) {
+                                top: auto;
+                                bottom: -2px;
+                            }
+                            &:nth-of-type(4) {
+                                top: auto;
+                                left: auto;
+                                right: -2px;
+                                bottom: -2px;
+                            }
+                        }
+                    }
                 }
             }
         }
