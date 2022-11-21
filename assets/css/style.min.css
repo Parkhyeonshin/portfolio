@@ -404,7 +404,7 @@ table {
   top: auto;
   left: auto;
   bottom: -2px;
-  right: -2px;
+  right: -3px;
 }
 #header .profileWrap .logoWrap > div .currentTime > span:nth-child(5) {
   top: auto;
@@ -598,18 +598,20 @@ table {
   right: -2px;
 }
 #header .headerContWrap > div:nth-child(2) {
-  margin-top: 10px;
+  margin-top: 15px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 #header .headerContWrap > div:nth-child(2) > div {
   width: 25%;
+  padding: 5px 10px;
+  border-right: 1px solid var(--base-border);
+  position: relative;
 }
 #header .headerContWrap > div:nth-child(2) > div:nth-child(1) {
   border-left: 1px solid var(--base-border);
-  border-right: 1px solid var(--base-border);
   width: 50%;
-  padding: 10px;
-  position: relative;
 }
 #header .headerContWrap > div:nth-child(2) > div:nth-child(1) > p {
   text-align: center;
@@ -670,6 +672,53 @@ table {
   right: -2px;
   bottom: -2px;
 }
+#header .headerContWrap > div:nth-child(2) > div:nth-of-type(2) > table {
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 0.8rem;
+}
+#header .headerContWrap > div:nth-child(2) > div:nth-of-type(2) > table tr > td {
+  border-left: 1px solid var(--base-border);
+  border-bottom: 1px solid var(--base-border);
+}
+#header .headerContWrap > div:nth-child(2) > div:nth-of-type(2) > table tr:nth-child(1) td:nth-child(1) {
+  border-left: none;
+}
+#header .headerContWrap > div:nth-child(2) > div:nth-of-type(2) > table tr:nth-child(2) td:nth-child(1) {
+  border-left: none;
+}
+#header .headerContWrap > div:nth-child(2) > div:nth-of-type(2) > table tr:nth-child(3) td:nth-child(1) {
+  border-left: none;
+  border-bottom: none;
+}
+#header .headerContWrap > div:nth-child(2) > div:nth-of-type(2) > table tr:nth-child(3) td:nth-child(2) {
+  border-bottom: none;
+}
+#header .headerContWrap > div:nth-child(2) > div:nth-of-type(2) > span:nth-of-type(1) {
+  left: auto;
+  right: -2px;
+}
+#header .headerContWrap > div:nth-child(2) > div:nth-of-type(2) > span:nth-of-type(2) {
+  left: auto;
+  top: auto;
+  bottom: -2px;
+  right: -2px;
+}
+#header .headerContWrap > div:nth-child(2) > div:nth-of-type(3) > span:nth-of-type(1) {
+  left: auto;
+  right: -2px;
+}
+#header .headerContWrap > div:nth-child(2) > div:nth-of-type(3) > span:nth-of-type(2) {
+  left: auto;
+  top: auto;
+  right: -2px;
+  bottom: -2px;
+}
+#header .headerContWrap > div:nth-child(2) > div:nth-of-type(3) > img {
+  width: 100%;
+  transform: scale(0.6);
+}
 #header .headerLastWrap {
   margin-top: 20px;
   height: 160px;
@@ -677,6 +726,63 @@ table {
   border-bottom: 1px solid var(--base-border);
   position: relative;
 }
+#header .headerLastWrap > div:nth-child(1) {
+  width: 100%;
+  margin: 0 auto;
+  padding: 5px 7px;
+  border-bottom: 1px solid var(--base-border);
+  position: relative;
+}
+#header .headerLastWrap > div:nth-child(1) > p {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 3px 10px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+#header .headerLastWrap > div:nth-child(1) > p > em {
+  margin-right: 5px;
+  background: #303e41;
+  padding: 2px 4px;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 2px #54d9f7;
+}
+#header .headerLastWrap > div:nth-child(1) > p > span {
+  border-radius: 50%;
+  border: 1px solid var(--base-border2);
+  background: none;
+  width: 4px;
+  height: 4px;
+}
+#header .headerLastWrap > div:nth-child(1) > p > span:nth-of-type(2) {
+  left: auto;
+  right: -2px;
+}
+#header .headerLastWrap > div:nth-child(1) > p > span:nth-of-type(3) {
+  top: auto;
+  bottom: -2px;
+}
+#header .headerLastWrap > div:nth-child(1) > p > span:nth-of-type(4) {
+  left: auto;
+  top: auto;
+  bottom: -2px;
+  right: -2px;
+}
+#header .headerLastWrap > div:nth-child(1) > p > span:nth-of-type(5) {
+  left: auto;
+  top: auto;
+  bottom: -3px;
+  right: 50%;
+}
+#header .headerLastWrap > div:nth-child(1) > p > span:nth-of-type(6) {
+  left: auto;
+  top: -3px;
+  right: 50%;
+}
+
 #main {
   width: 65%;
   background: #000;
