@@ -197,6 +197,7 @@
                     margin-bottom: 5px;
                     position: relative;
                     color: #a4bfba;
+                    font-weight: normal;
 
                     &::before {
                         content: "";
@@ -623,6 +624,18 @@
                             top: -3px;
                             right: 50%;
                         }
+                    }
+                }
+            }
+            .music__wrap {
+                padding: 5px;
+                > .musci__inner {
+                    display: flex;
+                    justify-content: space-between;
+                    > .music__left {
+                        width: 48%;
+                        height: 100px;
+                        background: #fff;
                     }
                 }
             }

@@ -378,6 +378,7 @@ table {
   margin-bottom: 5px;
   position: relative;
   color: #a4bfba;
+  font-weight: normal;
 }
 #header .profileWrap .logoWrap > div .currentTime::before {
   content: "";
@@ -781,6 +782,18 @@ table {
   left: auto;
   top: -3px;
   right: 50%;
+}
+#header .headerLastWrap > div .music__wrap {
+  padding: 5px;
+}
+#header .headerLastWrap > div .music__wrap > .musci__inner {
+  display: flex;
+  justify-content: space-between;
+}
+#header .headerLastWrap > div .music__wrap > .musci__inner > .music__left {
+  width: 48%;
+  height: 100px;
+  background: #fff;
 }
 
 #main {
