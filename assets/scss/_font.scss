@@ -6,3 +6,59 @@
     font-weight: 400;
     font-style: normal;
 }
+
+// ??에이리언?
+@font-face {
+    font-family: "Ailerons Trial Version";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/Ailerons-TrialVersion.eot");
+    src: url("../fonts/Ailerons-TrialVersion.eot?#iefix") format("embedded-opentype"), url("../fonts/Ailerons-TrialVersion.woff2") format("woff2"),
+        url("../fonts/Ailerons-TrialVersion.woff") format("woff"), url("../fonts/Ailerons-TrialVersion.ttf") format("truetype");
+
+    font-display: swap;
+}
+
+// 블랑카
+@font-face {
+    font-family: "Blanka";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/Blanka-Regular.eot");
+    src: url("../fonts/Blanka-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Blanka-Regular.woff2") format("woff2"),
+        url("../fonts/Blanka-Regular.woff") format("woff"), url("../fonts/Blanka-Regular.ttf") format("truetype");
+
+    font-display: swap;
+}
+
+// exan
+@font-face {
+    font-family: "Exan";
+    src: url("../Exan-Regular.eot");
+    src: url("../Exan-Regular.eot?#iefix") format("embedded-opentype"), url("../Exan-Regular.woff2") format("woff2"),
+        url("../Exan-Regular.woff") format("woff"), url("../Exan-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+// neuron
+@font-face {
+    font-family: "Neuron";
+    src: url("../fonts/NeuronRegular.eot");
+    src: url("../fonts/NeuronRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/NeuronRegular.woff2") format("woff2"),
+        url("../fonts/NeuronRegular.woff") format("woff"), url("../fonts/NeuronRegular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+// neuronitalic
+@font-face {
+    font-family: "Neuron";
+    src: url("../fonts/NeuronItalic.eot");
+    src: url("../fonts/NeuronItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/NeuronItalic.woff2") format("woff2"),
+        url("../fonts/NeuronItalic.woff") format("woff"), url("../fonts/NeuronItalic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}

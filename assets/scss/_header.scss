@@ -1,28 +1,31 @@
 #header {
     width: 20%;
-    // background-color: rgba(0, 0, 0, 0.5);
+    min-width: 320px;
 
     .profileWrap {
         width: 100%;
         @include borderbottom;
         @include bordertop;
         position: relative;
-        > span:nth-child(1) {
-            left: auto;
-            right: -2px;
+        > span {
+            &:nth-of-type(1) {
+                left: auto;
+                right: -2px;
+            }
         }
         .logoWrap {
             width: 100%;
             display: flex;
             flex-wrap: wrap;
             @include borderbottom;
-            min-height: 120px;
             position: relative;
-            > span:nth-child(1) {
-                top: auto;
-                left: auto;
-                right: -2px;
-                bottom: -2px;
+            > span {
+                &:nth-of-type(1) {
+                    top: auto;
+                    left: auto;
+                    right: -3px;
+                    bottom: -2px;
+                }
             }
             .logo {
                 width: 45%;
@@ -35,128 +38,137 @@
                     height: 1px;
                     background: var(--base-border2);
                 }
-                > span:first-child {
-                    height: 10%;
-                    display: block;
-                    position: relative;
-                    @include borderleft;
-                    @include borderright;
-                    > span:first-child {
-                        top: auto;
-                        left: auto;
-                        right: -2px;
-                        bottom: -2px;
-                    }
-                    > span:nth-child(2) {
-                        top: -2px;
-                        left: auto;
-                        right: -2px;
-                    }
-                    > span:nth-child(3) {
-                        top: -2px;
-                    }
-                    > span:nth-child(4) {
-                        top: auto;
-                        bottom: -2px;
-                        left: -2px;
+                > span {
+                    &:nth-of-type(1) {
+                        height: 10%;
+                        display: block;
+                        position: relative;
+                        @include borderleft;
+                        @include borderright;
+                        > span {
+                            &:nth-of-type(1) {
+                                top: auto;
+                                left: auto;
+                                right: -2px;
+                                bottom: -2px;
+                            }
+                            &:nth-of-type(2) {
+                                top: -2px;
+                                left: auto;
+                                right: -2px;
+                            }
+                            &:nth-of-type(3) {
+                                top: -2px;
+                            }
+                            &:nth-of-type(4) {
+                                top: auto;
+                                bottom: -2px;
+                                left: -2px;
+                            }
+                        }
                     }
                 }
                 > div {
                     width: 70%;
                     margin: 0 auto;
-                    height: 100%;
                     height: 70%;
                     // background-image: url("data:image/svg+xml,%0A%3Csvg width='500' height='500' viewBox='0 0 500 500' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='250' cy='250' r='250' fill='black'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M355.659 167.47C354.057 168.179 352.327 168.546 350.578 168.548H89.7267C88.4826 168.547 87.2657 168.179 86.2249 167.488C85.1842 166.798 84.3649 165.814 83.8673 164.659C83.3696 163.503 83.2153 162.226 83.4232 160.983C83.6311 159.74 84.1921 158.585 85.0376 157.66L140.003 97.8735C141.193 96.5749 142.634 95.5387 144.237 94.8294C145.84 94.1202 147.57 93.7532 149.319 93.7514H410.17C411.424 93.7251 412.66 94.0757 413.719 94.7591C414.778 95.4425 415.617 96.4281 416.123 97.5919C416.632 98.7557 416.787 100.046 416.573 101.3C416.359 102.554 415.784 103.715 414.921 104.639L359.894 164.426C358.704 165.724 357.262 166.761 355.659 167.47ZM359.894 211.5C358.699 210.208 357.257 209.176 355.655 208.467C354.053 207.758 352.325 207.388 350.578 207.378H89.7267C88.4826 207.379 87.2657 207.747 86.2249 208.438C85.1842 209.129 84.3649 210.112 83.8673 211.268C83.3696 212.423 83.2153 213.7 83.4232 214.943C83.6311 216.186 84.1921 217.341 85.0376 218.266L140.003 278.085C141.197 279.377 142.64 280.409 144.241 281.118C145.843 281.827 147.571 282.197 149.319 282.206H410.17C411.412 282.2 412.623 281.827 413.66 281.134C414.697 280.441 415.511 279.457 416.005 278.303C416.499 277.149 416.651 275.874 416.44 274.634C416.231 273.393 415.672 272.242 414.828 271.319L359.894 211.5ZM414.921 331.924L359.894 391.711C358.704 393.01 357.262 394.046 355.659 394.755C354.057 395.465 352.327 395.832 350.578 395.833H89.7267C88.4826 395.833 87.2657 395.465 86.2249 394.774C85.1842 394.083 84.3649 393.099 83.8673 391.944C83.3696 390.789 83.2153 389.511 83.4232 388.268C83.6311 387.025 84.1921 385.871 85.0376 384.946L140.003 325.159C141.193 323.86 142.634 322.824 144.237 322.115C145.84 321.406 147.57 321.038 149.319 321.037H410.17C411.424 321.01 412.66 321.361 413.719 322.044C414.778 322.728 415.617 323.713 416.123 324.877C416.632 326.041 416.787 327.331 416.573 328.585C416.359 329.839 415.784 331.001 414.921 331.924Z' fill='url(%23paint0_linear_201_27)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_201_27' x1='283.859' y1='526.979' x2='525.155' y2='191.345' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.08' stop-color='%239945FF'/%3E%3Cstop offset='0.3' stop-color='%238752F3'/%3E%3Cstop offset='0.5' stop-color='%235497D5'/%3E%3Cstop offset='0.6' stop-color='%2343B4CA'/%3E%3Cstop offset='0.72' stop-color='%2328E0B9'/%3E%3Cstop offset='0.97' stop-color='%2319FB9B'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
                     background-image: url(https://cdn.pixabay.com/photo/2022/04/02/20/22/robot-7107688_960_720.png);
-                    background-image: url("/assets/img/logo2.png");
+                    background-image: url("../img/logo2.png");
                     // background-image: url(../img/logo2.svg);
                     background-size: contain;
                     background-repeat: no-repeat;
                     background-position: center center;
                     transform: scale(1) translateX(-5px);
                 }
-                > span:last-child {
-                    height: 20%;
-                    display: block;
-                    position: relative;
-                    @include borderleft;
-                    @include borderright;
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        bottom: -1px;
-                        width: 100%;
-                        height: 1px;
-                        background: var(--base-border2);
-                    }
-                    > span:nth-child(1) {
-                    }
-                    > span:nth-child(2) {
-                        left: auto;
-                        top: -2px;
-                        right: -2px;
-                    }
-                    > span:nth-child(3) {
-                        top: auto;
-                        bottom: -2px;
-                    }
-                    > span:nth-child(4) {
-                        left: auto;
-                        top: auto;
-                        bottom: -2px;
-                        right: -2px;
-                    }
-                    > span:last-child {
+                > span {
+                    &:nth-last-of-type(1) {
+                        height: 20%;
                         display: block;
-                        width: 100%;
-                        height: 50%;
                         position: relative;
-                        @include borderbottom;
+                        @include borderleft;
+                        @include borderright;
                         &::before {
-                            position: absolute;
                             content: "";
-                            bottom: -2px;
-                            left: 20%;
-                            width: 3px;
-                            height: 3px;
-                            background: #f34e5fb7;
-                        }
-                        &::after {
                             position: absolute;
-                            content: "";
-                            bottom: -2px;
-                            left: 50%;
-                            width: 3px;
-                            height: 3px;
-                            background: rgba(255, 235, 205, 0.753);
+                            bottom: -1px;
+                            width: 100%;
+                            height: 1px;
+                            background: var(--base-border2);
                         }
-                        > span:nth-child(1) {
-                            top: auto;
-                            bottom: -2px;
-                            left: 80%;
-                            background: rgb(97, 157, 161);
-                            &::after {
-                                content: "";
-                                position: absolute;
-                                top: 30%;
-                                left: 59%;
-                                transform: translate(-50%, -50%);
-                                width: 15px;
-                                height: 15px;
-                                border-radius: 50%;
-                                border: 1px solid #f34e5fb7;
+                        > .bdcir {
+                            &:nth-of-type(2) {
+                                left: auto;
+                                top: -2px;
+                                right: -2px;
+                            }
+                            &:nth-of-type(3) {
+                                top: auto;
+                                bottom: -2px;
+                            }
+                            &:nth-of-type(4) {
+                                left: auto;
+                                top: auto;
+                                bottom: -2px;
+                                right: -2px;
                             }
                         }
-                        > span:nth-child(3) {
-                            left: -2px;
-                            top: auto;
-                            bottom: -2px;
-                        }
-                        > span:nth-child(4) {
-                            left: auto;
-                            top: auto;
-                            bottom: -2px;
-                            right: -2px;
+                        > span {
+                            &:nth-last-of-type(1) {
+                                display: block;
+                                width: 100%;
+                                height: 50%;
+                                position: relative;
+                                @include borderbottom;
+                                &::before {
+                                    position: absolute;
+                                    content: "";
+                                    bottom: -2px;
+                                    left: 20%;
+                                    width: 3px;
+                                    height: 3px;
+                                    background: #f34e5fb7;
+                                }
+                                &::after {
+                                    position: absolute;
+                                    content: "";
+                                    bottom: -2px;
+                                    left: 50%;
+                                    width: 3px;
+                                    height: 3px;
+                                    background: rgba(255, 235, 205, 0.753);
+                                }
+                                > .bdcir {
+                                    &:nth-of-type(2) {
+                                        left: -2px;
+                                        top: auto;
+                                        bottom: -2px;
+                                    }
+                                    &:nth-of-type(3) {
+                                        left: auto;
+                                        top: auto;
+                                        bottom: -2px;
+                                        right: -2px;
+                                    }
+                                    &:nth-of-type(4) {
+                                        top: auto;
+                                        bottom: -2px;
+                                        left: 80%;
+                                        background: var(--font-color);
+                                        &::after {
+                                            content: "";
+                                            position: absolute;
+                                            top: 30%;
+                                            left: 59%;
+                                            transform: translate(-50%, -50%);
+                                            width: 15px;
+                                            height: 15px;
+                                            border-radius: 50%;
+                                            border: 1px solid #f34e5fb7;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -164,43 +176,49 @@
             > div {
                 width: 55%;
                 .logoName {
-                    padding: 10% 2%;
+                    padding: 10px 8px;
                     width: 100%;
-                    display: block;
+                    // height: 55px;
+                    min-height: 70px;
+                    display: flex;
+                    align-items: center;
                     @include borderbottom2;
                     position: relative;
-                    > span:nth-child(1) {
-                        top: auto;
-                        bottom: -2px;
-                    }
-                    > span:nth-child(2) {
-                        top: auto;
-                        left: auto;
-                        bottom: -2px;
-                        right: -2px;
+                    > span {
+                        &:nth-of-type(1) {
+                            top: auto;
+                            bottom: -2px;
+                        }
+                        &:nth-of-type(2) {
+                            top: auto;
+                            left: auto;
+                            bottom: -2px;
+                            right: -2px;
+                        }
                     }
                     > p {
+                        display: block;
+                        width: 100%;
                         text-transform: uppercase;
                         text-align: center;
-                        font-size: 2.8rem;
-                        line-height: 2.3rem;
+                        font-size: 1.5rem;
+                        font-family: var(--font-main5);
                         color: var(--font-color2);
-                        letter-spacing: 0.2rem;
-                        // text-shadow: -1px 0 rgb(192, 144, 41), 0 1px #fff, 1px 0 #fff, 0 -1px #000;
+                        letter-spacing: 0.3rem;
+                        margin-left: 0.3rem;
                     }
                 }
                 .currentTime {
                     padding: 5px;
-                    width: 100%;
                     text-align: center;
-                    font-size: 2.5rem;
-                    line-height: 3rem;
+                    font-size: 2rem;
+                    line-height: 1.2;
                     @include borderbottom;
-                    margin-bottom: 5px;
+                    margin-bottom: 4px;
                     position: relative;
                     color: #a4bfba;
                     font-weight: normal;
-
+                    font-family: var(--font-main2);
                     &::before {
                         content: "";
                         position: absolute;
@@ -210,27 +228,29 @@
                         bottom: 20%;
                         background: var(--base-border);
                     }
-                    > span:nth-child(2) {
-                        top: auto;
-                        left: auto;
-                        bottom: 20%;
-                        right: -2px;
-                    }
-                    > span:nth-child(3) {
-                        top: auto;
-                        left: auto;
-                        bottom: 40%;
-                        right: -2px;
-                    }
-                    > span:nth-child(4) {
-                        top: auto;
-                        left: auto;
-                        bottom: -2px;
-                        right: -3px;
-                    }
-                    > span:nth-child(5) {
-                        top: auto;
-                        bottom: -2px;
+                    > .bdcir {
+                        &:nth-of-type(2) {
+                            top: auto;
+                            left: auto;
+                            bottom: 20%;
+                            right: -2px;
+                        }
+                        &:nth-of-type(3) {
+                            top: auto;
+                            left: auto;
+                            bottom: 40%;
+                            right: -2px;
+                        }
+                        &:nth-of-type(4) {
+                            top: auto;
+                            left: auto;
+                            bottom: -2px;
+                            right: -3px;
+                        }
+                        &:nth-of-type(5) {
+                            top: auto;
+                            bottom: -2px;
+                        }
                     }
                 }
             }
@@ -239,58 +259,55 @@
             display: flex;
             position: relative;
             height: 175px;
-            // min-height: 170px;
-            // background: #fff;
             &::before {
                 content: "";
                 position: absolute;
                 right: 0;
-                bottom: 0;
+                bottom: -1px;
                 width: 55%;
                 height: 1px;
                 background: var(--base-border2);
             }
-            > div:first-child {
-                width: 45%;
-                height: 97%;
-                @include borderbottom;
-                position: relative;
-                > div:first-child {
-                    height: 18%;
-                    width: 100%;
-                    @include borderleft;
+            > div {
+                &:nth-of-type(1) {
+                    width: 45%;
+                    height: 97%;
+                    @include borderbottom;
                     position: relative;
-                    > span:nth-child(1) {
+                    > div {
+                        &:nth-of-type(1) {
+                            height: 32%;
+                            width: 100%;
+                            @include borderleft;
+                            position: relative;
+                            > .bdcir {
+                                top: auto;
+                                bottom: -2px;
+                            }
+                        }
+                        &.humanimg {
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -44%);
+                            width: 70%;
+                            margin: 0 auto;
+                            height: 75%;
+                            overflow: hidden;
+                            border-top-left-radius: 15px;
+                            border-top-right-radius: 15px;
+                            img {
+                                vertical-align: bottom;
+                            }
+                        }
+                    }
+                    > .bdcir {
                         top: auto;
                         bottom: -2px;
                     }
                 }
-                > .humanimg {
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-                    width: 70%;
-                    margin: 0 auto;
-                    height: 80%;
-                    display: flex;
-                    // align-items: flex-end;
-                    background: #444;
-                    vertical-align: bottom;
-                    overflow: hidden;
-                    border-top-left-radius: 20%;
-                    border-top-right-radius: 20%;
-                    img {
-                        object-fit: cover;
-                        vertical-align: bottom;
-                        width: 100%;
-                    }
-                }
-                > span:nth-child(3) {
-                    top: auto;
-                    bottom: -2px;
-                }
             }
+
             .headerInfoDesc {
                 width: 55%;
                 height: 97%;
@@ -304,132 +321,139 @@
                     background: var(--base-border);
                     bottom: 0;
                 }
+                > div {
+                    &:nth-of-type(1) {
+                        height: 14%;
+                        height: fit-content;
+                        position: relative;
+                        @include borderbottom;
+                        > .bdcir {
+                            &:nth-of-type(1) {
+                                top: auto;
+                                bottom: -2px;
+                            }
+                            &:nth-of-type(2) {
+                                top: auto;
+                                left: auto;
+                                right: -2px;
+                                bottom: -2px;
+                            }
+                        }
+                        > p {
+                            padding: 8px 4px;
 
-                // > span {
-                //     top: auto;
-                //     left: -1px;
-                //     bottom: 50%;
-                // }
-
-                > div:first-child {
-                    height: 18%;
-                    width: 100%;
-                    position: relative;
-                    @include borderbottom;
-                    > span:first-child {
+                            display: block;
+                            font-size: 1rem;
+                            text-align: center;
+                            > em {
+                                @include emdeco;
+                            }
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        margin: 0 auto;
+                        height: 100%;
+                        position: relative;
+                        > div {
+                            &:nth-of-type(1) {
+                                width: 57%;
+                                margin: 0 auto;
+                                margin-top: 1%;
+                                height: 100%;
+                                // background: url("/임시이미지.svg");
+                                background: url("https://i.pinimg.com/originals/fe/84/4c/fe844cbda6fa537f1f2bfe47551f6de3.gif");
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                            }
+                            &:nth-of-type(2) {
+                                position: absolute;
+                                top: 70%;
+                                left: 10px;
+                                font-size: 0.1rem;
+                            }
+                            &:nth-of-type(3) {
+                                position: absolute;
+                                top: 70%;
+                                right: 16px;
+                                font-size: 0.5rem;
+                            }
+                        }
+                    }
+                }
+                > .bdcir {
+                    &:nth-of-type(1) {
                         top: auto;
+                        left: -1px;
+                        bottom: 50%;
+                    }
+                    &:nth-of-type(2) {
+                        top: auto;
+                        left: -1px;
                         bottom: -2px;
                     }
-                    > span:nth-child(2) {
+                    &:nth-of-type(3) {
                         top: auto;
                         left: auto;
                         right: -2px;
                         bottom: -2px;
                     }
-                    > p {
-                        margin-top: 10px;
-                        display: block;
-                        width: 100%;
-                        font-size: 1rem;
-                        text-align: center;
-                        > em {
-                            @include emdeco;
-                        }
-                    }
                 }
-
-                > div:nth-child(2) {
-                    margin: 0 auto;
-                    width: 100%;
-                    height: 100%;
-                    position: relative;
-                    > div:nth-child(1) {
-                        width: 50%;
-                        margin: 0 auto;
-                        margin-top: 5%;
-                        height: 100%;
-                        // background: url("/임시이미지.svg");
-                        background: url("https://i.pinimg.com/originals/fe/84/4c/fe844cbda6fa537f1f2bfe47551f6de3.gif");
-                        background-size: contain;
-                        background-repeat: no-repeat;
-                    }
-                    > div:nth-child(2) {
-                        position: absolute;
-                        top: 60%;
-                        left: 20px;
-                        font-size: 0.5rem;
-                    }
-                    > div:nth-child(3) {
-                        position: absolute;
-                        top: 60%;
-                        right: 26px;
-                        font-size: 0.5rem;
-                    }
-                }
-                > span:nth-child(3) {
+            }
+            > .bdcir {
+                &:nth-of-type(1) {
                     top: auto;
-                    left: -2px;
-                    bottom: 50%;
-                }
-                > span:nth-child(4) {
-                    top: auto;
-                    left: -1px;
                     bottom: -2px;
                 }
-                > span:nth-child(5) {
+                &:nth-of-type(2) {
                     top: auto;
                     left: auto;
                     right: -2px;
                     bottom: -2px;
                 }
-            }
-            > span:nth-child(3) {
-                top: auto;
-                bottom: -2px;
-            }
-            > span:nth-child(4) {
-                top: auto;
-                left: auto;
-                right: -2px;
-                bottom: -2px;
+                &:nth-of-type(3) {
+                    top: auto;
+                    left: auto;
+                    right: 55%;
+                    bottom: -2px;
+                    transform: translateX(55%);
+                }
             }
         }
     }
     .headerContWrap {
-        margin-top: 15px;
-        height: 400px;
+        margin-top: 30px;
+        min-height: 390px;
         @include bordertop;
         @include borderbottom;
-        // background: #333;
         position: relative;
-        > div:nth-child(1) {
-            padding: 10px 7px;
-            @include borderbottom;
-            position: relative;
-            > p {
-                text-align: center;
-                > em {
-                    @include emdeco;
-                }
-            }
-            span {
-                &:nth-child(2) {
-                    left: auto;
-                    right: -2px;
-                }
-                &:nth-child(3) {
-                    top: auto;
-                    bottom: -2px;
-                }
-                &:nth-child(4) {
-                    top: auto;
-                    left: auto;
-                    bottom: -2px;
-                    right: -2px;
-                }
-            }
-        }
         > div {
+            &:nth-of-type(1) {
+                padding: 10px 7px;
+                @include borderbottom;
+                position: relative;
+                > p {
+                    text-align: center;
+                    > em {
+                        @include emdeco;
+                    }
+                }
+                > .bdcir {
+                    &:nth-of-type(2) {
+                        left: auto;
+                        right: -2px;
+                    }
+                    &:nth-of-type(3) {
+                        top: auto;
+                        bottom: -2px;
+                    }
+                    &:nth-of-type(4) {
+                        top: auto;
+                        left: auto;
+                        bottom: -2px;
+                        right: -2px;
+                    }
+                }
+            }
             &:nth-of-type(2) {
                 margin-top: 15px;
                 display: flex;
@@ -439,6 +463,8 @@
                 > div {
                     width: 25%;
                     padding: 5px 10px;
+                    height: 60px;
+                    padding-top: 8px;
                     @include borderright;
                     position: relative;
                     &:nth-child(1) {
@@ -569,7 +595,7 @@
                         }
                         > div {
                             margin: 0 auto;
-                            width: 70%;
+                            width: 80%;
                             img {
                                 width: 100%;
                             }
@@ -582,7 +608,7 @@
                 > div {
                     @include borderleft;
                     // @include borderright;
-                    margin-bottom: 10px;
+                    margin-bottom: 16px;
                     position: relative;
 
                     > div {
@@ -701,7 +727,8 @@
                 }
             }
         }
-        > span {
+
+        > .bdcir {
             &:nth-of-type(1) {
                 top: auto;
                 bottom: -2px;

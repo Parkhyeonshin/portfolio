@@ -36,9 +36,10 @@
 
 // em강조
 @mixin emdeco {
-    margin-right: 5px;
+    margin-right: 8px;
     background: #303e41;
     padding: 2px 4px;
     border-radius: 3px;
     box-shadow: inset 0px 0px 2px #54d9f7;
+    font-size: 0.85rem;
 }
