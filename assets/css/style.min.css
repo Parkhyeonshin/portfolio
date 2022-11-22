@@ -1,6 +1,6 @@
 @charset "UTF-8";
 html {
-  padding: 0.4%;
+  padding: 0.7%;
   height: 100vh;
 }
 
@@ -253,9 +253,11 @@ table {
   height: 100%;
   height: 70%;
   background-image: url(https://cdn.pixabay.com/photo/2022/04/02/20/22/robot-7107688_960_720.png);
+  background-image: url("/assets/img/logo2.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+  transform: scale(1.35) translateY(-5px);
 }
 #header .profileWrap .logoWrap .logo > span:last-child {
   height: 20%;
