@@ -6,10 +6,12 @@
         background: #222;
     }
     > .main__mid {
-        width: 100%;
+        margin: 0 auto;
+        width: 90%;
         height: 700px;
         position: relative;
-        background: url("https://i.pinimg.com/564x/13/b2/48/13b24887a5858810a896c12a0a4a27ff.jpg");
+        // background: url("https://i.pinimg.com/564x/13/b2/48/13b24887a5858810a896c12a0a4a27ff.jpg");
+        background: #222;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
