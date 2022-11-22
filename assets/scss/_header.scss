@@ -73,7 +73,7 @@
                     background-size: contain;
                     background-repeat: no-repeat;
                     background-position: center center;
-                    transform: scale(1.35) translateY(-5px);
+                    transform: scale(1) translateX(-5px);
                 }
                 > span:last-child {
                     height: 20%;
@@ -602,7 +602,7 @@
                         }
                     }
                     .graph {
-                        width: 80%;
+                        width: 72%;
                         height: 10px;
                         background: var(--base-border);
                         border-radius: 2px;
@@ -621,7 +621,7 @@
                             border-radius: 2px;
                             &.graphBar_js {
                                 width: 0%;
-                                animation: graphjs 2.5s ease-out forwards;
+                                animation: graphjs 1.5s ease-out forwards;
                                 &::after {
                                     content: "";
                                     position: absolute;
@@ -629,11 +629,13 @@
                                     width: 3px;
                                     height: 100%;
                                     background: var(--font-color2);
+                                    border-top-right-radius: 2px;
+                                    border-bottom-right-radius: 2px;
                                 }
                             }
                             &.graphBar_css {
                                 width: 0%;
-                                animation: graphcss 2.5s 2.5s ease-out forwards;
+                                animation: graphcss 1.5s 1s ease-out forwards;
                                 &::after {
                                     content: "";
                                     position: absolute;
@@ -645,7 +647,7 @@
                             }
                             &.graphBar_php {
                                 width: 0%;
-                                animation: graphphp 2.5s 5s ease-out forwards;
+                                animation: graphphp 1.5s 2s ease-out forwards;
                                 &::after {
                                     content: "";
                                     position: absolute;
@@ -657,7 +659,7 @@
                             }
                             &.graphBar_react {
                                 width: 0%;
-                                animation: graphreact 2.5s 7.5s ease-out forwards;
+                                animation: graphreact 1.5s 3s ease-out forwards;
                                 &::after {
                                     content: "";
                                     position: absolute;
@@ -669,7 +671,7 @@
                             }
                             &.graphBar_vue {
                                 width: 0%;
-                                animation: graphvue 2.5s 10s ease-out forwards;
+                                animation: graphvue 1.5s 4s ease-out forwards;
                                 &::after {
                                     content: "";
                                     position: absolute;
@@ -686,6 +688,15 @@
                             top: auto;
                             bottom: -2px;
                         }
+                    }
+                    .graphCount {
+                        position: absolute;
+                        right: 20px;
+                        top: 50%;
+                        display: block;
+                        color: var(--font-color2);
+                        font-size: 18px;
+                        transform: translate(0, 6%);
                     }
                 }
             }
