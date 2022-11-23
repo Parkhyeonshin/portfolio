@@ -6,7 +6,8 @@
     --bg-light: #f0eeeb;
     --base-border: #66818abe;
     --base-border2: #89a7b1cc;
-    --base-border-cir: #98b1b9de;
+    --base-border-cir: #8da5adaf;
+    // --base-border-cir: #98b1b9de;
     // --base-border: #66818a;
 
     --bg-dark: #111;
@@ -82,7 +83,7 @@ textarea {
     font-size: var(--font-size);
     line-height: var(--font-height);
     color: var(--font-color);
-    font-family: var(--font-main3), -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    font-family: var(--font-main4), -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
         "Open Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
