@@ -328,8 +328,7 @@
                 font-size: 2rem;
                 overflow: hidden;
                 position: relative;
-                &::before {
-                }
+
                 .wave {
                     border-width: 1px;
                     border-style: solid;
@@ -474,13 +473,14 @@
                         flex-wrap: wrap;
                         transform-origin: center;
                         > div {
-                            border: 2px dotted var(--font-color);
+                            border: 2px double var(--font-color);
                             width: 33%;
                             height: 33%;
                             display: inline-block;
                             box-sizing: border-box;
                             vertical-align: top;
-                            border-radius: 5px;
+                            border-radius: 4px;
+                            animation: cubeborder 6s ease infinite;
                         }
                         &.front {
                             transform: translate3d(0, 0, 20px);
