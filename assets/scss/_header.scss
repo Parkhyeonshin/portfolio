@@ -1,7 +1,7 @@
 #header {
     width: 20%;
     min-width: 320px;
-
+    min-height: 910px;
     .profileWrap {
         width: 100%;
         @include borderbottom;
@@ -201,7 +201,7 @@
                         width: 100%;
                         text-transform: uppercase;
                         text-align: center;
-                        font-size: 2.5rem;
+                        font-size: 2rem;
                         font-family: var(--font-main5);
                         color: var(--font-color2);
                         letter-spacing: 0.3rem;
@@ -216,7 +216,7 @@
                     @include borderbottom;
                     margin-bottom: 4px;
                     position: relative;
-                    color: #a4bfba;
+                    color: #a4bfbaad;
                     font-weight: normal;
                     font-family: var(--font-main2);
                     &::before {
@@ -503,6 +503,7 @@
                                 border-top: 8px solid var(--font-color3);
                                 border-left: 5px solid transparent;
                                 border-right: 5px solid transparent;
+                                animation: techgraphtarget 3s 1s infinite ease-out;
                             }
                             > div {
                                 position: absolute;
@@ -513,6 +514,7 @@
                                 background: var(--font-color2);
                                 @include borderleft2;
                                 border-color: var(--font-color3);
+                                animation: techgraphBar 3s 1s infinite ease-out;
                             }
                         }
                         > span {
@@ -628,23 +630,25 @@
                         }
                     }
                     .graph {
-                        width: 72%;
-                        height: 10px;
+                        width: 82%;
+                        height: 7px;
                         // background: var(--base-border);
                         border: 1px solid var(--base-border);
-                        border-radius: 2px;
+                        // border-radius: 2px;
                         margin: 0 auto;
                         margin-left: 48px;
+                        margin-top: 5px;
                         position: relative;
-                        overflow: hidden;
+                        // overflow: hidden;
 
                         .graphBar {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
+                            // position: absolute;
+                            // top: 0;
+                            // left: 0;
                             // width: 90%;
+                            position: relative;
                             height: 100%;
-                            background: var(--font-color);
+                            background: var(--base-border);
                             border-radius: 2px;
                             &.graphBar_js {
                                 width: 0%;
@@ -653,11 +657,19 @@
                                     content: "";
                                     position: absolute;
                                     right: -1px;
-                                    width: 3px;
-                                    height: 100%;
+                                    width: 2px;
+                                    height: 98%;
                                     background: var(--font-color2);
-                                    border-top-right-radius: 2px;
-                                    border-bottom-right-radius: 2px;
+                                    border-top-right-radius: 1px;
+                                    border-bottom-right-radius: 1px;
+                                }
+                                .graphCount {
+                                    position: absolute;
+                                    top: -20px;
+                                    right: -15px;
+                                    font-size: 1rem;
+                                    opacity: 0;
+                                    animation: graphjsCount 1.5s forwards;
                                 }
                             }
                             &.graphBar_css {
@@ -667,9 +679,17 @@
                                     content: "";
                                     position: absolute;
                                     right: -1px;
-                                    width: 3px;
+                                    width: 2px;
                                     height: 100%;
                                     background: var(--font-color2);
+                                }
+                                .graphCount {
+                                    position: absolute;
+                                    top: -20px;
+                                    right: -15px;
+                                    font-size: 1rem;
+                                    opacity: 0;
+                                    animation: graphcssCount 1.5s 1s forwards;
                                 }
                             }
                             &.graphBar_php {
@@ -679,9 +699,17 @@
                                     content: "";
                                     position: absolute;
                                     right: -1px;
-                                    width: 3px;
+                                    width: 2px;
                                     height: 100%;
                                     background: var(--font-color2);
+                                }
+                                .graphCount {
+                                    position: absolute;
+                                    top: -20px;
+                                    right: -15px;
+                                    font-size: 1rem;
+                                    opacity: 0;
+                                    animation: graphphpCount 1.5s 2s forwards;
                                 }
                             }
                             &.graphBar_react {
@@ -691,9 +719,17 @@
                                     content: "";
                                     position: absolute;
                                     right: -1px;
-                                    width: 3px;
+                                    width: 2px;
                                     height: 100%;
                                     background: var(--font-color2);
+                                }
+                                .graphCount {
+                                    position: absolute;
+                                    top: -20px;
+                                    right: -15px;
+                                    font-size: 1rem;
+                                    opacity: 0;
+                                    animation: graphreactCount 1.5s 3s forwards;
                                 }
                             }
                             &.graphBar_vue {
@@ -703,9 +739,17 @@
                                     content: "";
                                     position: absolute;
                                     right: -1px;
-                                    width: 3px;
+                                    width: 2px;
                                     height: 100%;
                                     background: var(--font-color2);
+                                }
+                                .graphCount {
+                                    position: absolute;
+                                    top: -20px;
+                                    right: -15px;
+                                    font-size: 1rem;
+                                    opacity: 0;
+                                    animation: graphvueCount 1.5s 4s forwards;
                                 }
                             }
                         }
@@ -722,8 +766,9 @@
                         top: 50%;
                         display: block;
                         color: var(--font-color2);
-                        font-size: 18px;
+                        font-size: 12px;
                         transform: translate(0, 6%);
+                        font-family: var(--font-main2);
                     }
                 }
             }

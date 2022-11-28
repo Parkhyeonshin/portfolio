@@ -1,6 +1,7 @@
 #footer {
     width: 10%;
     min-width: 120px;
+    min-height: 910px;
     > .footer__top {
         > div {
             &:nth-of-type(1) {
@@ -165,7 +166,7 @@
         }
     }
     > .footer__mid {
-        margin-top: 40px;
+        margin-top: 20px;
         position: relative;
         > div {
             &:nth-of-type(1) {
@@ -507,6 +508,158 @@
                             animation: cubebottom 6s ease-in-out infinite;
                         }
                     }
+                }
+            }
+            &:nth-of-type(8) {
+                @include bordertop;
+                @include borderbottom;
+                text-align: center;
+                padding: 3px 0;
+                display: flex;
+                width: 100%;
+                align-items: center;
+                margin-top: 75px;
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -1px;
+                    right: 0;
+                    width: 35%;
+                    height: 1px;
+                    opacity: 0;
+                    background: var(--base-border2);
+                    animation: borderflash 4s 10s ease infinite;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -1px;
+                    right: 0;
+                    width: 35%;
+                    height: 1px;
+                    opacity: 0;
+                    background: var(--base-border2);
+                    animation: borderflash 4s 10s ease infinite;
+                }
+                > div {
+                    padding: 5px 0;
+                    &:nth-of-type(1) {
+                        width: 66%;
+                        > p {
+                            display: inline-block;
+                            text-align: center;
+                            @include emdeco;
+                            padding: 4px 10px;
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        width: 34%;
+                        > p {
+                            display: inline-block;
+                            text-align: center;
+                            animation: footerdescflash 4s 10s ease infinite;
+                        }
+                    }
+                }
+                > .bdcir {
+                    &:nth-of-type(2) {
+                        left: auto;
+                        right: -2px;
+                    }
+                    &:nth-of-type(3) {
+                        top: auto;
+                        bottom: -2px;
+                    }
+                    &:nth-of-type(4) {
+                        top: auto;
+                        left: auto;
+                        bottom: -2px;
+                        right: -2px;
+                    }
+                    &:nth-of-type(5) {
+                        left: 65%;
+                    }
+                    &:nth-of-type(6) {
+                        top: auto;
+                        bottom: -2px;
+                        left: 65%;
+                    }
+                }
+            }
+            &:nth-of-type(9) {
+                position: relative;
+                width: 100px;
+                height: 100px;
+                margin: 10px auto;
+
+                overflow: hidden;
+                z-index: 500;
+                border-radius: 10em 10em 10em 10em;
+                background: none repeat 0 0 rgba(21, 25, 9, 0.95);
+                box-shadow: 0 0 30px rgba(0, 0, 0, 1) inset;
+                border: 1px solid #202020;
+                > .blip {
+                    position: absolute;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 2em 2em 2em 2em;
+                    background-color: rgb(118, 153, 15);
+                    box-shadow: 0 0 5px white;
+                    transform-origin: 50% 50%;
+                    opacity: 0;
+
+                    /* Common animation properties */
+                    animation-timing-function: ease;
+                    animation-duration: 4s;
+                    animation-fill-mode: none;
+                    animation-iteration-count: infinite;
+                    animation-name: blipper;
+                    &.blip-1 {
+                        bottom: 40px;
+                        right: 87px;
+                        animation-delay: 0.5s;
+                    }
+                    &.blip-2 {
+                        bottom: 86px;
+                        left: 35px;
+                        animation-delay: 1.5s;
+                    }
+
+                    &.blip-3 {
+                        bottom: 67px;
+                        left: 62px;
+                        animation-delay: 1.25s;
+                    }
+
+                    &.blip-4 {
+                        top: 40px;
+                        right: 50px;
+                        animation-delay: 3.1s;
+                    }
+                }
+
+                > .sweep {
+                    @include borderright;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 50px;
+                    height: 50px;
+
+                    /* background light green gradient */
+                    background: -moz-linear-gradient(right bottom, rgba(118, 153, 15, 0.781) 0%, rgba(118, 153, 15, 0) 60%);
+
+                    /* rectangle rotated around bottom right corner */
+                    transform-origin: right bottom;
+
+                    /* Animation properties */
+                    animation-delay: 0s;
+                    animation-timing-function: linear;
+                    animation-duration: 4s;
+                    animation-fill-mode: none;
+                    animation-iteration-count: infinite;
+                    animation-name: sweeper;
                 }
             }
         }

@@ -14,6 +14,7 @@ body {
   min-height: 100%;
   width: 100%;
   font-family: var(--font-main);
+  overflow-x: hidden;
 }
 
 :root {
@@ -235,6 +236,7 @@ table {
 #header {
   width: 20%;
   min-width: 320px;
+  min-height: 910px;
 }
 #header .profileWrap {
   width: 100%;
@@ -418,7 +420,7 @@ table {
   width: 100%;
   text-transform: uppercase;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: var(--font-main5);
   color: var(--font-color2);
   letter-spacing: 0.3rem;
@@ -432,7 +434,7 @@ table {
   border-bottom: 1px solid var(--base-border);
   margin-bottom: 4px;
   position: relative;
-  color: #a4bfba;
+  color: rgba(164, 191, 186, 0.6784313725);
   font-weight: normal;
   font-family: var(--font-main2);
 }
@@ -710,6 +712,8 @@ table {
   border-top: 8px solid var(--font-color3);
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
+  -webkit-animation: techgraphtarget 3s 1s infinite ease-out;
+          animation: techgraphtarget 3s 1s infinite ease-out;
 }
 #header .headerContWrap > div:nth-of-type(2) > div:nth-child(1) > div > div {
   position: absolute;
@@ -720,6 +724,8 @@ table {
   background: var(--font-color2);
   border-left: 1px solid var(--base-border2);
   border-color: var(--font-color3);
+  -webkit-animation: techgraphBar 3s 1s infinite ease-out;
+          animation: techgraphBar 3s 1s infinite ease-out;
 }
 #header .headerContWrap > div:nth-of-type(2) > div:nth-child(1) > span:nth-of-type(2) {
   left: auto;
@@ -810,21 +816,18 @@ table {
   font-weight: bold;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph {
-  width: 72%;
-  height: 10px;
+  width: 82%;
+  height: 7px;
   border: 1px solid var(--base-border);
-  border-radius: 2px;
   margin: 0 auto;
   margin-left: 48px;
+  margin-top: 5px;
   position: relative;
-  overflow: hidden;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   height: 100%;
-  background: var(--font-color);
+  background: var(--base-border);
   border-radius: 2px;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_js {
@@ -836,11 +839,20 @@ table {
   content: "";
   position: absolute;
   right: -1px;
-  width: 3px;
-  height: 100%;
+  width: 2px;
+  height: 98%;
   background: var(--font-color2);
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-top-right-radius: 1px;
+  border-bottom-right-radius: 1px;
+}
+#header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_js .graphCount {
+  position: absolute;
+  top: -20px;
+  right: -15px;
+  font-size: 1rem;
+  opacity: 0;
+  -webkit-animation: graphjsCount 1.5s forwards;
+          animation: graphjsCount 1.5s forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_css {
   width: 0%;
@@ -851,9 +863,18 @@ table {
   content: "";
   position: absolute;
   right: -1px;
-  width: 3px;
+  width: 2px;
   height: 100%;
   background: var(--font-color2);
+}
+#header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_css .graphCount {
+  position: absolute;
+  top: -20px;
+  right: -15px;
+  font-size: 1rem;
+  opacity: 0;
+  -webkit-animation: graphcssCount 1.5s 1s forwards;
+          animation: graphcssCount 1.5s 1s forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_php {
   width: 0%;
@@ -864,9 +885,18 @@ table {
   content: "";
   position: absolute;
   right: -1px;
-  width: 3px;
+  width: 2px;
   height: 100%;
   background: var(--font-color2);
+}
+#header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_php .graphCount {
+  position: absolute;
+  top: -20px;
+  right: -15px;
+  font-size: 1rem;
+  opacity: 0;
+  -webkit-animation: graphphpCount 1.5s 2s forwards;
+          animation: graphphpCount 1.5s 2s forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_react {
   width: 0%;
@@ -877,9 +907,18 @@ table {
   content: "";
   position: absolute;
   right: -1px;
-  width: 3px;
+  width: 2px;
   height: 100%;
   background: var(--font-color2);
+}
+#header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_react .graphCount {
+  position: absolute;
+  top: -20px;
+  right: -15px;
+  font-size: 1rem;
+  opacity: 0;
+  -webkit-animation: graphreactCount 1.5s 3s forwards;
+          animation: graphreactCount 1.5s 3s forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_vue {
   width: 0%;
@@ -890,9 +929,18 @@ table {
   content: "";
   position: absolute;
   right: -1px;
-  width: 3px;
+  width: 2px;
   height: 100%;
   background: var(--font-color2);
+}
+#header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_vue .graphCount {
+  position: absolute;
+  top: -20px;
+  right: -15px;
+  font-size: 1rem;
+  opacity: 0;
+  -webkit-animation: graphvueCount 1.5s 4s forwards;
+          animation: graphvueCount 1.5s 4s forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div > span:nth-of-type(2) {
   top: auto;
@@ -904,8 +952,9 @@ table {
   top: 50%;
   display: block;
   color: var(--font-color2);
-  font-size: 18px;
+  font-size: 12px;
   transform: translate(0, 6%);
+  font-family: var(--font-main2);
 }
 #header .headerLastWrap {
   margin-top: 20px;
@@ -1221,6 +1270,7 @@ table {
 
 #main {
   width: 68%;
+  min-height: 910px;
 }
 #main > .main__top {
   width: 100%;
@@ -1251,6 +1301,7 @@ table {
 #footer {
   width: 10%;
   min-width: 120px;
+  min-height: 910px;
 }
 #footer > .footer__top > div:nth-of-type(1) {
   width: 100%;
@@ -1404,7 +1455,7 @@ table {
   opacity: 0.7;
 }
 #footer > .footer__mid {
-  margin-top: 40px;
+  margin-top: 20px;
   position: relative;
 }
 #footer > .footer__mid > div:nth-of-type(1) {
@@ -1937,6 +1988,265 @@ table {
   -webkit-animation: cubebottom 6s ease-in-out infinite;
           animation: cubebottom 6s ease-in-out infinite;
 }
+#footer > .footer__mid > div:nth-of-type(8) {
+  border-top: 1px solid var(--base-border);
+  border-bottom: 1px solid var(--base-border);
+  text-align: center;
+  padding: 3px 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-top: 75px;
+  position: relative;
+}
+#footer > .footer__mid > div:nth-of-type(8)::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: 0;
+  width: 35%;
+  height: 1px;
+  opacity: 0;
+  background: var(--base-border2);
+  -webkit-animation: borderflash 4s 10s ease infinite;
+          animation: borderflash 4s 10s ease infinite;
+}
+#footer > .footer__mid > div:nth-of-type(8)::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  width: 35%;
+  height: 1px;
+  opacity: 0;
+  background: var(--base-border2);
+  -webkit-animation: borderflash 4s 10s ease infinite;
+          animation: borderflash 4s 10s ease infinite;
+}
+#footer > .footer__mid > div:nth-of-type(8) > div {
+  padding: 5px 0;
+}
+#footer > .footer__mid > div:nth-of-type(8) > div:nth-of-type(1) {
+  width: 66%;
+}
+#footer > .footer__mid > div:nth-of-type(8) > div:nth-of-type(1) > p {
+  display: inline-block;
+  text-align: center;
+  margin-right: 8px;
+  background: #303e41;
+  padding: 2px 4px;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 2px #54d9f7;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+}
+#footer > .footer__mid > div:nth-of-type(8) > div:nth-of-type(2) {
+  width: 34%;
+}
+#footer > .footer__mid > div:nth-of-type(8) > div:nth-of-type(2) > p {
+  display: inline-block;
+  text-align: center;
+  -webkit-animation: footerdescflash 4s 10s ease infinite;
+          animation: footerdescflash 4s 10s ease infinite;
+}
+#footer > .footer__mid > div:nth-of-type(8) > .bdcir:nth-of-type(2) {
+  left: auto;
+  right: -2px;
+}
+#footer > .footer__mid > div:nth-of-type(8) > .bdcir:nth-of-type(3) {
+  top: auto;
+  bottom: -2px;
+}
+#footer > .footer__mid > div:nth-of-type(8) > .bdcir:nth-of-type(4) {
+  top: auto;
+  left: auto;
+  bottom: -2px;
+  right: -2px;
+}
+#footer > .footer__mid > div:nth-of-type(8) > .bdcir:nth-of-type(5) {
+  left: 65%;
+}
+#footer > .footer__mid > div:nth-of-type(8) > .bdcir:nth-of-type(6) {
+  top: auto;
+  bottom: -2px;
+  left: 65%;
+}
+#footer > .footer__mid > div:nth-of-type(9) {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+  overflow: hidden;
+  z-index: 500;
+  border-radius: 10em 10em 10em 10em;
+  background: none repeat 0 0 rgba(21, 25, 9, 0.95);
+  box-shadow: 0 0 30px rgb(0, 0, 0) inset;
+  border: 1px solid #202020;
+}
+#footer > .footer__mid > div:nth-of-type(9) > .blip {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 2em 2em 2em 2em;
+  background-color: rgb(118, 153, 15);
+  box-shadow: 0 0 5px white;
+  transform-origin: 50% 50%;
+  opacity: 0;
+  /* Common animation properties */
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: blipper;
+          animation-name: blipper;
+}
+#footer > .footer__mid > div:nth-of-type(9) > .blip.blip-1 {
+  bottom: 40px;
+  right: 87px;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+#footer > .footer__mid > div:nth-of-type(9) > .blip.blip-2 {
+  bottom: 86px;
+  left: 35px;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+#footer > .footer__mid > div:nth-of-type(9) > .blip.blip-3 {
+  bottom: 67px;
+  left: 62px;
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+}
+#footer > .footer__mid > div:nth-of-type(9) > .blip.blip-4 {
+  top: 40px;
+  right: 50px;
+  -webkit-animation-delay: 3.1s;
+          animation-delay: 3.1s;
+}
+#footer > .footer__mid > div:nth-of-type(9) > .sweep {
+  border-right: 1px solid var(--base-border);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 50px;
+  height: 50px;
+  /* background light green gradient */
+  background: -moz-linear-gradient(right bottom, rgba(118, 153, 15, 0.781) 0%, rgba(118, 153, 15, 0) 60%);
+  /* rectangle rotated around bottom right corner */
+  transform-origin: right bottom;
+  /* Animation properties */
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: sweeper;
+          animation-name: sweeper;
+}
+@-webkit-keyframes borderflash {
+  0% {
+    background: var(--base-border2);
+    opacity: 0;
+  }
+  30% {
+    background: var(--base-border2);
+    opacity: 1;
+  }
+  60% {
+    background: var(--base-border2);
+    opacity: 0;
+  }
+  70% {
+    background: var(--base-border2);
+    opacity: 1;
+  }
+  85% {
+    background: var(--base-border2);
+    opacity: 0;
+  }
+  90% {
+    background: var(--base-border2);
+    opacity: 1;
+  }
+  100% {
+    background: var(--base-border2);
+    opacity: 0;
+  }
+}
+@keyframes borderflash {
+  0% {
+    background: var(--base-border2);
+    opacity: 0;
+  }
+  30% {
+    background: var(--base-border2);
+    opacity: 1;
+  }
+  60% {
+    background: var(--base-border2);
+    opacity: 0;
+  }
+  70% {
+    background: var(--base-border2);
+    opacity: 1;
+  }
+  85% {
+    background: var(--base-border2);
+    opacity: 0;
+  }
+  90% {
+    background: var(--base-border2);
+    opacity: 1;
+  }
+  100% {
+    background: var(--base-border2);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes footerdescflash {
+  5% {
+    text-shadow: none;
+  }
+  20% {
+    text-shadow: 0px 0px 3px snow;
+  }
+  40% {
+    text-shadow: 0px 0px 3px snow;
+  }
+  80% {
+    text-shadow: none;
+  }
+  100% {
+    text-shadow: 0px 0px 3px snow;
+  }
+}
+@keyframes footerdescflash {
+  5% {
+    text-shadow: none;
+  }
+  20% {
+    text-shadow: 0px 0px 3px snow;
+  }
+  40% {
+    text-shadow: 0px 0px 3px snow;
+  }
+  80% {
+    text-shadow: none;
+  }
+  100% {
+    text-shadow: 0px 0px 3px snow;
+  }
+}
 @-webkit-keyframes graphjs {
   0% {
     width: 0;
@@ -1951,6 +2261,116 @@ table {
   }
   100% {
     width: 88%;
+  }
+}
+@-webkit-keyframes graphjsCount {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes graphjsCount {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes graphcssCount {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes graphcssCount {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes graphphpCount {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes graphphpCount {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes graphreactCount {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes graphreactCount {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes graphvueCount {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes graphvueCount {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @-webkit-keyframes graphcss {
@@ -2015,6 +2435,86 @@ table {
   }
   100% {
     width: 80%;
+  }
+}
+@-webkit-keyframes techgraphBar {
+  0% {
+    width: 30%;
+  }
+  20% {
+    width: 35%;
+  }
+  50% {
+    width: 40%;
+  }
+  60% {
+    width: 30%;
+  }
+  70% {
+    width: 24%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@keyframes techgraphBar {
+  0% {
+    width: 30%;
+  }
+  20% {
+    width: 35%;
+  }
+  50% {
+    width: 40%;
+  }
+  60% {
+    width: 30%;
+  }
+  70% {
+    width: 24%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@-webkit-keyframes techgraphtarget {
+  0% {
+    right: 30%;
+  }
+  40% {
+    right: 25%;
+  }
+  60% {
+    right: 30%;
+  }
+  75% {
+    right: 33%;
+  }
+  88% {
+    right: 24%;
+  }
+  100% {
+    right: 30%;
+  }
+}
+@keyframes techgraphtarget {
+  0% {
+    right: 30%;
+  }
+  40% {
+    right: 25%;
+  }
+  60% {
+    right: 30%;
+  }
+  75% {
+    right: 33%;
+  }
+  88% {
+    right: 24%;
+  }
+  100% {
+    right: 30%;
   }
 }
 @-webkit-keyframes wave {
@@ -2183,7 +2683,7 @@ table {
   50% {
     border-radius: 2px;
     opacity: 0.5;
-    border-color: var(--font-color2);
+    border-color: #68856e;
   }
   100% {
     opacity: 0.3;
@@ -2198,11 +2698,55 @@ table {
   50% {
     border-radius: 2px;
     opacity: 0.5;
-    border-color: var(--font-color2);
+    border-color: #68856e;
   }
   100% {
     opacity: 0.3;
     border-color: var(--base-border);
+  }
+}
+@-webkit-keyframes sweeper {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes sweeper {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes blipper {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blipper {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @-webkit-keyframes bdcirflash {

@@ -1,9 +1,116 @@
+// borderflash
+@keyframes borderflash {
+    0% {
+        background: var(--base-border2);
+        opacity: 0;
+    }
+    30% {
+        background: var(--base-border2);
+        opacity: 1;
+    }
+    60% {
+        background: var(--base-border2);
+        opacity: 0;
+    }
+    70% {
+        background: var(--base-border2);
+        opacity: 1;
+    }
+    85% {
+        background: var(--base-border2);
+        opacity: 0;
+    }
+    90% {
+        background: var(--base-border2);
+        opacity: 1;
+    }
+
+    100% {
+        background: var(--base-border2);
+        opacity: 0;
+    }
+}
+// footerdescflash
+@keyframes footerdescflash {
+    5% {
+        text-shadow: none;
+    }
+    20% {
+        text-shadow: 0px 0px 3px snow;
+    }
+    40% {
+        text-shadow: 0px 0px 3px snow;
+    }
+    80% {
+        text-shadow: none;
+    }
+    100% {
+        text-shadow: 0px 0px 3px snow;
+    }
+}
+
+// 헤더 그래프
 @keyframes graphjs {
     0% {
         width: 0;
     }
     100% {
         width: 88%;
+    }
+}
+@keyframes graphjsCount {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes graphcssCount {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes graphphpCount {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes graphreactCount {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes graphvueCount {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
     }
 }
 @keyframes graphcss {
@@ -36,6 +143,47 @@
     }
     100% {
         width: 80%;
+    }
+}
+// header 그래프 상단
+@keyframes techgraphBar {
+    0% {
+        width: 30%;
+    }
+    20% {
+        width: 35%;
+    }
+    50% {
+        width: 40%;
+    }
+    60% {
+        width: 30%;
+    }
+    70% {
+        width: 24%;
+    }
+    100% {
+        width: 30%;
+    }
+}
+@keyframes techgraphtarget {
+    0% {
+        right: 30%;
+    }
+    40% {
+        right: 25%;
+    }
+    60% {
+        right: 30%;
+    }
+    75% {
+        right: 33%;
+    }
+    88% {
+        right: 24%;
+    }
+    100% {
+        right: 30%;
     }
 }
 
@@ -129,13 +277,38 @@
     50% {
         border-radius: 2px;
         opacity: 0.5;
-        border-color: var(--font-color2);
+        border-color: #68856e;
     }
     100% {
         opacity: 0.3;
         border-color: var(--base-border);
     }
 }
+// radar ani
+@keyframes sweeper {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes blipper {
+    0% {
+        opacity: 0;
+    }
+    35% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 @keyframes bdcirflash {
     0% {
         opacity: 0.2;

@@ -42,6 +42,26 @@ function printTime() {
     //     setTimeout(() => counter($counter, max), 2000);
     // };
 }
+// 그래프바 카운트
+function countUp(numberElement) {
+    let currentCount = 0;
+    const total = parseInt(numberElement.textContent);
+    const increment = Math.ceil(total / 100);
+
+    function step() {
+        currentCount += increment;
+        if (currentCount > total) currentCount = total;
+        numberElement.textContent = currentCount.toLocaleString();
+        currentCount !== total && requestAnimationFrame(step);
+    }
+    step();
+}
+// console.log(document.querySelectorAll(".graphCount")[1]);
+document.querySelectorAll(".graphCount").forEach((elem, idx) =>
+    setTimeout(() => {
+        countUp(elem);
+    }, idx * 1000 + 200)
+);
 
 // 창 로드시
 window.onload = function () {
