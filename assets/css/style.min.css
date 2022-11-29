@@ -2079,24 +2079,45 @@ table {
   overflow: hidden;
   z-index: 500;
   border-radius: 10em 10em 10em 10em;
-  background: none repeat 0 0 rgba(21, 25, 9, 0.95);
-  box-shadow: 0 0 30px rgb(0, 0, 0) inset;
-  border: 1px solid #202020;
+}
+#footer > .footer__mid > div:nth-of-type(9) > .radarborder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 40%;
+  border: 0.5px dotted var(--base-border);
+  border-radius: 50%;
+  -webkit-animation: radarborderscale 8s;
+          animation: radarborderscale 8s;
+}
+#footer > .footer__mid > div:nth-of-type(9) > .radarborder.radarborder1 {
+  width: 60%;
+  height: 60%;
+}
+#footer > .footer__mid > div:nth-of-type(9) > .radarborder.radarborder2 {
+  width: 40%;
+  height: 40%;
+}
+#footer > .footer__mid > div:nth-of-type(9) > .radarborder.radarborder3 {
+  width: 20%;
+  height: 20%;
 }
 #footer > .footer__mid > div:nth-of-type(9) > .blip {
   position: absolute;
   width: 6px;
   height: 6px;
-  border-radius: 2em 2em 2em 2em;
-  background-color: rgb(118, 153, 15);
-  box-shadow: 0 0 5px white;
+  border-radius: 50%;
+  background-color: var(--font-color3);
+  box-shadow: 0 0 5px var(--font-color);
   transform-origin: 50% 50%;
   opacity: 0;
   /* Common animation properties */
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
   -webkit-animation-fill-mode: none;
           animation-fill-mode: none;
   -webkit-animation-iteration-count: infinite;
@@ -2107,26 +2128,26 @@ table {
 #footer > .footer__mid > div:nth-of-type(9) > .blip.blip-1 {
   bottom: 40px;
   right: 87px;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
 }
 #footer > .footer__mid > div:nth-of-type(9) > .blip.blip-2 {
   bottom: 86px;
   left: 35px;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
 }
 #footer > .footer__mid > div:nth-of-type(9) > .blip.blip-3 {
   bottom: 67px;
   left: 62px;
-  -webkit-animation-delay: 1.25s;
-          animation-delay: 1.25s;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
 }
 #footer > .footer__mid > div:nth-of-type(9) > .blip.blip-4 {
   top: 40px;
   right: 50px;
-  -webkit-animation-delay: 3.1s;
-          animation-delay: 3.1s;
+  -webkit-animation-delay: 6.5s;
+          animation-delay: 6.5s;
 }
 #footer > .footer__mid > div:nth-of-type(9) > .sweep {
   border-right: 1px solid var(--base-border);
@@ -2136,7 +2157,7 @@ table {
   width: 50px;
   height: 50px;
   /* background light green gradient */
-  background: -moz-linear-gradient(right bottom, rgba(118, 153, 15, 0.781) 0%, rgba(118, 153, 15, 0) 60%);
+  background: linear-gradient(8deg, rgba(102, 129, 138, 0) 0%, rgba(102, 129, 138, 0.1769082633) 93%, rgba(102, 129, 138, 0.3673844538) 100%);
   /* rectangle rotated around bottom right corner */
   transform-origin: right bottom;
   /* Animation properties */
@@ -2144,8 +2165,8 @@ table {
           animation-delay: 0s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
   -webkit-animation-fill-mode: none;
           animation-fill-mode: none;
   -webkit-animation-iteration-count: infinite;
@@ -2729,7 +2750,10 @@ table {
     opacity: 0;
   }
   50% {
-    opacity: 1;
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0;
   }
   100% {
     opacity: 0;
@@ -2743,7 +2767,10 @@ table {
     opacity: 0;
   }
   50% {
-    opacity: 1;
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0;
   }
   100% {
     opacity: 0;
