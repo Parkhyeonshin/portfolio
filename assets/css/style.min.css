@@ -239,6 +239,7 @@ table {
   min-width: 350px;
   min-height: 910px;
   height: 910px;
+  margin-right: 1%;
 }
 #header .profileWrap {
   width: 100%;
@@ -481,11 +482,21 @@ table {
 }
 #header .profileWrap .logoWrap > div .logoName > div:nth-of-type(1) {
   position: absolute;
-  top: 3px;
-  left: 0;
+  top: 2px;
+  left: -4px;
   font-size: 0.2rem;
-  transform: scale(0.7);
+  transform: scale(0.6);
   display: inline-block;
+}
+#header .profileWrap .logoWrap > div .logoName > div:nth-of-type(1)::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  bottom: -2px;
+  left: 1px;
+  background: var(--font-color2);
+  opacity: 0.8;
 }
 #header .profileWrap .logoWrap > div .currentTime {
   padding: 5px;
@@ -636,6 +647,7 @@ table {
   margin-top: 1%;
   height: 100%;
   background: url("https://i.pinimg.com/originals/fe/84/4c/fe844cbda6fa537f1f2bfe47551f6de3.gif");
+  background: url(https://i.pinimg.com/originals/37/6a/5e/376a5e92ac739ac5919f0f0bf44e0a99.gif);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1289,7 +1301,7 @@ table {
 #header .nomeanLine2Header > div:nth-of-type(1) > span {
   font-size: 0.2rem;
   display: inline-block;
-  transform: scale(0.7);
+  transform: scale(0.7) translateX(-10%);
 }
 #header .nomeanLine2Header > div:nth-of-type(1) > span em {
   font-weight: bold;
@@ -1357,7 +1369,7 @@ table {
 #header .nomeanLine2Header > div:nth-of-type(4) > span {
   font-size: 0.2rem;
   display: inline-block;
-  transform: scale(0.7);
+  transform: scale(0.7) translateX(12%);
 }
 #header .nomeanLine2Header > div:nth-of-type(4) > span em {
   font-weight: bold;
@@ -1367,7 +1379,7 @@ table {
   width: 2px;
   height: 2px;
   top: 60%;
-  left: -2px;
+  left: 7px;
   transform: translate(0, -15%);
 }
 
@@ -1408,6 +1420,7 @@ table {
   min-width: 180px;
   height: 910px;
   position: relative;
+  margin-left: 1%;
 }
 #footer > .footer__top::before {
   content: "";
@@ -2203,8 +2216,6 @@ table {
   overflow: hidden;
   z-index: 500;
   border-radius: 10em 10em 10em 10em;
-  box-shadow: 0 0 30px rgb(0, 0, 0) inset;
-  border: 1px solid var(--base-border3);
 }
 #footer > .footer__btm > div:nth-of-type(2)::after {
   position: absolute;
@@ -2225,6 +2236,7 @@ table {
   border-radius: 50%;
   -webkit-animation: radarborderscale 10s ease-in-out infinite;
           animation: radarborderscale 10s ease-in-out infinite;
+  box-shadow: 0 0 30px rgb(0, 0, 0) inset;
 }
 #footer > .footer__btm > div:nth-of-type(2) > .radarborder.radarborder1 {
   width: 0%;
@@ -2284,20 +2296,20 @@ table {
 #footer > .footer__btm > div:nth-of-type(2) > .blip.blip-2 {
   bottom: 86px;
   left: 35px;
-  -webkit-animation-delay: 4.5s;
-          animation-delay: 4.5s;
+  -webkit-animation-delay: 4.8s;
+          animation-delay: 4.8s;
 }
 #footer > .footer__btm > div:nth-of-type(2) > .blip.blip-3 {
   bottom: 67px;
   left: 62px;
-  -webkit-animation-delay: 5.5s;
-          animation-delay: 5.5s;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
 }
 #footer > .footer__btm > div:nth-of-type(2) > .blip.blip-4 {
   top: 40px;
   right: 50px;
-  -webkit-animation-delay: 4.5s;
-          animation-delay: 4.5s;
+  -webkit-animation-delay: 4.8s;
+          animation-delay: 4.8s;
 }
 #footer > .footer__btm > div:nth-of-type(2) > .blip.blip-5 {
   bottom: 15px;
@@ -2306,7 +2318,6 @@ table {
           animation-delay: 8.7s;
 }
 #footer > .footer__btm > div:nth-of-type(2) > .sweep {
-  border-right: 1px solid var(--base-border);
   position: absolute;
   top: 0px;
   left: 0px;

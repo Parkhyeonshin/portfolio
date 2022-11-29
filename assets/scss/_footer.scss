@@ -3,6 +3,7 @@
     min-width: 180px;
     height: 910px;
     position: relative;
+    margin-left: 1%;
     > .footer__top {
         &::before {
             content: "";
@@ -618,9 +619,9 @@
                 z-index: 500;
                 border-radius: 10em 10em 10em 10em;
                 // background: none repeat 0 0 rgba(21, 25, 9, 0.95);
-                box-shadow: 0 0 30px rgba(0, 0, 0, 1) inset;
+                // box-shadow: 0 0 30px rgba(0, 0, 0, 1) inset;
                 // border: 1px solid #202020;
-                border: 1px solid var(--base-border3);
+                // border: 1px solid var(--base-border3);
                 &::after {
                     position: absolute;
                     content: "";
@@ -641,6 +642,7 @@
                     border: 1px dotted var(--font-color);
                     border-radius: 50%;
                     animation: radarborderscale 10s ease-in-out infinite;
+                    box-shadow: 0 0 30px rgba(0, 0, 0, 1) inset;
                     &.radarborder1 {
                         width: 0%;
                         height: 0%;
@@ -691,19 +693,19 @@
                     &.blip-2 {
                         bottom: 86px;
                         left: 35px;
-                        animation-delay: 4.5s;
+                        animation-delay: 4.8s;
                     }
 
                     &.blip-3 {
                         bottom: 67px;
                         left: 62px;
-                        animation-delay: 5.5s;
+                        animation-delay: 6s;
                     }
 
                     &.blip-4 {
                         top: 40px;
                         right: 50px;
-                        animation-delay: 4.5s;
+                        animation-delay: 4.8s;
                     }
                     &.blip-5 {
                         bottom: 15px;
@@ -713,7 +715,7 @@
                 }
 
                 > .sweep {
-                    @include borderright;
+                    // @include borderright;
                     position: absolute;
                     top: 0px;
                     left: 0px;
