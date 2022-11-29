@@ -1,14 +1,30 @@
 #footer {
-    width: 10%;
-    min-width: 120px;
-    min-height: 910px;
+    width: 7%;
+    min-width: 180px;
+    height: 910px;
+    position: relative;
     > .footer__top {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0;
+            width: 36%;
+            height: 1px;
+            background: var(--base-border2);
+        }
+        > .bdcir {
+            left: auto;
+            right: 36%;
+            top: -1px;
+            opacity: 0.5;
+        }
         > div {
             &:nth-of-type(1) {
                 width: 100%;
                 > .footerName {
                     @include borderbottom2;
-                    @include bordertop2;
+                    @include bordertop;
                     padding: 10px 8px;
                     padding-top: 2px;
                     min-height: 70px;
@@ -133,7 +149,7 @@
                         display: flex;
                         justify-content: space-between;
                         width: 100%;
-                        margin-top: 3px;
+                        margin-top: 2px;
                         font-size: 0.2rem;
                         > div {
                             position: relative;
@@ -152,7 +168,7 @@
                             }
                             span {
                                 font-size: 0.2rem;
-                                transform: scale(0.8);
+                                transform: scale(0.7);
                                 display: inline-block;
                                 em {
                                     color: var(--font-color2);
@@ -166,7 +182,7 @@
         }
     }
     > .footer__mid {
-        margin-top: 20px;
+        margin-top: 25px;
         position: relative;
         > div {
             &:nth-of-type(1) {
@@ -510,7 +526,12 @@
                     }
                 }
             }
-            &:nth-of-type(8) {
+        }
+    }
+    > .footer__btm {
+        position: relative;
+        > div {
+            &:nth-of-type(1) {
                 @include bordertop;
                 @include borderbottom;
                 text-align: center;
@@ -551,6 +572,7 @@
                             text-align: center;
                             @include emdeco;
                             padding: 4px 10px;
+                            animation: footerdescflash 4s 10s ease infinite;
                         }
                     }
                     &:nth-of-type(2) {
@@ -558,7 +580,6 @@
                         > p {
                             display: inline-block;
                             text-align: center;
-                            animation: footerdescflash 4s 10s ease infinite;
                         }
                     }
                 }
@@ -588,39 +609,61 @@
                 }
             }
             // 레이더 ↓
-            &:nth-of-type(9) {
+            &:nth-of-type(2) {
                 position: relative;
                 width: 100px;
                 height: 100px;
-                margin: 10px auto;
-
+                margin: 15px auto;
                 overflow: hidden;
                 z-index: 500;
                 border-radius: 10em 10em 10em 10em;
                 // background: none repeat 0 0 rgba(21, 25, 9, 0.95);
-                // box-shadow: 0 0 30px rgba(0, 0, 0, 1) inset;
+                box-shadow: 0 0 30px rgba(0, 0, 0, 1) inset;
                 // border: 1px solid #202020;
+                border: 1px solid var(--base-border3);
+                &::after {
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    width: 1px;
+                    height: 20px;
+                    background: var(--base-border);
+                }
                 > .radarborder {
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    width: 40%;
-                    height: 40%;
-                    border: 0.5px dotted var(--base-border);
+                    // width: 20%;
+                    // height: 20%;
+                    border: 1px dotted var(--base-border);
+                    border: 1px dotted var(--font-color);
                     border-radius: 50%;
-                    animation: radarborderscale 8s ;
+                    animation: radarborderscale 10s ease-in-out infinite;
                     &.radarborder1 {
-                        width: 60%;
-                        height: 60%;
+                        width: 0%;
+                        height: 0%;
                     }
                     &.radarborder2 {
-                        width: 40%;
-                        height: 40%;
+                        width: 0%;
+                        height: 0%;
+                        animation-delay: 2s;
                     }
                     &.radarborder3 {
-                        width: 20%;
-                        height: 20%;
+                        width: 0%;
+                        height: 0%;
+                        animation-delay: 4s;
+                    }
+                    &.radarborder4 {
+                        width: 0%;
+                        height: 0%;
+                        animation-delay: 6s;
+                    }
+                    &.radarborder5 {
+                        width: 0%;
+                        height: 0%;
+                        animation-delay: 8s;
                     }
                 }
                 > .blip {
@@ -643,24 +686,29 @@
                     &.blip-1 {
                         bottom: 40px;
                         right: 87px;
-                        animation-delay: 3.5s;
+                        animation-delay: 3.2s;
                     }
                     &.blip-2 {
                         bottom: 86px;
                         left: 35px;
-                        animation-delay: 5.5s;
+                        animation-delay: 4.5s;
                     }
 
                     &.blip-3 {
                         bottom: 67px;
                         left: 62px;
-                        animation-delay: 7s;
+                        animation-delay: 5.5s;
                     }
 
                     &.blip-4 {
                         top: 40px;
                         right: 50px;
-                        animation-delay: 6.5s;
+                        animation-delay: 4.5s;
+                    }
+                    &.blip-5 {
+                        bottom: 15px;
+                        right: 35px;
+                        animation-delay: 8.7s;
                     }
                 }
 
@@ -695,6 +743,108 @@
             }
         }
     }
-    > .footer__btm {
+    .nomeanLineFooter {
+        @include bordertop;
+        @include borderbottom;
+        width: 100%;
+        height: 5px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 50%;
+            top: -1px;
+            right: 0;
+            height: 1px;
+            background: var(--base-border2);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 50%;
+            bottom: -1px;
+            right: 0;
+            height: 1px;
+            background: var(--base-border2);
+        }
+        > span {
+            &:nth-of-type(2) {
+                left: auto;
+                right: -2px;
+            }
+            &:nth-of-type(3) {
+                top: auto;
+                bottom: -2px;
+            }
+            &:nth-of-type(4) {
+                top: auto;
+                left: auto;
+                right: -2px;
+                bottom: -2px;
+            }
+            &:nth-of-type(5) {
+                left: auto;
+                right: 50%;
+            }
+            &:nth-of-type(6) {
+                left: auto;
+                right: 50%;
+                top: auto;
+                bottom: -2px;
+            }
+        }
+    }
+    .nomeanLine2Footer {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.3rem;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 2px;
+        > div {
+            position: relative;
+            &:nth-of-type(1) {
+                width: 50%;
+                text-align: left;
+                span {
+                    font-size: 0.2rem;
+                    display: inline-block;
+                    transform: scale(0.7);
+                    em {
+                        font-weight: bold;
+                        color: var(--font-color2);
+                    }
+                    &.bdcir {
+                        width: 2px;
+                        height: 2px;
+                        top: 50%;
+                        left: -2px;
+                        transform: translate(0, -15%);
+                    }
+                }
+            }
+            &:nth-of-type(2) {
+                width: 50%;
+                text-align: right;
+                padding-left: 4px;
+                span {
+                    font-size: 0.2rem;
+                    display: inline-block;
+                    transform: scale(0.7) translateX(20%);
+                    em {
+                        font-weight: bold;
+                        color: var(--font-color2);
+                    }
+                    &.bdcir {
+                        width: 2px;
+                        height: 2px;
+                        top: 50%;
+                        left: -2px;
+                        transform: translate(0, -15%);
+                    }
+                }
+            }
+        }
     }
 }
