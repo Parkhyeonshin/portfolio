@@ -1,7 +1,8 @@
 #footer {
     width: 7%;
     min-width: 180px;
-    height: 910px;
+    // height: 910px;
+    height: calc(910px - 20px);
     position: relative;
     margin-left: 1%;
     > .footer__top {
@@ -28,8 +29,8 @@
                     @include bordertop;
                     padding: 10px 8px;
                     padding-top: 2px;
-                    min-height: 70px;
-                    max-height: 70px;
+                    min-height: 71px;
+                    max-height: 71px;
                     align-items: center;
                     position: relative;
                     > div {
@@ -69,7 +70,7 @@
                     }
                 }
                 > .footerName_btm {
-                    padding: 13px 8px;
+                    padding: 14px 8px;
                     @include borderbottom;
                     text-align: center;
                     > p {
@@ -614,7 +615,8 @@
                 position: relative;
                 width: 100px;
                 height: 100px;
-                margin: 15px auto;
+                margin: 12px auto;
+                margin-bottom: 13px;
                 overflow: hidden;
                 z-index: 500;
                 border-radius: 10em 10em 10em 10em;
@@ -804,6 +806,7 @@
         width: 100%;
         justify-content: space-between;
         margin-top: 2px;
+        height: 15px;
         > div {
             position: relative;
             &:nth-of-type(1) {

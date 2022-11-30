@@ -6,8 +6,13 @@
         <meta name="portfolio" content="width=device-width, initial-scale=1.0" />
         <title>portfolio</title>
         <link rel="stylesheet" href="./assets/css/style.min.css" />
+        <script type="text/javascript">
+            document.onselectstart = function () {
+                return false;
+            };
+        </script>
     </head>
-    <body>
+    <body onselectstart="return false">
         <header id="header">
             <div class="profileWrap">
                 <span class="bdcir"></span>
@@ -277,16 +282,42 @@
         </header>
         <main id="main">
             <div class="main__left">
-                <div class="Mleft__top"></div>
+                <div class="Mleft__top">
+                    <p><em>con</em>tent</p>
+                    <div></div>
+                    <div>content</div>
+                    <div>area</div>
+                    <span class="bdcir"></span>
+                    <span class="bdcir"></span>
+                </div>
                 <div class="Mleft__mid"></div>
                 <div class="Mleft__btm"></div>
+                <div class="Mleft__nomeanLine">
+                    <span class="bdcir"></span>
+                    <span class="bdcir"></span>
+                    <span class="bdcir"></span>
+                    <span class="bdcir"></span>
+                </div>
+
+                <span class="bdcir"></span>
+                <span class="bdcir"></span>
             </div>
             <div class="main__right">
                 <div class="Mright__top"></div>
                 <div class="Mright__mid"></div>
                 <div class="Mright__btm"></div>
+                <div class="Mright__nomeanLine">
+                    <span class="bdcir"></span>
+                    <span class="bdcir"></span>
+                    <span class="bdcir"></span>
+                    <span class="bdcir"></span>
+                </div>
+                <span class="bdcir"></span>
+                <span class="bdcir"></span>
             </div>
             <div class="main__btm"></div>
+            <div class="nomeanLineMain"></div>
+            <div class="nomeanLine2Main"></div>
         </main>
         <footer id="footer">
             <div class="footer__top">
@@ -525,6 +556,9 @@
         </footer>
 
         <script src="./assets/js/mainScript.js"></script>
+        <script>
+            window.document.ondragstart = new Function("return false");
+        </script>
         <!-- <script type="module">
             import {
                 Scene,
