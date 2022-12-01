@@ -251,6 +251,55 @@
         transform: translate3d(0, 0, 0);
     }
 }
+// main
+@keyframes contentcircle__stick {
+    0% {
+        transform: translate(-15%, -1px) rotate(0deg);
+    }
+    20% {
+        transform: translate(-15%, -1px) rotate(45deg);
+    }
+    25% {
+        transform: translate(-15%, -1px) rotate(45deg);
+    }
+    60% {
+        transform: translate(-15%, -1px) rotate(90deg);
+    }
+    65% {
+        transform: translate(-15%, -1px) rotate(90deg);
+    }
+    80% {
+        transform: translate(-15%, -1px) rotate(210deg);
+    }
+    85% {
+        transform: translate(-15%, -1px) rotate(220deg);
+    }
+
+    100% {
+        transform: translate(-15%, -1px) rotate(360deg);
+    }
+}
+
+// main__btm
+@keyframes spin3D {
+    from {
+        transform: rotate3d(0.5, 0.5, 0.5, 360deg);
+    }
+    to {
+        transform: rotate3d(0deg);
+    }
+}
+@keyframes spinner-boxScale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
 // footerdescflash
 @keyframes footerdescflash {

@@ -28,12 +28,68 @@
                 color: var(--font-color);
                 letter-spacing: 0.3rem;
                 margin-left: 0.3rem;
+                em {
+                    color: var(--font-color4);
+                    text-shadow: 0px 0px 5px var(--font-color4);
+                    position: relative;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 70%;
+                        height: 2px;
+                        background: var(--font-color4);
+                        bottom: 0;
+                        left: 3px;
+                        opacity: 0.3;
+                        box-shadow: 0px 0px 10px var(--font-color4);
+                    }
+                }
             }
             > div {
                 &:nth-of-type(1) {
                     width: 20%;
-                    height: 100%;
-                    background: #222;
+                    height: 80%;
+                    transform: translateY(-6px);
+                    // background: #222;
+                    display: flex;
+                    align-items: center;
+                    > div {
+                        margin: 0 auto;
+                        width: 70%;
+                        height: 70%;
+                        border-radius: 50%;
+                        border: 2px solid #cbe5e2;
+                        box-shadow: 0px 0px 3px snow;
+                        background: #111;
+                        position: relative;
+                        &::before {
+                            // content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 10%;
+                            height: 10%;
+                            border-radius: 50%;
+                            border: 1px solid #555;
+                            background: #222;
+                            z-index: 2;
+                        }
+                        > div {
+                            position: absolute;
+                            top: 50%;
+                            left: 0%;
+                            transform: translate(-15%, -1px);
+                            transform-origin: 50% 50%;
+                            background: var(--font-color3);
+                            opacity: 0.6;
+                            width: 140%;
+                            height: 2px;
+                            border-radius: 50%;
+
+                            animation: contentcircle__stick 50s linear infinite;
+                        }
+                    }
                 }
                 &:nth-of-type(2),
                 &:nth-of-type(3) {
@@ -68,8 +124,393 @@
             }
         }
         .Mleft__mid {
+            width: 100%;
+            height: 65%;
+            background: #111;
+            margin-top: 13px;
+            > div {
+                width: 100%;
+                display: flex;
+                &:nth-of-type(1) {
+                    > div {
+                        position: relative;
+                        padding: 8px 2px;
+                        &:nth-of-type(1) {
+                            @include bordertop2;
+                            @include borderbottom;
+                            width: 75%;
+                            padding-left: 10px;
+                            > p {
+                                &:nth-of-type(1) {
+                                    font-size: 0.8rem;
+                                }
+                                &:nth-of-type(2) {
+                                    font-family: var(--font-main2);
+                                    margin-top: 8px;
+                                    font-size: 1.4rem;
+                                    color: var(--font-color5);
+                                    letter-spacing: 0.1rem;
+                                }
+                            }
+                            > .bdcir {
+                                &:nth-of-type(2) {
+                                    @include bdcir2;
+                                }
+                                &:nth-of-type(3) {
+                                    @include bdcir3;
+                                }
+                                &:nth-of-type(4) {
+                                    @include bdcir4;
+                                }
+                            }
+                        }
+                        &:nth-of-type(2) {
+                            @include bordertop;
+                            @include borderbottom2;
+                            @include borderleft;
+                            @include borderright;
+                            width: 25%;
+                            text-align: center;
+                            // box-shadow: inset 0px 0px 3px var(--base-border);
+                            > p {
+                                &:nth-of-type(1) {
+                                    font-size: 0.8rem;
+                                }
+                                &:nth-of-type(2) {
+                                    font-family: var(--font-main2);
+                                    margin-top: 8px;
+                                    font-size: 1.4rem;
+                                    color: var(--font-color5);
+                                    letter-spacing: 0.1rem;
+                                }
+                            }
+                            @include bordertop;
+                            > .bdcir {
+                                &:nth-of-type(1) {
+                                    @include bdcir2;
+                                }
+                                &:nth-of-type(2) {
+                                    @include bdcir4;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(2) {
+                    margin-top: 30px;
+                    > div {
+                        position: relative;
+                        padding: 8px 2px;
+                        &:nth-of-type(1) {
+                            @include bordertop;
+                            @include borderbottom2;
+                            width: 75%;
+                            padding-left: 10px;
+                            > p {
+                                &:nth-of-type(1) {
+                                    font-size: 0.8rem;
+                                }
+                                &:nth-of-type(2) {
+                                    font-family: var(--font-main2);
+                                    margin-top: 8px;
+                                    font-size: 1.4rem;
+                                    color: var(--font-color5);
+                                    letter-spacing: 0.1rem;
+                                }
+                            }
+                            > .bdcir {
+                                &:nth-of-type(2) {
+                                    @include bdcir2;
+                                }
+                                &:nth-of-type(3) {
+                                    @include bdcir3;
+                                }
+                                &:nth-of-type(4) {
+                                    @include bdcir4;
+                                }
+                            }
+                        }
+                        &:nth-of-type(2) {
+                            @include bordertop2;
+                            @include borderbottom;
+                            @include borderleft;
+                            @include borderright;
+                            width: 25%;
+                            text-align: center;
+                            // box-shadow: inset 0px 0px 3px var(--base-border);
+                            > p {
+                                &:nth-of-type(1) {
+                                    font-size: 0.8rem;
+                                }
+                                &:nth-of-type(2) {
+                                    font-family: var(--font-main2);
+                                    margin-top: 8px;
+                                    font-size: 1.4rem;
+                                    color: var(--font-color5);
+                                    letter-spacing: 0.1rem;
+                                }
+                            }
+                            @include bordertop;
+                            > .bdcir {
+                                &:nth-of-type(1) {
+                                    @include bdcir2;
+                                }
+                                &:nth-of-type(2) {
+                                    @include bdcir4;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(3) {
+                    width: 100%;
+                    margin-top: 30px;
+                    height: 20px;
+                    display: block;
+                    > div {
+                        display: flex;
+                        position: relative;
+                        &:nth-of-type(1) {
+                            width: 100%;
+                            height: 50%;
+                            > div {
+                                position: relative;
+                                &:nth-of-type(1) {
+                                    width: 75%;
+                                }
+                                &:nth-of-type(2) {
+                                    @include bordertop;
+                                    width: 25%;
+                                    > .bdcir {
+                                        &:nth-of-type(2) {
+                                            @include bdcir2;
+                                        }
+                                        &:nth-of-type(3) {
+                                            @include bdcir3;
+                                        }
+                                        &:nth-of-type(4) {
+                                            @include bdcir4;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-of-type(2) {
+                            width: 100%;
+                            height: 50%;
+                            @include bordertop;
+                            > div {
+                                position: relative;
+                                &:nth-of-type(1) {
+                                    width: 75%;
+                                    > .bdcir {
+                                        &:nth-of-type(2) {
+                                            @include bdcir3;
+                                        }
+                                    }
+                                }
+                                &:nth-of-type(2) {
+                                    @include borderbottom;
+                                    width: 25%;
+                                    &::after {
+                                        content: "";
+                                        position: absolute;
+                                        top: -1px;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 1px;
+                                        background: var(--base-border2);
+                                    }
+                                    > .bdcir {
+                                        &:nth-of-type(1) {
+                                            @include bdcir3;
+                                        }
+                                        &:nth-of-type(2) {
+                                            @include bdcir4;
+                                        }
+                                    }
+                                }
+                            }
+                            &::after {
+                                content: "Nothing";
+                                position: absolute;
+                                bottom: -15px;
+                                left: 2px;
+                                font-size: 0.2rem;
+                                transform: scale(0.7);
+                            }
+                            &::before {
+                                content: "Cont";
+                                position: absolute;
+                                bottom: -15px;
+                                left: 35px;
+                                font-size: 0.2rem;
+                                transform: scale(0.8);
+                                color: var(--font-color5);
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(4) {
+                    width: 100%;
+                    position: relative;
+                    margin-top: 50px;
+                    display: block;
+                    > div {
+                        &:nth-of-type(1) {
+                            @include bordertop;
+                            @include borderbottom;
+                            width: 100%;
+                            text-align: center;
+                            display: flex;
+                            align-items: center;
+                            position: relative;
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: -1px;
+                                right: 0;
+                                width: 25%;
+                                height: 1px;
+                                background: var(--base-border2);
+                            }
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                bottom: -1px;
+                                right: 0;
+                                width: 60%;
+                                height: 1px;
+                                background: var(--base-border2);
+                            }
+                            > div {
+                                padding: 5px 0;
+                                position: relative;
+                                &:nth-of-type(1) {
+                                    width: 40%;
+                                    > p {
+                                        display: inline-block;
+                                        text-align: center;
+                                        @include emdeco;
+                                        padding: 4px 10px;
+                                        margin-right: 0;
+                                    }
+                                    > .bdcir {
+                                        &:nth-of-type(2) {
+                                            @include bdcir2;
+                                        }
+                                        &:nth-of-type(3) {
+                                            @include bdcir3;
+                                        }
+                                        &:nth-of-type(4) {
+                                            @include bdcir4;
+                                        }
+                                    }
+                                }
+                                &:nth-of-type(2) {
+                                    position: relative;
+                                    width: 60%;
+
+                                    > p {
+                                        display: block;
+                                        text-align: center;
+                                        position: relative;
+                                    }
+                                }
+                            }
+                            > .bdcir {
+                                @include bdcir4;
+                            }
+                        }
+                        &:nth-of-type(2) {
+                            // display: block;
+                            // background: #333;
+                            // margin: 10px auto;
+                            // margin-bottom: 2px;
+                            // width: 97%;
+                            // height: 180px;
+                            // background: url(https://i.pinimg.com/564x/da/68/52/da68521d0750e0af1d1f23b344ee4c63.jpg);
+                            // background-repeat: no-repeat;
+                            // background-size: 100% 100%;
+                        }
+                        &:nth-of-type(3) {
+                            display: flex;
+                            justify-content: space-between;
+                            > p {
+                                display: block;
+                                font-size: 0.2rem;
+                                transform: scale(0.7);
+                                &:nth-of-type(2) {
+                                    em {
+                                        color: var(--font-color2);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    > .bdcir {
+                        &:nth-of-type(1) {
+                            left: auto;
+                            right: 25%;
+                            top: -1px;
+                        }
+                        &:nth-of-type(2) {
+                            @include bdcir2;
+                            top: -1px;
+                            right: -1px;
+                        }
+                        &:nth-of-type(3) {
+                            @include bdcir4;
+                            bottom: -1px;
+                            right: -1px;
+                        }
+                    }
+                }
+                &:nth-of-type(5) {
+                    margin-top: 8px;
+                    height: 5px;
+                    width: 100%;
+                    display: flex;
+                    > div {
+                        width: 50%;
+                        position: relative;
+                        &:nth-of-type(1) {
+                            @include bordertop;
+                            @include borderbottom;
+                            > .bdcir {
+                                &:nth-of-type(2) {
+                                    @include bdcir2;
+                                }
+                                &:nth-of-type(3) {
+                                    @include bdcir3;
+                                }
+                                &:nth-of-type(4) {
+                                    @include bdcir4;
+                                }
+                            }
+                        }
+                        &:nth-of-type(2) {
+                            @include bordertop;
+                            @include borderbottom2;
+                            > .bdcir {
+                                &:nth-of-type(1) {
+                                    @include bdcir2;
+                                }
+                                &:nth-of-type(2) {
+                                    @include bdcir4;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
         .Mleft__btm {
+            width: 100%;
+            height: 22%;
+            margin-top: 10px;
+            background: #222;
         }
         .Mleft__nomeanLine {
             @include borderbottom;
@@ -133,6 +574,7 @@
                         width: 5px;
                         height: 5px;
                         background: #333;
+                        border-radius: 50%;
                         &:nth-of-type(2) {
                             margin-right: 6px;
                             background: var(--base-border);
@@ -149,6 +591,9 @@
                 width: 50%;
                 height: 100%;
                 position: relative;
+                padding: 5px 3px;
+                display: flex;
+                align-items: flex-end;
                 > .bdcir {
                     &:nth-of-type(2) {
                         @include bdcir2;
@@ -158,6 +603,71 @@
                     }
                     &:nth-of-type(4) {
                         @include bdcir4;
+                    }
+                }
+                > div {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    > .dotWrap {
+                        padding-left: 10%;
+                        width: 50%;
+                        display: flex;
+                        > .Mright__top__dot {
+                            margin: 0 2px;
+                            width: 5px;
+                            height: 5px;
+                            background: #333;
+                            border-radius: 50%;
+                            &:nth-of-type(1) {
+                                background: var(--base-border);
+                            }
+                            &:nth-of-type(2) {
+                                margin-right: 10px;
+                                background: var(--font-color2);
+                            }
+                            &:nth-of-type(3) {
+                                background: var(--font-color2);
+                            }
+                            &:nth-of-type(4) {
+                                background: var(--font-color);
+                            }
+                            &:nth-of-type(8) {
+                                background: var(--font-color);
+                            }
+                        }
+                    }
+                    > .dotWrap2 {
+                        width: 50%;
+                        display: flex;
+                        flex-direction: row-reverse;
+                        padding-right: 2px;
+                        > .Mright__top__dot {
+                            margin: 0 2px;
+                            width: 5px;
+                            height: 5px;
+                            background: #333;
+                            border-radius: 50%;
+                            &:nth-of-type(1) {
+                                background: var(--base-border);
+                            }
+                            &:nth-of-type(2) {
+                                margin-right: 10px;
+                                background: var(--font-color);
+                            }
+                            &:nth-of-type(3) {
+                                background: var(--font-color2);
+                            }
+                            &:nth-of-type(4) {
+                                // background: var(--font-color);
+                            }
+                            &:nth-of-type(5) {
+                                // background: var(--font-color);
+                            }
+                            &:nth-of-type(6) {
+                                // background: var(--font-color);
+                            }
+                        }
                     }
                 }
             }
@@ -181,7 +691,6 @@
                 > div {
                     width: 100%;
                     text-align: right;
-                    background: #333;
                     padding: 5px 3px;
                     display: flex;
                     align-items: flex-end;
@@ -192,14 +701,37 @@
                         font-family: var(--font-main2);
                         text-shadow: 0px 0px 2px var(--font-color);
                         > em {
-                            &:nth-of-type(1){
-                                color: #dfdfdf;
+                            &:nth-of-type(1) {
                                 margin-right: -2px;
                                 // color: var(--base-border);
+                                color: #dfdfdf;
                                 text-shadow: 0px 0px 3px #dfdfdfdf;
                             }
-                            &:nth-of-type(2){
-                                
+                            &:nth-of-type(2) {
+                                font-size: 0.7rem;
+                                display: inline-block;
+                                transform: scale(0.9);
+                                position: relative;
+                                margin-left: 5px;
+                                color: var(--font-color);
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 2px;
+                                    left: -10px;
+                                    width: 3px;
+                                    height: 6px;
+                                    background: var(--font-color2);
+                                }
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    top: 2px;
+                                    left: -5px;
+                                    width: 1px;
+                                    height: 6px;
+                                    background: var(--font-color);
+                                }
                             }
                         }
                     }
@@ -207,8 +739,8 @@
                         display: flex;
                         > .Mright__top__dot {
                             margin: 2px;
-                            width: 6px;
-                            height: 6px;
+                            width: 5px;
+                            height: 5px;
                             border-radius: 50%;
                             background: #333;
                             &:nth-of-type(1) {
@@ -232,9 +764,34 @@
             }
         }
         .Mright__mid {
-            height: 20px;
+            width: 100%;
+            height: 65%;
+            margin-top: 13px;
+            > div {
+                width: 100%;
+                height: 100%;
+                border: 1px solid #cbe5e2b2;
+                border: 1px solid var(--base-border);
+                // box-shadow: 0px 0px 1px snow;
+
+                padding: 1%;
+                > .contentsWrap {
+                    border: 1px solid var(--base-border);
+                    width: 100%;
+                    height: 100%;
+                    background: url(https://i.pinimg.com/originals/be/f0/5e/bef05e397070e9ef000065c27778656c.gif);
+                    // background: url(../img/image49.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: 50% 50%;
+                }
+            }
         }
         .Mright__btm {
+            width: 100%;
+            height: 22%;
+            margin-top: 10px;
+            background: #333;
         }
         .Mright__nomeanLine {
             @include borderbottom;
@@ -267,12 +824,105 @@
         }
     }
     .main__btm {
-        width: 100%;
+        width: 50px;
         height: 12%;
-        background: #222;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        // background: rgb(43, 42, 42);
+        // > div {
+        //     width: 90px;
+        //     height: ;
+        //     display: flex;
+        //     margin: 0 auto;
+        //     .Key {
+        //         width: 30px;
+        //         height: 30px;
+        //         border: 1px solid var(--base-border);
+        //         border-radius: 7px;
+        //     }
+        //     .keyUp{
+
+        //     }
+        // }
+        .spinner-box {
+            width: 35px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            position: relative;
+            animation: spinner-boxScale 6s infinite;
+
+            .leo {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+            }
+
+            .blue-orbit {
+                width: 220%;
+                height: 220%;
+                border: 1px solid var(--font-color5);
+                box-shadow: inset 0px 0px 13px var(--base-border);
+                animation: spin3D 5s linear 0.2s infinite;
+            }
+
+            .green-orbit {
+                width: 180%;
+                height: 180%;
+                border: 1px solid var(--font-color);
+                animation: spin3D 6s linear 0s infinite;
+            }
+
+            .red-orbit {
+                width: 150%;
+                height: 150%;
+                border: 1px solid var(--font-color2);
+                box-shadow: inset 0px 0px 6px var(--font-color3);
+                animation: spin3D 4s linear 0s infinite;
+            }
+
+            .white-orbit {
+                width: 100%;
+                height: 100%;
+                border: 2px solid var(--font-color5);
+                box-shadow: inset 0px 0px 6px var(--font-color);
+                animation: spin3D 7s linear 0s infinite;
+            }
+
+            .w1 {
+                transform: rotate3D(1, 1, 1, 90deg);
+            }
+
+            .w2 {
+                transform: rotate3D(1, 2, 0.5, 90deg);
+            }
+
+            .w3 {
+                transform: rotate3D(0.5, 1, 2, 90deg);
+            }
+        }
     }
     .nomeanLineMain {
+        @include bordertop;
+        @include borderbottom;
+        width: 100%;
         height: 5px;
+        margin-top: 10px;
+        position: relative;
+        display: flex;
+        > div {
+            &:nth-of-type(1) {
+                width: 15%;
+            }
+            &:nth-of-type(2) {
+                width: 85%;
+            }
+        }
     }
     .nomeanLine2Main {
         height: 15px;
