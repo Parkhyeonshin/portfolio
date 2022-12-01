@@ -22,6 +22,20 @@
 @mixin borderright2 {
     border-right: 1px solid var(--base-border2);
 }
+@mixin bdcir2 {
+    left: auto;
+    right: -2px;
+}
+@mixin bdcir3 {
+    top: auto;
+    bottom: -2px;
+}
+@mixin bdcir4 {
+    left: auto;
+    top: auto;
+    right: -2px;
+    bottom: -2px;
+}
 
 // 리셋으로 넘김(대비용으로 살려둠)
 @mixin cir {
