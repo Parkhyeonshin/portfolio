@@ -1,3 +1,14 @@
+// kostar
+@font-face {
+    font-family: "Kostar";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/Kostar.eot");
+    src: url("../fonts/Kostar.eot?#iefix") format("embedded-opentype"), url("../fonts/Kostar.woff2") format("woff2"),
+        url("../fonts/Kostar.woff") format("woff"), url("../fonts/Kostar.ttf") format("truetype");
+    font-display: swap;
+}
+
 // 모노플렉스
 // https://noonnu.cc/font_page/973
 @font-face {

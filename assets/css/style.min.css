@@ -39,6 +39,7 @@ body {
   --font-main3: "Blanka";
   --font-main4: "Exan";
   --font-main5: "Neuron";
+  --font-main6: "Kostar";
 }
 
 *,
@@ -195,6 +196,14 @@ table {
   animation: bdcirflash 2s infinite;
 }
 
+@font-face {
+  font-family: "Kostar";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Kostar.eot");
+  src: url("../fonts/Kostar.eot?#iefix") format("embedded-opentype"), url("../fonts/Kostar.woff2") format("woff2"), url("../fonts/Kostar.woff") format("woff"), url("../fonts/Kostar.ttf") format("truetype");
+  font-display: swap;
+}
 @font-face {
   font-family: "MonoplexKR-Regular";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-kr@1.0/MonoplexKR-Regular.woff2") format("woff2");
@@ -1478,7 +1487,7 @@ table {
 }
 #main .main__left .Mleft__mid {
   width: 100%;
-  height: 65%;
+  height: 69%;
   margin-top: 13px;
 }
 #main .main__left .Mleft__mid > div {
@@ -1794,7 +1803,7 @@ table {
   margin: 10px auto;
   margin-bottom: 2px;
   width: 90%;
-  height: 180px;
+  height: 203px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
@@ -1862,6 +1871,24 @@ table {
   border-top: 1px solid var(--base-border);
   border-bottom: 1px solid var(--base-border2);
 }
+#main .main__left .Mleft__mid > div:nth-of-type(5) > div:nth-of-type(2)::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: -1px;
+  width: 1px;
+  height: 60px;
+  background: var(--base-border2);
+}
+#main .main__left .Mleft__mid > div:nth-of-type(5) > div:nth-of-type(2)::after {
+  content: "";
+  position: absolute;
+  top: 65px;
+  right: -2px;
+  width: 3px;
+  height: 3px;
+  background: var(--base-border);
+}
 #main .main__left .Mleft__mid > div:nth-of-type(5) > div:nth-of-type(2) > .bdcir:nth-of-type(1) {
   left: auto;
   right: -2px;
@@ -1874,13 +1901,89 @@ table {
 }
 #main .main__left .Mleft__btm {
   width: 100%;
-  height: 22%;
-  margin-top: 10px;
-  background: #222;
+  height: 18%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin-top: 9px;
+  position: relative;
+}
+#main .main__left .Mleft__btm::before {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: -1px;
+  width: 1px;
+  height: 100px;
+  background: var(--base-border2);
+}
+#main .main__left .Mleft__btm::after {
+  content: "";
+  position: absolute;
+  bottom: 101px;
+  left: -2px;
+  width: 3px;
+  height: 3px;
+  background: var(--base-border);
+}
+#main .main__left .Mleft__btm .spinner-box {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  position: relative;
+  margin: 0 auto;
+  margin-top: -10px;
+  animation: spinner-boxScale 6s infinite;
+}
+#main .main__left .Mleft__btm .spinner-box .leo {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+#main .main__left .Mleft__btm .spinner-box .blue-orbit {
+  width: 220%;
+  height: 220%;
+  border: 1px solid var(--font-color5);
+  box-shadow: inset 0px 0px 13px var(--base-border);
+  animation: spin3D 5s linear 0.2s infinite;
+}
+#main .main__left .Mleft__btm .spinner-box .green-orbit {
+  width: 180%;
+  height: 180%;
+  border: 1px solid var(--font-color);
+  animation: spin3D 6s linear 0s infinite;
+}
+#main .main__left .Mleft__btm .spinner-box .red-orbit {
+  width: 150%;
+  height: 150%;
+  border: 1px solid var(--font-color2);
+  box-shadow: inset 0px 0px 6px var(--font-color3);
+  animation: spin3D 4s linear 0s infinite;
+}
+#main .main__left .Mleft__btm .spinner-box .white-orbit {
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--font-color5);
+  box-shadow: inset 0px 0px 6px var(--font-color);
+  animation: spin3D 7s linear 0s infinite;
+}
+#main .main__left .Mleft__btm .spinner-box .w1 {
+  transform: rotate3D(1, 1, 1, 90deg);
+}
+#main .main__left .Mleft__btm .spinner-box .w2 {
+  transform: rotate3D(1, 2, 0.5, 90deg);
+}
+#main .main__left .Mleft__btm .spinner-box .w3 {
+  transform: rotate3D(0.5, 1, 2, 90deg);
 }
 #main .main__left .Mleft__nomeanLine {
   border-bottom: 1px solid var(--base-border);
-  border-top: 1px solid var(--base-border);
+  border-top: 1px solid var(--base-border2);
   width: 100%;
   height: 5px;
   position: relative;
@@ -2114,7 +2217,7 @@ table {
 }
 #main .main__right .Mright__mid {
   width: 100%;
-  height: 65%;
+  height: 68%;
   margin-top: 13px;
 }
 #main .main__right .Mright__mid > div {
@@ -2135,8 +2238,114 @@ table {
 }
 #main .main__right .Mright__btm {
   width: 100%;
-  height: 22%;
+  height: calc(19% - 1.5px);
   margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+#main .main__right .Mright__btm > div {
+  padding: 5px 10px;
+}
+#main .main__right .Mright__btm > div:nth-of-type(1) {
+  border-top: 1px solid var(--base-border);
+  position: relative;
+  width: 60%;
+  height: 100%;
+  font-family: var(--font-main6);
+  padding: 15px 20px;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+}
+#main .main__right .Mright__btm > div:nth-of-type(1)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 30px;
+  width: 1px;
+  background: var(--base-border);
+}
+#main .main__right .Mright__btm > div:nth-of-type(1) > .bdcir:nth-of-type(2) {
+  left: auto;
+  right: -2px;
+}
+#main .main__right .Mright__btm > div:nth-of-type(1) > .bdcir:nth-of-type(3) {
+  top: auto;
+  bottom: -2px;
+  left: -1px;
+  bottom: 30px;
+}
+#main .main__right .Mright__btm > div:nth-of-type(2) {
+  border-top: 1px solid var(--base-border2);
+  width: 38%;
+  height: 100%;
+  position: relative;
+}
+#main .main__right .Mright__btm > div:nth-of-type(2)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 45px;
+  background: var(--base-border2);
+}
+#main .main__right .Mright__btm > div:nth-of-type(2)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 25px;
+  background: var(--base-border);
+}
+#main .main__right .Mright__btm > div:nth-of-type(2) .content_title {
+  width: 100%;
+  text-align: center;
+}
+#main .main__right .Mright__btm > div:nth-of-type(2) .content_title .content_title_big {
+  margin-top: 20px;
+  font-size: 3rem;
+  font-family: var(--font-main5);
+  position: relative;
+  display: inline-block;
+  color: var(--font-color2);
+  text-shadow: 0px 0px 8px var(--font-color5);
+  letter-spacing: 0.3rem;
+}
+#main .main__right .Mright__btm > div:nth-of-type(2) .content_title .content_title_big::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 80%;
+  height: 1px;
+  box-shadow: 0px 0px 2px var(--font-color5);
+  transform: translate(-50%);
+}
+#main .main__right .Mright__btm > div:nth-of-type(2) .content_title .content_title_small {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  font-family: var(--font-main2);
+  letter-spacing: 0.2rem;
+  color: var(--base-border2);
+}
+#main .main__right .Mright__btm > div:nth-of-type(2) .bdcir:nth-of-type(2) {
+  left: auto;
+  right: -2px;
+}
+#main .main__right .Mright__btm > div:nth-of-type(2) .bdcir:nth-of-type(3) {
+  top: auto;
+  bottom: -2px;
+  bottom: 25px;
+  left: -1px;
+}
+#main .main__right .Mright__btm > div:nth-of-type(2) .bdcir:nth-of-type(4) {
+  left: auto;
+  right: -2px;
+  top: 45px;
+  right: -1px;
 }
 #main .main__right .Mright__nomeanLine {
   border-bottom: 1px solid var(--base-border);
@@ -2164,64 +2373,75 @@ table {
   right: -2px;
 }
 #main .main__btm {
-  width: 50px;
+  width: 100%;
   height: 12%;
   margin: 0 auto;
   display: flex;
   align-items: center;
-}
-#main .main__btm .spinner-box {
-  width: 35px;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
   position: relative;
-  animation: spinner-boxScale 6s infinite;
 }
-#main .main__btm .spinner-box .leo {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-}
-#main .main__btm .spinner-box .blue-orbit {
-  width: 220%;
-  height: 220%;
-  border: 1px solid var(--font-color5);
-  box-shadow: inset 0px 0px 13px var(--base-border);
-  animation: spin3D 5s linear 0.2s infinite;
-}
-#main .main__btm .spinner-box .green-orbit {
-  width: 180%;
-  height: 180%;
-  border: 1px solid var(--font-color);
-  animation: spin3D 6s linear 0s infinite;
-}
-#main .main__btm .spinner-box .red-orbit {
-  width: 150%;
-  height: 150%;
-  border: 1px solid var(--font-color2);
-  box-shadow: inset 0px 0px 6px var(--font-color3);
-  animation: spin3D 4s linear 0s infinite;
-}
-#main .main__btm .spinner-box .white-orbit {
-  width: 100%;
+#main .main__btm > div:nth-of-type(1) {
+  width: 40%;
   height: 100%;
-  border: 2px solid var(--font-color5);
-  box-shadow: inset 0px 0px 6px var(--font-color);
-  animation: spin3D 7s linear 0s infinite;
 }
-#main .main__btm .spinner-box .w1 {
-  transform: rotate3D(1, 1, 1, 90deg);
+#main .main__btm .mainControlWrap {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
-#main .main__btm .spinner-box .w2 {
-  transform: rotate3D(1, 2, 0.5, 90deg);
+#main .main__btm .mainControlWrap .contentPrev {
+  width: 38%;
+  height: 100%;
+  background: url(../img/PrevBtn.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: scale(0.5);
+  transition: all 0.3s ease;
 }
-#main .main__btm .spinner-box .w3 {
-  transform: rotate3D(0.5, 1, 2, 90deg);
+#main .main__btm .mainControlWrap .contentPrev:hover {
+  background: url(../img/PrevBtn_hover.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: scale(0.6);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+#main .main__btm .mainControlWrap .contentNext {
+  width: 38%;
+  height: 100%;
+  background: url(../img/nextBtn.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: scale(0.5);
+  transition: all 0.3s ease;
+}
+#main .main__btm .mainControlWrap .contentNext:hover {
+  background: url(../img/nextBtn_hover.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: scale(0.6);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+#main .main__btm .btmLogoWrap {
+  width: 40%;
+  height: 100%;
+  display: flex;
+}
+#main .main__btm .btmLogoWrap .lengthWrap {
+  width: 70%;
+  height: 100%;
+}
+#main .main__btm .btmLogoWrap .btmLogo {
+  width: 20%;
+  height: 78%;
+  margin: 0 auto;
+  background: url(../img/bottom_logo.svg);
+  background-repeat: no-repeat;
+  background-position: center 20px;
+  background-size: contain;
+  transform: translate(5%, 20px) scale(0.7);
 }
 #main .nomeanLineMain {
   border-top: 1px solid var(--base-border);
