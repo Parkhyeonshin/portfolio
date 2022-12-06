@@ -87,6 +87,7 @@ const contentWrap = document.getElementsByClassName("contentsWrap");
 const contentNext = document.querySelector(".contentNext");
 const contentPrev = document.querySelector(".contentPrev");
 const contentChange = document.querySelector(".contentChange");
+const contentChange2 = document.querySelector(".contentChange2");
 let WrapWidth = contentWrap[0].clientWidth;
 let WrapHeight = contentWrap[0].clientHeight;
 
@@ -97,14 +98,20 @@ contentNext.addEventListener("click", () => {
 function changeend() {
     setTimeout(() => {
         contentChange.style.transition = "none";
-        contentChange.style.left = 0;
+        contentChange.style.top = 0;
         contentChange.style.opacity = 0;
+        contentChange2.style.transition = "none";
+        contentChange2.style.top = 100 + "%";
+        contentChange2.style.opacity = 0;
     }, 1000);
 }
 function changestart() {
     contentChange.style.opacity = 1;
-    contentChange.style.left = 100 + "%";
-    contentChange.style.transition = "left 1s linear";
+    contentChange.style.top = 100 + "%";
+    contentChange.style.transition = "top 1s linear";
+    contentChange2.style.opacity = 0.2;
+    contentChange2.style.top = -20 + "%";
+    contentChange2.style.transition = "top .7s linear";
 }
 function scrollIt(x) {
     let transform = Math.max(0, Math.min(x, document.querySelector(".contentsWrap").offsetWidth)); //최솟값반환후 그 값과 0하고 max반환인데 굳이 왜?
@@ -123,8 +130,8 @@ function scrollItStart(x) {
     console.log(contentWrap);
     console.log(WrapWidth);
     console.log(WrapHeight);
-    document.querySelector(".contentMain").style.width = x + "%";
-    document.querySelector(".contentMain").style.transition = "width 1s linear";
+    document.querySelector(".contentMain").style.height = x + "%";
+    document.querySelector(".contentMain").style.transition = "height 1s linear";
     changestart();
     changeend();
 }
