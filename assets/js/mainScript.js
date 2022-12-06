@@ -81,7 +81,64 @@ mainlist.forEach((e, i) => {
     });
 });
 
+// 메인창 스와이프 스크립트
+// https://codepen.io/nosurprisethere/pen/xrXjYV
+const contentWrap = document.getElementsByClassName("contentsWrap");
+const contentNext = document.querySelector(".contentNext");
+const contentPrev = document.querySelector(".contentPrev");
+const contentChange = document.querySelector(".contentChange");
+let WrapWidth = contentWrap[0].clientWidth;
+let WrapHeight = contentWrap[0].clientHeight;
+
+contentNext.addEventListener("click", () => {
+    x = 100;
+    scrollIt(x);
+});
+function changeend() {
+    setTimeout(() => {
+        contentChange.style.transition = "none";
+        contentChange.style.left = 0;
+        contentChange.style.opacity = 0;
+    }, 1000);
+}
+function changestart() {
+    contentChange.style.opacity = 1;
+    contentChange.style.left = 100 + "%";
+    contentChange.style.transition = "left 1s linear";
+}
+function scrollIt(x) {
+    let transform = Math.max(0, Math.min(x, document.querySelector(".contentsWrap").offsetWidth)); //최솟값반환후 그 값과 0하고 max반환인데 굳이 왜?
+    console.log(transform);
+    document.querySelector(".sitelist__1").style.height = transform + "%";
+    document.querySelector(".sitelist__1").style.backgroundSize = "cover";
+    document.querySelector(".sitelist__1").style.transition = "height 1s linear";
+    setTimeout(() => {
+        document.querySelector(".sitelist__1").style.transition = "none";
+        document.querySelector(".sitelist__1").style.backgroundSize = "100% 100%";
+    }, 1000);
+    changestart();
+    changeend();
+}
+function scrollItStart(x) {
+    console.log(contentWrap);
+    console.log(WrapWidth);
+    console.log(WrapHeight);
+    document.querySelector(".contentMain").style.width = x + "%";
+    document.querySelector(".contentMain").style.transition = "width 1s linear";
+    changestart();
+    changeend();
+}
+
 // 창 로드시
 window.onload = function () {
     printTime(); // 현재시간
+    scrollItStart(100);
+};
+
+// 사이즈변경시 값 변경
+window.onresize = function () {
+    WrapWidth = contentWrap[0].clientWidth;
+    WrapHeight = contentWrap[0].clientHeight;
+    console.log(WrapWidth);
+    console.log(WrapHeight);
 };

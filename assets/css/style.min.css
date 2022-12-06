@@ -1225,9 +1225,11 @@ table {
 }
 #header .headerLastWrap .music__wrap > .music__inner > .music__right .music__equal {
   width: 85%;
-  height: 35px;
+  height: 33px;
   background: url(../img/music__equal.jpg);
   margin: 0 auto;
+  transform-origin: 50% 55%;
+  position: relative;
 }
 #header .headerLastWrap > span:nth-of-type(1) {
   left: -3px;
@@ -2278,10 +2280,41 @@ table {
   border: 1px solid var(--base-border);
   width: 100%;
   height: 100%;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+#main .main__right .Mright__mid > div > .contentsWrap > .contentChange {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2%;
+  height: 100%;
+  background: var(--font-color2);
+  border-right: 1px solid var(--font-color5);
+  border-left: 1px solid var(--font-color5);
+  box-shadow: 1px 1px 5px var(--font-color5);
+  z-index: 2;
+}
+#main .main__right .Mright__mid > div > .contentsWrap > .contentMain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  overflow: hidden;
   background: url(https://i.pinimg.com/originals/be/f0/5e/bef05e397070e9ef000065c27778656c.gif);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
+  background-position: center;
+}
+#main .main__right .Mright__mid > div > .contentsWrap > .sitelist__1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: url(../img/image48.jpg);
+  background-repeat: no-repeat;
 }
 #main .main__right .Mright__btm {
   width: 100%;
