@@ -1814,16 +1814,28 @@ table {
   bottom: -2px;
 }
 #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) {
-  display: block;
   margin: 10px auto;
   margin-bottom: 2px;
-  width: 90%;
-  height: 203px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  align-items: center;
 }
-#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) > ul li {
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div {
+  width: 200%;
+  height: 100px;
+  display: flex;
+}
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL {
+  display: block;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: transform 0.15s linear;
+}
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL.active {
+  transform: translateX(0%);
+}
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL li {
   display: block;
   text-align: center;
   width: 0%;
@@ -1842,32 +1854,103 @@ table {
   cursor: pointer;
   animation: ListName 1.6s forwards;
 }
-#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) > ul li:hover, #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) > ul li.active {
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL li:hover, #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL li.active {
   color: var(--font-color5);
   border-left: 4px solid var(--font-color5);
   border-right: 4px solid var(--font-color5);
   transition: all 0.5s ease;
 }
-#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) > ul li:nth-of-type(2) {
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL li:nth-of-type(1) {
+  margin-top: 10px;
+}
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL li:nth-of-type(2) {
   animation-delay: 0.3s;
 }
-#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) > ul li:nth-of-type(3) {
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL li:nth-of-type(3) {
   animation-delay: 0.6s;
 }
-#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) > ul li:nth-of-type(4) {
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL li:nth-of-type(4) {
+  animation-delay: 0.9s;
+}
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL2 {
+  width: 100%;
+  transform: translateX(20%);
+  transition: transform 0.15s linear;
+}
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL2.active {
+  transform: translateX(-100%);
+  width: 100%;
+}
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL2 li {
+  display: block;
+  text-align: center;
+  padding: 8px 2px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-left: 2px solid #abded5;
+  border-right: 2px solid #abded5;
+  background: rgba(46, 58, 56, 0.3098039216);
+  color: rgba(171, 222, 213, 0.4509803922);
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-family: var(--font-main6);
+  cursor: pointer;
+}
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL2 li:hover, #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL2 li.active {
+  color: var(--font-color5);
+  border-left: 4px solid var(--font-color5);
+  border-right: 4px solid var(--font-color5);
+  transition: all 0.5s ease;
+}
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL2 li:nth-of-type(1) {
+  margin-top: 10px;
+}
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL2 li:nth-of-type(2) {
+  animation-delay: 0.3s;
+}
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL2 li:nth-of-type(3) {
+  animation-delay: 0.6s;
+}
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL2 li:nth-of-type(4) {
   animation-delay: 0.9s;
 }
 #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(3) {
+  width: 100%;
+  height: 15px;
+  overflow: hidden;
+}
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(3) > div {
+  width: 200%;
+  display: flex;
+  transition: transform 0.15s linear;
+}
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(3) > div.active {
+  transform: translateX(-50%);
+}
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(3) > div > div {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
-#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(3) > p {
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(3) > div > div:nth-of-type(1) > p {
   display: block;
   font-size: 0.2rem;
   transform: scale(0.7);
 }
-#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(3) > p:nth-of-type(2) em {
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(3) > div > div:nth-of-type(1) > p:nth-of-type(2) em {
   color: var(--font-color2);
+}
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(3) > div > div:nth-of-type(2) > p {
+  display: block;
+  font-size: 0.2rem;
+  transform: scale(1);
+  color: var(--font-color2);
+  font-family: var(--font-main3);
+}
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(3) > div > div:nth-of-type(2) > p:hover {
+  cursor: pointer;
+  color: var(--font-color5);
 }
 #main .main__left .Mleft__mid > div:nth-of-type(4) > .bdcir:nth-of-type(1) {
   left: auto;
@@ -2320,28 +2403,40 @@ table {
   box-shadow: 1px 1px 2px var(--font-color5);
   z-index: 2;
 }
-#main .main__right .Mright__mid > div > .contentsWrap > .contentMain {
+#main .main__right .Mright__mid > div > .contentsWrap > .ContDescWrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#main .main__right .Mright__mid > div > .contentsWrap > .ContDescWrap > .contentMain {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 0%;
+  width: 0%;
+  height: 100%;
   background: url(https://i.pinimg.com/originals/be/f0/5e/bef05e397070e9ef000065c27778656c.gif);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
-#main .main__right .Mright__mid > div > .contentsWrap > .sitelist__1 {
-  position: absolute;
-  top: 0;
-  left: 0;
+#main .main__right .Mright__mid > div > .contentsWrap > .ContDescWrap > .contentMain.active {
+  width: 100%;
+}
+#main .main__right .Mright__mid > div > .contentsWrap > .ContDescWrap > .AboutMe {
   width: 100%;
   height: 100%;
-  background: transparent;
+  position: relative;
 }
-#main .main__right .Mright__mid > div > .contentsWrap > .sitelist__1 > iframe {
+#main .main__right .Mright__mid > div > .contentsWrap > .ContDescWrap > .AboutMe > .AboutMeCont {
   width: 100%;
-  height: 0%;
-  overflow: hidden;
+  height: 100%;
+  background: silver;
+}
+#main .main__right .Mright__mid > div > .contentsWrap > .sitelistCont {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #f5f5f5;
 }
 #main .main__right .Mright__btm {
   width: 100%;
@@ -2360,7 +2455,7 @@ table {
   height: 100%;
   font-family: var(--font-main6);
   padding: 15px 20px;
-  line-height: 1.4;
+  line-height: 1.6;
   display: flex;
   align-items: center;
 }
@@ -2372,6 +2467,12 @@ table {
   height: 30px;
   width: 1px;
   background: var(--base-border);
+}
+#main .main__right .Mright__btm > div:nth-of-type(1) .content_desc > span {
+  display: block;
+}
+#main .main__right .Mright__btm > div:nth-of-type(1) .content_desc > span em {
+  color: var(--font-color2);
 }
 #main .main__right .Mright__btm > div:nth-of-type(1) > .bdcir:nth-of-type(2) {
   left: auto;
@@ -2420,6 +2521,7 @@ table {
   color: var(--font-color2);
   text-shadow: 0px 0px 8px var(--font-color5);
   letter-spacing: 0.3rem;
+  text-transform: uppercase;
 }
 #main .main__right .Mright__btm > div:nth-of-type(2) .content_title .content_title_big::after {
   content: "";
@@ -2437,6 +2539,7 @@ table {
   font-family: var(--font-main2);
   letter-spacing: 0.2rem;
   color: var(--base-border2);
+  text-transform: uppercase;
 }
 #main .main__right .Mright__btm > div:nth-of-type(2) .bdcir:nth-of-type(2) {
   left: auto;

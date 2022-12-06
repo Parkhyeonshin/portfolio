@@ -70,99 +70,101 @@ document.querySelector(".music__control").addEventListener("click", () => {
     }
 });
 
-// 메인리스트 클릭
-const mainlist = document.querySelectorAll(".mainListUL > li");
-let contentframe = document.querySelector(".currentIframe");
-let contentframeprev = document.querySelector(".prevIframe");
-console.log(contentframe.src);
-mainlist.forEach((e, i) => {
-    e.addEventListener("click", (t) => {
-        mainlist.forEach((e) => {
-            e.classList.remove("active");
-        });
-        e.classList.add("active");
-        if (i == 0) {
-            contentframeprev = contentframe;
-            contentframe.src = `http://sshin4882.dothome.co.kr/javascript/effect/searchEffect01.html`;
-            scrollIt(100, contentframe, contentframeprev);
-        } else if (i == 1) {
-            contentframeprev = contentframe;
-            contentframe.src = `http://sshin4882.dothome.co.kr/javascript/effect/quizEffect01.html`;
-            scrollIt(100, contentframe, contentframeprev);
-        }
-    });
-});
-
-// 메인창 스와이프 스크립트
-// https://codepen.io/nosurprisethere/pen/xrXjYV
-const contentWrap = document.getElementsByClassName("contentsWrap");
-const contentNext = document.querySelector(".contentNext");
-const contentPrev = document.querySelector(".contentPrev");
-const contentChange = document.querySelector(".contentChange");
-const contentChange2 = document.querySelector(".contentChange2");
-let WrapWidth = contentWrap[0].clientWidth;
-let WrapHeight = contentWrap[0].clientHeight;
-
-contentNext.addEventListener("click", () => {
-    x = 100;
-    scrollIt(x);
-});
-contentPrev.addEventListener("click", () => {
-    x = 100;
-    scrollIt(x);
-});
-function changeend() {
-    setTimeout(() => {
-        contentChange.style.transition = "none";
-        contentChange.style.top = 0;
-        contentChange.style.opacity = 0;
-        contentChange2.style.transition = "none";
-        contentChange2.style.top = 100 + "%";
-        contentChange2.style.opacity = 0;
-    }, 1000);
-}
-function changestart() {
-    contentChange.style.opacity = 1;
-    contentChange.style.top = 100 + "%";
-    contentChange.style.transition = "top .4s linear";
-    contentChange2.style.opacity = 0.4;
-    contentChange2.style.top = -20 + "%";
-    contentChange2.style.transition = "top .3s linear";
-}
-function scrollIt(x, content, contentprev) {
-    let transform = Math.max(0, Math.min(x, document.querySelector(".contentsWrap").offsetWidth)); //최솟값반환후 그 값과 0하고 max반환인데 굳이 왜?
-    console.log(content);
-    content.style.height = transform + "%";
-    // content.style.backgroundSize = "cover";
-    content.style.transition = "height .4s linear";
-    setTimeout(() => {
-        content.style.transition = "none";
-        // document.querySelector(".sitelist__1").style.backgroundSize = "100% 100%";
-    }, 700);
-    changestart();
-    changeend();
-}
-function scrollItStart(x, content) {
-    console.log(contentWrap);
-    console.log(WrapWidth);
-    console.log(WrapHeight);
-    // document.querySelector(".contentMain").style.height = x + "%";
-    content.style.height = x + "%";
-    content.style.transition = "height .4s linear";
-    changestart();
-    changeend();
-}
-
 // 창 로드시
 window.onload = function () {
     printTime(); // 현재시간
-    scrollItStart(100, contentframe);
+    // scrollItStart(100, contentframe);
 };
 
-// 사이즈변경시 값 변경
-window.onresize = function () {
-    WrapWidth = contentWrap[0].clientWidth;
-    WrapHeight = contentWrap[0].clientHeight;
-    console.log(WrapWidth);
-    console.log(WrapHeight);
-};
+// 나는 너무 멀리온거야 ~~~
+// // 메인리스트 클릭
+// const mainlist = document.querySelectorAll(".mainListUL > li");
+// let contentframe = document.querySelector(".currentIframe");
+// let contentframeprev = document.querySelector(".prevIframe");
+// console.log(contentframe.src);
+// mainlist.forEach((e, i) => {
+//     e.addEventListener("click", (t) => {
+//         mainlist.forEach((e) => {
+//             e.classList.remove("active");
+//         });
+//         e.classList.add("active");
+//         if (i == 0) {
+//             contentframeprev = contentframe;
+//             contentframe.src = `http://sshin4882.dothome.co.kr/javascript/effect/searchEffect01.html`;
+//             scrollIt(100, contentframe, contentframeprev);
+//         } else if (i == 1) {
+//             contentframeprev = contentframe;
+//             contentframe.src = `http://sshin4882.dothome.co.kr/javascript/effect/quizEffect01.html`;
+//             scrollIt(100, contentframe, contentframeprev);
+//         }
+//     });
+// });
+
+// // 메인창 스와이프 스크립트
+// // https://codepen.io/nosurprisethere/pen/xrXjYV
+// const contentWrap = document.getElementsByClassName("contentsWrap");
+// const contentNext = document.querySelector(".contentNext");
+// const contentPrev = document.querySelector(".contentPrev");
+// const contentChange = document.querySelector(".contentChange");
+// const contentChange2 = document.querySelector(".contentChange2");
+// let WrapWidth = contentWrap[0].clientWidth;
+// let WrapHeight = contentWrap[0].clientHeight;
+
+// contentNext.addEventListener("click", () => {
+//     x = 100;
+//     scrollIt(x);
+// });
+// contentPrev.addEventListener("click", () => {
+//     x = 100;
+//     scrollIt(x);
+// });
+// function changeend() {
+//     setTimeout(() => {
+//         contentChange.style.transition = "none";
+//         contentChange.style.top = 0;
+//         contentChange.style.opacity = 0;
+//         contentChange2.style.transition = "none";
+//         contentChange2.style.top = 100 + "%";
+//         contentChange2.style.opacity = 0;
+//     }, 1000);
+// }
+// function changestart() {
+//     contentChange.style.opacity = 1;
+//     contentChange.style.top = 100 + "%";
+//     contentChange.style.transition = "top .4s linear";
+//     contentChange2.style.opacity = 0.4;
+//     contentChange2.style.top = -20 + "%";
+//     contentChange2.style.transition = "top .3s linear";
+// }
+// function scrollIt(x, content, contentprev) {
+//     let transform = Math.max(0, Math.min(x, document.querySelector(".contentsWrap").offsetWidth)); //최솟값반환후 그 값과 0하고 max반환인데 굳이 왜?
+//     console.log(content);
+//     content.style.height = transform + "%";
+//     // content.style.backgroundSize = "cover";
+//     content.style.transition = "height .4s linear";
+//     setTimeout(() => {
+//         content.style.transition = "none";
+//         // document.querySelector(".sitelist__1").style.backgroundSize = "100% 100%";
+//     }, 700);
+//     changestart();
+//     changeend();
+// }
+// function scrollItStart(x, content) {
+//     console.log(contentWrap);
+//     console.log(WrapWidth);
+//     console.log(WrapHeight);
+//     // document.querySelector(".contentMain").style.height = x + "%";
+//     content.style.height = x + "%";
+//     content.style.transition = "height .4s linear";
+//     changestart();
+//     changeend();
+// }
+
+// // 사이즈변경시 값 변경
+// window.onresize = function () {
+//     WrapWidth = contentWrap[0].clientWidth;
+//     WrapHeight = contentWrap[0].clientHeight;
+//     console.log(WrapWidth);
+//     console.log(WrapHeight);
+// };
+// 나는 너무 멀리온거야 ~~~//////

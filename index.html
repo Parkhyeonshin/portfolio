@@ -357,16 +357,33 @@
                             <span class="bdcir"></span>
                         </div>
                         <div class="mainListWrap">
-                            <ul class="mainListUL">
-                                <li class="active">Main</li>
-                                <li>About Me</li>
-                                <li>site list</li>
-                                <li>contact</li>
-                            </ul>
+                            <div>
+                                <ul class="mainListUL active">
+                                    <li class="active">Main</li>
+                                    <li>About Me</li>
+                                    <li>site list</li>
+                                    <li>contact</li>
+                                </ul>
+                                <ul class="mainListUL2">
+                                    <li>site1</li>
+                                    <li>site2</li>
+                                    <li>site3</li>
+                                    <li>site4</li>
+                                </ul>
+                            </div>
                         </div>
                         <div>
-                            <p>Index</p>
-                            <p>Page<em> Index</em></p>
+                            <div class="mainListUL2control">
+                                <div>
+                                    <p>Index</p>
+                                    <p>Page<em> Index</em></p>
+                                </div>
+                                <div>
+                                    <p>&lt;</p>
+                                    <p class="listBack">Back</p>
+                                    <p>&gt;</p>
+                                </div>
+                            </div>
                         </div>
 
                         <span class="bdcir"></span>
@@ -459,19 +476,23 @@
                         <div class="contentsWrap">
                             <div class="contentChange"></div>
                             <div class="contentChange2"></div>
-                            <div class="contentMain"></div>
-                            <div class="AboutMe"></div>
-                            <div class="sitelist__1">
-                                <iframe
-                                    class="currentIframe"
-                                    src="http://sshin4882.dothome.co.kr/javascript/effect/searchEffect01.html"
-                                    frameborder="0"
-                                ></iframe>
-                                <iframe
-                                    class="prevIframe"
-                                    src="http://sshin4882.dothome.co.kr/javascript/effect/quizEffect01.html"
-                                    frameborder="0"
-                                ></iframe>
+                            <div class="ContDescWrap">
+                                <div class="contentMain active"></div>
+                                <div class="AboutMe">
+                                    <div class="AboutMeCont"></div>
+                                </div>
+                                <div class="sitelistCont">
+                                    <!-- <iframe
+                                        class="currentIframe"
+                                        src="http://sshin4882.dothome.co.kr/javascript/effect/searchEffect01.html"
+                                        frameborder="0"
+                                    ></iframe>
+                                    <iframe
+                                        class="prevIframe"
+                                        src="http://sshin4882.dothome.co.kr/javascript/effect/quizEffect01.html"
+                                        frameborder="0"
+                                    ></iframe> -->
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -479,10 +500,8 @@
                 <div class="Mright__btm">
                     <div>
                         <div class="content_desc">
-                            웹표준을 준수하며 모든 기기에 유연하게 대응하는 반응형사이트입니다.
-                            <br />
-                            Swiper 플러그인을 적용하여 배너와 차트 탭, 이미지 슬라이드, 동영상 등 다양하면서도 편리한 기능을 담은 기업형 웹사이트로
-                            작업했습니다.
+                            <!-- 웹표준을 준수하며 모든 기기에 유연하게 대응하는 반응형사이트입니다. Swiper 플러그인을 적용하여 배너와 차트 탭, 이미지
+                            슬라이드, 동영상 등 다양하면서도 편리한 기능을 담은 기업형 웹사이트로 작업했습니다. -->
                         </div>
                         <span class="bdcir"></span>
                         <span class="bdcir"></span>
@@ -490,8 +509,12 @@
                     </div>
                     <div>
                         <div class="content_title">
-                            <div class="content_title_big">SITE LIST</div>
-                            <div class="content_title_small">API SITE</div>
+                            <div class="content_title_big">
+                                <!-- SITE LIST -->
+                            </div>
+                            <div class="content_title_small">
+                                <!-- API SITE -->
+                            </div>
                             <span class="bdcir"></span>
                             <span class="bdcir"></span>
                             <span class="bdcir"></span>
@@ -785,6 +808,7 @@
         </footer>
 
         <script src="./assets/js/mainScript.js"></script>
+        <script src="./assets/js/contentScript.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script>
             // 드래그 막기
