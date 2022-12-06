@@ -10,6 +10,8 @@
         @include borderbottom;
         @include bordertop;
         position: relative;
+        opacity: 0;
+        animation: Startheadertop 0.6s forwards;
         > span {
             &:nth-of-type(1) {
                 left: auto;
@@ -247,10 +249,10 @@
                         width: 100%;
                         text-transform: uppercase;
                         text-align: center;
-                        font-size: 2rem;
+                        font-size: 1.6rem;
                         font-family: var(--font-main5);
                         color: var(--font-color2);
-                        letter-spacing: 0.3rem;
+                        letter-spacing: 0.2rem;
                         margin-left: 0.3rem;
                         // line-height: 70px;
                     }
@@ -495,6 +497,9 @@
         @include bordertop;
         // @include borderbottom;
         position: relative;
+        opacity: 0;
+        animation: Startheadermid 0.6s 0.6s forwards;
+
         > div {
             &:nth-of-type(1) {
                 padding: 10px 7px;
@@ -952,8 +957,8 @@
                         border: 2px solid var(--base-border2);
                         box-shadow: inset 0px 0px 0px 3px var(--bg-dark);
                         position: relative;
-                        transform: rotate(-383deg);
-                        transition: transform 1.6s ease-out;
+                        transform: rotate(-390deg);
+                        transition: transform 0.6s ease-out;
                         &::after {
                             content: "";
                             position: absolute;
@@ -993,9 +998,10 @@
                                 background-repeat: no-repeat;
                                 background-size: contain;
                                 display: block;
-                                transition: all 0.3s ease-out;
+                                transition: all 0.6s ease-out;
                                 position: relative;
                                 margin-bottom: 10px;
+                                cursor: pointer;
                                 &:last-child {
                                     margin-bottom: 0;
                                 }
@@ -1030,9 +1036,11 @@
                         margin-left: 25px;
                         > div {
                             width: 50%;
+                            transition: all 0.3s ease;
+                            cursor: pointer;
                             &:nth-child(1) {
                                 height: 35px;
-                                background: url(../img/music__play.png);
+                                background: url(../img/music__stop.png);
                                 background-size: contain;
                                 background-repeat: no-repeat;
                                 background-position: center center;
@@ -1042,6 +1050,16 @@
                                     font-size: 1.6rem;
                                     color: var(--font-color3);
                                     letter-spacing: 0.15rem;
+                                }
+                            }
+                        }
+                        &.active {
+                            > div {
+                                &:nth-of-type(1) {
+                                    background: url(../img/music__play.png);
+                                    background-size: contain;
+                                    background-repeat: no-repeat;
+                                    background-position: center center;
                                 }
                             }
                         }

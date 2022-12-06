@@ -433,6 +433,44 @@
                             background-repeat: no-repeat;
                             background-size: contain;
                             background-position: center center;
+
+                            > ul {
+                                li {
+                                    display: block;
+                                    text-align: center;
+                                    width: 0%;
+                                    opacity: 0;
+                                    padding: 8px 2px;
+                                    margin: 0 auto;
+                                    margin-top: 20px;
+                                    border-left: 2px solid #abded5;
+                                    border-right: 2px solid #abded5;
+                                    background: #2e3a384f;
+                                    color: #abded573;
+                                    letter-spacing: 0.1rem;
+                                    font-size: 0.8rem;
+                                    text-transform: uppercase;
+                                    font-family: var(--font-main6);
+                                    cursor: pointer;
+                                    animation: ListName 1.6s forwards;
+                                    &:hover,
+                                    &.active {
+                                        color: var(--font-color5);
+                                        border-left: 4px solid var(--font-color5);
+                                        border-right: 4px solid var(--font-color5);
+                                        transition: all 0.5s ease;
+                                    }
+                                    &:nth-of-type(2) {
+                                        animation-delay: 0.3s;
+                                    }
+                                    &:nth-of-type(3) {
+                                        animation-delay: 0.6s;
+                                    }
+                                    &:nth-of-type(4) {
+                                        animation-delay: 0.9s;
+                                    }
+                                }
+                            }
                         }
                         &:nth-of-type(3) {
                             display: flex;
@@ -1107,23 +1145,116 @@
         }
     }
     .nomeanLineMain {
-        @include bordertop;
-        @include borderbottom;
         width: 100%;
         height: 5px;
         margin-top: 10px;
         position: relative;
         display: flex;
         > div {
+            position: relative;
             &:nth-of-type(1) {
+                @include bordertop;
+                @include borderbottom;
                 width: 15%;
+                > .bdcir {
+                    &:nth-of-type(2) {
+                        @include bdcir2;
+                    }
+                    &:nth-of-type(3) {
+                        @include bdcir3;
+                    }
+                    &:nth-of-type(4) {
+                        @include bdcir4;
+                    }
+                }
             }
             &:nth-of-type(2) {
+                @include bordertop2;
+                @include borderbottom2;
                 width: 85%;
+                > .bdcir {
+                    &:nth-of-type(1) {
+                        @include bdcir2;
+                    }
+                    &:nth-of-type(2) {
+                        @include bdcir4;
+                    }
+                }
             }
         }
     }
     .nomeanLine2Main {
-        height: 15px;
+        // height: 15px;
+        width: 100%;
+        margin-top: -2px;
+        display: flex;
+        > div {
+            position: relative;
+            &:nth-of-type(1) {
+                width: 15%;
+                text-align: left;
+                span {
+                    font-size: 0.2rem;
+                    display: inline-block;
+                    transform: scale(0.7);
+                    em {
+                        font-weight: bold;
+                        color: var(--font-color2);
+                    }
+                    &.bdcir {
+                        width: 2px;
+                        height: 2px;
+                        top: 60%;
+                        left: -2px;
+                        transform: translate(0, -15%);
+                    }
+                }
+            }
+            &:nth-of-type(2) {
+                width: 85%;
+                text-align: right;
+                padding-left: 4px;
+                display: flex;
+                justify-content: space-between;
+                > div {
+                    &:nth-of-type(1) {
+                        span {
+                            font-size: 0.2rem;
+                            display: inline-block;
+                            transform: scale(0.7) translateX(0%);
+                            em {
+                                font-weight: bold;
+                                color: var(--font-color2);
+                            }
+                            &.bdcir {
+                                width: 2px;
+                                height: 2px;
+                                top: 60%;
+                                left: 2px;
+                                transform: translate(0, -15%);
+                            }
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        span {
+                            font-size: 0.2rem;
+                            display: inline-block;
+                            transform: scale(0.7) translateX(20%);
+                            em {
+                                font-weight: bold;
+                                color: var(--font-color2);
+                            }
+                            &.bdcir {
+                                width: 2px;
+                                height: 2px;
+                                top: 60%;
+                                left: 2px;
+                                transform: translate(0, -15%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

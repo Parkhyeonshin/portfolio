@@ -279,6 +279,27 @@
         transform: translate(-15%, -1px) rotate(360deg);
     }
 }
+@keyframes ListName {
+    0% {
+        width: 0%;
+        border-right: 10px solid #abded5;
+        border-left: 10px solid #abded5;
+        color: #abded500;
+    }
+    5% {
+        opacity: 1;
+    }
+    40% {
+        color: #abded500;
+    }
+    95% {
+        color: #abded5a2;
+    }
+    100% {
+        width: 95%;
+        opacity: 1;
+    }
+}
 
 // main__btm
 @keyframes spin3D {
