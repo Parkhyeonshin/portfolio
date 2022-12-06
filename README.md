@@ -14,3 +14,16 @@ LF를 line ending으로 사용한다.
 git config --global core.autocrlf true  
 (--global은 시스템전체적용/나는 빼고씀)
 git config core.autocrlf true
+
+
+
+## 음원저작권
+https://www.youtube.com/watch?v=AjgJ3NTm0yc   
+1, 4, 
+1/    
+Track: Max Brhon - The Future  [NCS Release]   
+Music provided by NoCopyrightSounds.   
+Watch: https://youtu.be/dRe_rS19E04   
+Free Download / Stream: http://ncs.io/TheFuture   
+𝑴𝒖𝒔𝒊𝒄 𝑷𝒍𝒂𝒚𝒍𝒊𝒔𝒕 : https://youtu.be/0vHqJBfK4rQ
+2/   

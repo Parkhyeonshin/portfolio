@@ -1,3 +1,6 @@
+$multiplier: 28;
+$bar-width: 6px;
+$bar-height: 10px;
 #header {
     width: 19%;
     min-width: 350px;
@@ -1050,8 +1053,10 @@
                             &:nth-child(2) {
                                 > p {
                                     font-size: 1.6rem;
-                                    color: var(--font-color3);
+                                    // color: var(--font-color3);
+                                    color: #444;
                                     letter-spacing: 0.15rem;
+                                    transition: color 0.6s ease;
                                 }
                             }
                         }
@@ -1066,23 +1071,66 @@
                             }
                         }
                     }
+
                     .music__equal {
-                        width: 85%;
-                        height: 33px;
-                        background: url(../img/music__equal.jpg);
+                        width: 95%;
+                        height: 60px;
                         margin: 0 auto;
-                        transform-origin: 50% 55%;
+                        transform: translate(0, 10%);
                         position: relative;
-                        // &::after {
-                        //     content: "";
-                        //     position: absolute;
-                        //     top: 0;
-                        //     left: 0;
-                        //     width: 100%;
-                        //     height: 100%;
-                        //     background: #0c0c0c;
-                        //     animation: dlatl 2.3s infinite;
-                        // }
+
+                        // background: url(../img/music__equal.jpg);
+
+                        // transform-origin: bottom;
+                        .graphic-equalizer {
+                            width: $multiplier * $bar-width;
+                            height: $multiplier * $bar-height;
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -80%);
+                            // margin-top: -($multiplier * $bar-height)/1.01;
+                            // margin-left: -($multiplier * $bar-width) / 3.6;
+                            .bars {
+                                width: 5px;
+                                // border: 1px solid var(--font-color2);
+                                height: 10px;
+                                position: absolute;
+                                // background: var(--base-border2);
+                                // background: url(../img/equalFree.svg);
+                                background: url(../img/equaltest-g.svg);
+                                // background: url(../img/eqtest2.png);
+                                opacity: 0.8;
+                                bottom: 0;
+                                @for $i from 1 to $multiplier + 1 {
+                                    &:nth-child(#{$i}) {
+                                        // left: ($i * $bar-width) - $bar-width;
+                                        left: ($i * $bar-width) + $bar-width;
+                                    }
+                                }
+                                // &.bars-green {
+                                //     background-position: left bottom;
+                                //     background-position: -7px 0;
+                                // }
+                                &.bars-red {
+                                    // background-position: center bottom;
+                                    // background-position: -7px 0;
+                                    background: url(../img/equaltest-r.svg);
+                                }
+                                &.bars-blue {
+                                    // background-position: right bottom;
+                                    // background-position: -15px 0;
+                                    background: url(../img/equaltest-y.svg);
+                                }
+                                &.bars-white {
+                                    // background-position: right bottom;
+                                    // background-position: -23px 0;
+                                    background: url(../img/equaltest-w.svg);
+                                }
+                            }
+                        }
                     }
                 }
             }

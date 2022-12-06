@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="portfolio" content="width=device-width, initial-scale=1.0" />
         <title>portfolio</title>
+        <link rel="icon" href="./assets/img/logo2.ico" type="image/x-icon" />
         <link rel="stylesheet" href="./assets/css/style.min.css" />
         <script type="text/javascript">
             document.onselectstart = function () {
@@ -214,6 +215,7 @@
                         <span class="bdcir"></span>
                         <span class="bdcir"></span>
                         <span class="bdcir"></span>
+                        <audio id="audio" src="./assets/audio/1. BGM01.mp3" loop="loop" autoplay="autoplay"></audio>
                     </p>
                     <span class="bdcir"></span>
                     <span class="bdcir"></span>
@@ -244,11 +246,41 @@
                             </div>
                         </div>
                         <div class="music__right">
-                            <div class="music__control active">
+                            <div class="music__control">
                                 <div></div>
-                                <div><p>ON</p></div>
+                                <div><p>OFF</p></div>
                             </div>
-                            <div class="music__equal"></div>
+                            <div class="music__equal">
+                                <div class="graphic-equalizer">
+                                    <div class="bars"></div>
+                                    <div class="bars bars-red"></div>
+                                    <div class="bars bars-blue"></div>
+                                    <div class="bars"></div>
+                                    <div class="bars bars-blue"></div>
+                                    <div class="bars bars-blue"></div>
+                                    <div class="bars"></div>
+                                    <div class="bars bars-blue"></div>
+                                    <div class="bars bars-blue"></div>
+                                    <div class="bars"></div>
+                                    <div class="bars bars-blue"></div>
+                                    <div class="bars bars-white"></div>
+                                    <div class="bars bars-white"></div>
+                                    <div class="bars bars-blue"></div>
+                                    <div class="bars bars-blue"></div>
+                                    <div class="bars"></div>
+                                    <div class="bars bars-blue"></div>
+                                    <div class="bars bars-blue"></div>
+                                    <div class="bars"></div>
+                                    <div class="bars bars-red"></div>
+                                    <div class="bars bars-blue"></div>
+                                    <div class="bars bars-white"></div>
+                                    <div class="bars bars-red"></div>
+                                    <div class="bars bars-blue"></div>
+                                    <div class="bars"></div>
+                                    <div class="bars bars-red"></div>
+                                    <div class="bars bars-blue"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -807,9 +839,10 @@
             </div>
         </footer>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
         <script src="./assets/js/mainScript.js"></script>
         <script src="./assets/js/contentScript.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script>
             // 드래그 막기
             window.document.ondragstart = new Function("return false");

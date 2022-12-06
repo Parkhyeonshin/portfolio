@@ -1,3 +1,8 @@
+// 이퀄변수
+let bars = document.querySelectorAll(".bars");
+let barHeight = 1.5;
+let multiplier = 28;
+
 // 시간 출력
 function printTime() {
     const clock = document.querySelector(".currentTime > p");
@@ -39,6 +44,7 @@ document.querySelectorAll(".graphCount").forEach((elem, idx) =>
 );
 
 // 뮤직리스트클릭
+const musicAudio = document.querySelector("#audio");
 document.querySelectorAll(".music__list > ul >li").forEach((e, idx) => {
     e.addEventListener("click", () => {
         console.log(idx);
@@ -49,12 +55,18 @@ document.querySelectorAll(".music__list > ul >li").forEach((e, idx) => {
         switch (idx) {
             case 0:
                 document.querySelector(".music__circle").style.transform = "rotate(-390deg)";
+                AudioStop();
+                AudioPlay(idx);
                 break;
             case 1:
                 document.querySelector(".music__circle").style.transform = "rotate(-360deg)";
+                AudioStop();
+                AudioPlay(idx);
                 break;
             case 2:
                 document.querySelector(".music__circle").style.transform = "rotate(-330deg)";
+                AudioStop();
+                AudioPlay(idx);
                 break;
         }
     });
@@ -64,15 +76,77 @@ document.querySelector(".music__control").addEventListener("click", () => {
     if (document.querySelector(".music__control").classList.contains("active")) {
         document.querySelector(".music__control").classList.remove("active");
         document.querySelector(".music__control > div > p").textContent = "OFF";
+        document.querySelector(".music__control > div > p").style.color = "#444";
+        TweenMax.pauseAll();
+        document.querySelectorAll(".bars").forEach((element) => {
+            element.style.height = "10px";
+        });
+
+        musicAudio.pause();
     } else {
         document.querySelector(".music__control").classList.add("active");
         document.querySelector(".music__control > div > p").textContent = "ON";
+        document.querySelector(".music__control > div > p").style.color = "var(--font-color3)";
+        musicAudio.play();
+        for (let i = 0; i < multiplier; i++) {
+            equalizer(bars[i], 0);
+        }
     }
 });
+
+function AudioPlay(i) {
+    let audioarray = [
+        `./assets/audio/1. BGM01.mp3`,
+        `./assets/audio/2. BGM02.mp3`,
+        `./assets/audio/3. BGM03.mp3`,
+        // `./assets/audio/2. Infraction-Virtual-Reality-pr.mp3`,
+        // `./assets/audio/3. Max Brhon - Cyberpunk [NCS Release].mp3`,
+    ];
+    musicAudio.src = audioarray[i];
+    console.log(audioarray[0]);
+    musicAudio.play();
+    if (!document.querySelector(".music__control").classList.contains("active")) {
+        document.querySelector(".music__control").classList.add("active");
+        document.querySelector(".music__control > div > p").textContent = "ON";
+        document.querySelector(".music__control > div > p").style.color = "var(--font-color3)";
+        musicAudio.play();
+        barHeight = 1.5;
+        for (let i = 0; i < multiplier; i++) {
+            equalizer(bars[i], 0);
+        }
+    }
+    barHeight = 1.5;
+    for (let i = 0; i < multiplier; i++) {
+        equalizer(bars[i], 0);
+    }
+}
+function AudioStop() {
+    musicAudio.pause();
+    musicAudio.currentTime = 0;
+}
+// 이퀄라이저
+// https://codepen.io/joemidi/pen/vLVrBj
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+function equalizer(object, prevHeight) {
+    let j = getRandomInt(1, multiplier);
+    TweenMax.to(object, 0.45, {
+        height: barHeight * j,
+        ease: SteppedEase.config(j - prevHeight),
+        onComplete: equalizer,
+        onCompleteParams: [object, j],
+    });
+}
 
 // 창 로드시
 window.onload = function () {
     printTime(); // 현재시간
+    // musicAudio.muted = true;
+    // musicAudio.play();
+    // musicAudio.muted = false;
+
     // scrollItStart(100, contentframe);
 };
 
