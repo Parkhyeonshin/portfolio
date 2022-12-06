@@ -72,8 +72,9 @@ document.querySelector(".music__control").addEventListener("click", () => {
 
 // 메인리스트 클릭
 const mainlist = document.querySelectorAll(".mainListUL > li");
-let contentframe = document.querySelector(".contentMain");
-let contentframeprev = document.querySelector(".contentMain");
+let contentframe = document.querySelector(".currentIframe");
+let contentframeprev = document.querySelector(".prevIframe");
+console.log(contentframe.src);
 mainlist.forEach((e, i) => {
     e.addEventListener("click", (t) => {
         mainlist.forEach((e) => {
@@ -82,11 +83,11 @@ mainlist.forEach((e, i) => {
         e.classList.add("active");
         if (i == 0) {
             contentframeprev = contentframe;
-            contentframe = document.querySelector(".contentMain");
+            contentframe.src = `http://sshin4882.dothome.co.kr/javascript/effect/searchEffect01.html`;
             scrollIt(100, contentframe, contentframeprev);
         } else if (i == 1) {
             contentframeprev = contentframe;
-            contentframe = document.querySelector(".sitelist__1");
+            contentframe.src = `http://sshin4882.dothome.co.kr/javascript/effect/quizEffect01.html`;
             scrollIt(100, contentframe, contentframeprev);
         }
     });
@@ -113,33 +114,31 @@ contentPrev.addEventListener("click", () => {
 function changeend() {
     setTimeout(() => {
         contentChange.style.transition = "none";
-        contentChange.style.left = 0;
+        contentChange.style.top = 0;
         contentChange.style.opacity = 0;
         contentChange2.style.transition = "none";
-        contentChange2.style.left = 100 + "%";
+        contentChange2.style.top = 100 + "%";
         contentChange2.style.opacity = 0;
-    }, 400);
+    }, 1000);
 }
 function changestart() {
     contentChange.style.opacity = 1;
-    contentChange.style.left = 100 + "%";
-    contentChange.style.transition = "left .4s linear";
-    contentChange2.style.opacity = 0.2;
-    contentChange2.style.left = 0 + "%";
-    contentChange2.style.transition = "left .3s .1s linear";
+    contentChange.style.top = 100 + "%";
+    contentChange.style.transition = "top .4s linear";
+    contentChange2.style.opacity = 0.4;
+    contentChange2.style.top = -20 + "%";
+    contentChange2.style.transition = "top .3s linear";
 }
 function scrollIt(x, content, contentprev) {
     let transform = Math.max(0, Math.min(x, document.querySelector(".contentsWrap").offsetWidth)); //최솟값반환후 그 값과 0하고 max반환인데 굳이 왜?
     console.log(content);
-    content.style.transition = "width .4s linear";
-    content.style.width = transform + "%";
-    content.style.zIndex = "2";
-    contentprev.style.zIndex = "1";
+    content.style.height = transform + "%";
+    // content.style.backgroundSize = "cover";
+    content.style.transition = "height .4s linear";
     setTimeout(() => {
         content.style.transition = "none";
-        contentprev.style.width = 0;
         // document.querySelector(".sitelist__1").style.backgroundSize = "100% 100%";
-    }, 400);
+    }, 700);
     changestart();
     changeend();
 }
@@ -148,8 +147,8 @@ function scrollItStart(x, content) {
     console.log(WrapWidth);
     console.log(WrapHeight);
     // document.querySelector(".contentMain").style.height = x + "%";
-    content.style.width = x + "%";
-    content.style.transition = "width .4s linear";
+    content.style.height = x + "%";
+    content.style.transition = "height .4s linear";
     changestart();
     changeend();
 }
