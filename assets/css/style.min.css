@@ -2292,7 +2292,8 @@ table {
   width: 100%;
   height: 100%;
   background: url(https://i.pinimg.com/originals/e2/ca/51/e2ca511664a6f9cf2c5d9f92328534ae.gif);
-  opacity: 0.3;
+  opacity: 0.2;
+  pointer-events: none;
 }
 #main .main__right .Mright__mid > div > .contentsWrap > .contentChange {
   position: absolute;
