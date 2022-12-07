@@ -14,7 +14,7 @@ $bar-height: 10px;
         @include bordertop;
         position: relative;
         opacity: 0;
-        animation: Startheadertop 0.6s forwards;
+        animation: Startheadertop 0.6s $Alldelay forwards;
         > span {
             &:nth-of-type(1) {
                 left: auto;
@@ -101,7 +101,7 @@ $bar-height: 10px;
                         }
                         &:nth-child(n + 2) {
                             animation-duration: 5s;
-                            animation-delay: 2s;
+                            animation-delay: $Alldelay + 2s;
                             animation-timing-function: ease;
                             animation-iteration-count: infinite;
                         }
@@ -501,7 +501,7 @@ $bar-height: 10px;
         // @include borderbottom;
         position: relative;
         opacity: 0;
-        animation: Startheadermid 0.6s 0.6s forwards;
+        animation: Startheadermid 0.6s $Alldelay + 0.6s forwards;
 
         > div {
             &:nth-of-type(1) {
@@ -582,7 +582,7 @@ $bar-height: 10px;
                                 border-top: 8px solid var(--font-color3);
                                 border-left: 5px solid transparent;
                                 border-right: 5px solid transparent;
-                                animation: techgraphtarget 3s 1s infinite ease-out;
+                                animation: techgraphtarget 3s $Alldelay + 12s infinite cubic-bezier(0.88, 0.65, 0.22, 0.6);
                             }
                             > div {
                                 position: absolute;
@@ -593,7 +593,7 @@ $bar-height: 10px;
                                 background: var(--font-color2);
                                 @include borderleft2;
                                 border-color: var(--font-color3);
-                                animation: techgraphBar 3s 1s infinite ease-out;
+                                animation: techgraphBar 3s $Alldelay + 12s infinite cubic-bezier(0.17, 0.81, 0.59, 0.65);
                             }
                         }
                         > span {
@@ -731,7 +731,7 @@ $bar-height: 10px;
                             border-radius: 2px;
                             &.graphBar_js {
                                 width: 0%;
-                                animation: graphjs 1.5s ease-out forwards;
+                                animation: graphjs 1.5s $Alldelay + 6s ease-out forwards;
                                 &::after {
                                     content: "";
                                     position: absolute;
@@ -748,12 +748,12 @@ $bar-height: 10px;
                                     right: -15px;
                                     font-size: 1rem;
                                     opacity: 0;
-                                    animation: graphjsCount 1.5s forwards;
+                                    animation: graphjsCount 1.5s $Alldelay + 6s forwards;
                                 }
                             }
                             &.graphBar_css {
                                 width: 0%;
-                                animation: graphcss 1.5s 1s ease-out forwards;
+                                animation: graphcss 1.5s $Alldelay + 7s ease-out forwards;
                                 &::after {
                                     content: "";
                                     position: absolute;
@@ -768,12 +768,12 @@ $bar-height: 10px;
                                     right: -15px;
                                     font-size: 1rem;
                                     opacity: 0;
-                                    animation: graphcssCount 1.5s 1s forwards;
+                                    animation: graphcssCount 1.5s $Alldelay + 7s forwards;
                                 }
                             }
                             &.graphBar_php {
                                 width: 0%;
-                                animation: graphphp 1.5s 2s ease-out forwards;
+                                animation: graphphp 1.5s $Alldelay + 8s ease-out forwards;
                                 &::after {
                                     content: "";
                                     position: absolute;
@@ -788,12 +788,12 @@ $bar-height: 10px;
                                     right: -15px;
                                     font-size: 1rem;
                                     opacity: 0;
-                                    animation: graphphpCount 1.5s 2s forwards;
+                                    animation: graphphpCount 1.5s $Alldelay + 8s forwards;
                                 }
                             }
                             &.graphBar_react {
                                 width: 0%;
-                                animation: graphreact 1.5s 3s ease-out forwards;
+                                animation: graphreact 1.5s $Alldelay + 9s ease-out forwards;
                                 &::after {
                                     content: "";
                                     position: absolute;
@@ -808,12 +808,12 @@ $bar-height: 10px;
                                     right: -15px;
                                     font-size: 1rem;
                                     opacity: 0;
-                                    animation: graphreactCount 1.5s 3s forwards;
+                                    animation: graphreactCount 1.5s $Alldelay + 9s forwards;
                                 }
                             }
                             &.graphBar_vue {
                                 width: 0%;
-                                animation: graphvue 1.5s 4s ease-out forwards;
+                                animation: graphvue 1.5s $Alldelay + 10s ease-out forwards;
                                 &::after {
                                     content: "";
                                     position: absolute;
@@ -828,7 +828,7 @@ $bar-height: 10px;
                                     right: -15px;
                                     font-size: 1rem;
                                     opacity: 0;
-                                    animation: graphvueCount 1.5s 4s forwards;
+                                    animation: graphvueCount 1.5s $Alldelay + 10s forwards;
                                 }
                             }
                         }

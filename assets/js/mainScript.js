@@ -38,11 +38,13 @@ function countUp(numberElement) {
     }
     step();
 }
-document.querySelectorAll(".graphCount").forEach((elem, idx) =>
-    setTimeout(() => {
-        countUp(elem);
-    }, idx * 1000 + 200)
-);
+function graphCountfunc() {
+    document.querySelectorAll(".graphCount").forEach((elem, idx) =>
+        setTimeout(() => {
+            countUp(elem);
+        }, idx * 1000 + 200)
+    );
+}
 
 // 뮤직리스트클릭
 const musicAudio = document.querySelector("#audio");
@@ -141,12 +143,17 @@ function equalizer(object, prevHeight) {
 // 창 로드시
 window.onload = function () {
     printTime(); // 현재시간
+    setTimeout(() => {
+        graphCountfunc();
+    }, 6000);
     // musicAudio.muted = true;
     // musicAudio.play();
     // musicAudio.muted = false;
 
     // scrollItStart(100, contentframe);
 };
+
+
 
 // 나는 너무 멀리온거야 ~~~
 // // 메인리스트 클릭

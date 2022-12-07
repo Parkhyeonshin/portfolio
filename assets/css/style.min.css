@@ -4,6 +4,8 @@ html {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  position: relative;
+  cursor: none;
 }
 
 body {
@@ -15,6 +17,7 @@ body {
   width: 100%;
   font-family: var(--font-main);
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 :root {
@@ -196,6 +199,29 @@ table {
   animation: bdcirflash 2s infinite;
 }
 
+#cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  pointer-events: none;
+}
+#cursor::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  background: url(../img/cursor_normal.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 9999999;
+  pointer-events: none;
+}
+
 @font-face {
   font-family: "Kostar";
   font-weight: normal;
@@ -262,7 +288,7 @@ table {
   border-top: 1px solid var(--base-border);
   position: relative;
   opacity: 0;
-  animation: Startheadertop 0.6s forwards;
+  animation: Startheadertop 0.6s 0s forwards;
 }
 #header .profileWrap > span:nth-of-type(1) {
   left: auto;
@@ -792,7 +818,7 @@ table {
   border-top: 8px solid var(--font-color3);
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  animation: techgraphtarget 3s 1s infinite ease-out;
+  animation: techgraphtarget 3s 12s infinite cubic-bezier(0.88, 0.65, 0.22, 0.6);
 }
 #header .headerContWrap > div:nth-of-type(2) > div:nth-child(1) > div > div {
   position: absolute;
@@ -803,7 +829,7 @@ table {
   background: var(--font-color2);
   border-left: 1px solid var(--base-border2);
   border-color: var(--font-color3);
-  animation: techgraphBar 3s 1s infinite ease-out;
+  animation: techgraphBar 3s 12s infinite cubic-bezier(0.17, 0.81, 0.59, 0.65);
 }
 #header .headerContWrap > div:nth-of-type(2) > div:nth-child(1) > span:nth-of-type(2) {
   left: auto;
@@ -910,7 +936,7 @@ table {
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_js {
   width: 0%;
-  animation: graphjs 1.5s ease-out forwards;
+  animation: graphjs 1.5s 6s ease-out forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_js::after {
   content: "";
@@ -928,11 +954,11 @@ table {
   right: -15px;
   font-size: 1rem;
   opacity: 0;
-  animation: graphjsCount 1.5s forwards;
+  animation: graphjsCount 1.5s 6s forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_css {
   width: 0%;
-  animation: graphcss 1.5s 1s ease-out forwards;
+  animation: graphcss 1.5s 7s ease-out forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_css::after {
   content: "";
@@ -948,11 +974,11 @@ table {
   right: -15px;
   font-size: 1rem;
   opacity: 0;
-  animation: graphcssCount 1.5s 1s forwards;
+  animation: graphcssCount 1.5s 7s forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_php {
   width: 0%;
-  animation: graphphp 1.5s 2s ease-out forwards;
+  animation: graphphp 1.5s 8s ease-out forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_php::after {
   content: "";
@@ -968,11 +994,11 @@ table {
   right: -15px;
   font-size: 1rem;
   opacity: 0;
-  animation: graphphpCount 1.5s 2s forwards;
+  animation: graphphpCount 1.5s 8s forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_react {
   width: 0%;
-  animation: graphreact 1.5s 3s ease-out forwards;
+  animation: graphreact 1.5s 9s ease-out forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_react::after {
   content: "";
@@ -988,11 +1014,11 @@ table {
   right: -15px;
   font-size: 1rem;
   opacity: 0;
-  animation: graphreactCount 1.5s 3s forwards;
+  animation: graphreactCount 1.5s 9s forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_vue {
   width: 0%;
-  animation: graphvue 1.5s 4s ease-out forwards;
+  animation: graphvue 1.5s 10s ease-out forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_vue::after {
   content: "";
@@ -1008,7 +1034,7 @@ table {
   right: -15px;
   font-size: 1rem;
   opacity: 0;
-  animation: graphvueCount 1.5s 4s forwards;
+  animation: graphvueCount 1.5s 10s forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div > span:nth-of-type(2) {
   top: auto;
@@ -1581,7 +1607,7 @@ table {
   width: 140%;
   height: 2px;
   border-radius: 50%;
-  animation: contentcircle__stick 50s linear infinite;
+  animation: contentcircle__stick 50s 0s linear infinite;
 }
 #main .main__left .Mleft__top > div:nth-of-type(2), #main .main__left .Mleft__top > div:nth-of-type(3) {
   font-size: 0.2rem;
@@ -1961,8 +1987,7 @@ table {
   font-size: 0.8rem;
   text-transform: uppercase;
   font-family: var(--font-main6);
-  cursor: pointer;
-  animation: ListName 1.6s forwards;
+  animation: ListName 1.6s 0s forwards cubic-bezier(0.01, 0.92, 0.32, 0.93);
 }
 #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL li:hover, #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL li.active {
   color: var(--font-color5);
@@ -1984,8 +2009,15 @@ table {
 }
 #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL2 {
   width: 100%;
+  height: 200%;
   transform: translateX(20%);
   transition: transform 0.15s linear;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL2::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }
 #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL2.active {
   transform: translateX(-100%);
@@ -2005,13 +2037,15 @@ table {
   font-size: 0.8rem;
   text-transform: uppercase;
   font-family: var(--font-main6);
-  cursor: pointer;
 }
 #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL2 li:hover, #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL2 li.active {
-  color: var(--font-color5);
-  border-left: 4px solid var(--font-color5);
-  border-right: 4px solid var(--font-color5);
-  transition: all 0.5s ease;
+  color: var(--font-color4);
+  transition: all 0.2s ease;
+}
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL2 li.active {
+  text-shadow: 0px 0px 3px var(--font-color5);
+  border-left: 4px solid var(--font-color4);
+  border-right: 4px solid var(--font-color4);
 }
 #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL2 li:nth-of-type(1) {
   margin-top: 10px;
@@ -2058,9 +2092,12 @@ table {
   color: var(--font-color2);
   font-family: var(--font-main3);
 }
-#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(3) > div > div:nth-of-type(2) > p:hover {
-  cursor: pointer;
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(3) > div > div:nth-of-type(2) > p:nth-child(2):hover {
   color: var(--font-color5);
+}
+#main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(3) > div > div:nth-of-type(2) > p:last-child, #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(3) > div > div:nth-of-type(2) > p:first-child {
+  cursor: default;
+  color: var(--font-color);
 }
 #main .main__left .Mleft__mid > div:nth-of-type(4) > .bdcir:nth-of-type(1) {
   left: auto;
@@ -2178,7 +2215,7 @@ table {
   position: relative;
   margin: 0 auto;
   margin-top: -10px;
-  animation: spinner-boxScale 6s infinite;
+  animation: spinner-boxScale 6s 0s infinite;
 }
 #main .main__left .Mleft__btm .spinner-box .leo {
   position: absolute;
@@ -2192,27 +2229,27 @@ table {
   height: 220%;
   border: 1px solid var(--font-color5);
   box-shadow: inset 0px 0px 13px var(--base-border);
-  animation: spin3D 5s linear 0.2s infinite;
+  animation: spin3D 5s 0.2s linear infinite;
 }
 #main .main__left .Mleft__btm .spinner-box .green-orbit {
   width: 180%;
   height: 180%;
   border: 1px solid var(--font-color);
-  animation: spin3D 6s linear 0s infinite;
+  animation: spin3D 6s 0s linear infinite;
 }
 #main .main__left .Mleft__btm .spinner-box .red-orbit {
   width: 150%;
   height: 150%;
   border: 1px solid var(--font-color2);
   box-shadow: inset 0px 0px 6px var(--font-color3);
-  animation: spin3D 4s linear 0s infinite;
+  animation: spin3D 4s 0s linear infinite;
 }
 #main .main__left .Mleft__btm .spinner-box .white-orbit {
   width: 100%;
   height: 100%;
   border: 2px solid var(--font-color5);
   box-shadow: inset 0px 0px 6px var(--font-color);
-  animation: spin3D 7s linear 0s infinite;
+  animation: spin3D 7s 0s linear infinite;
 }
 #main .main__left .Mleft__btm .spinner-box .w1 {
   transform: rotate3D(1, 1, 1, 90deg);
@@ -2535,11 +2572,11 @@ table {
   left: 0;
   width: 0%;
   height: 100%;
-  background: url(https://i.pinimg.com/564x/3f/ac/5b/3fac5b57a08cd4ec769b02d99cce39c3.jpg);
   background: url(https://i.pinimg.com/564x/32/03/cb/3203cba48db78e6804764de23e741375.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  animation: contentMainMove 120s 0s linear infinite;
 }
 #main .main__right .Mright__mid > div > .contentsWrap > .ContDescWrap > .contentMain.active {
   width: 100%;
@@ -2742,7 +2779,6 @@ table {
   background-position: center center;
   transform: scale(0.6);
   transition: all 0.3s ease;
-  cursor: pointer;
 }
 #main .main__btm .mainControlWrap .contentNext {
   width: 38%;
@@ -2759,7 +2795,6 @@ table {
   background-position: center center;
   transform: scale(0.6);
   transition: all 0.3s ease;
-  cursor: pointer;
 }
 #main .main__btm .btmLogoWrap {
   width: 40%;
@@ -3240,7 +3275,7 @@ table {
   border-width: 1px;
   border-style: solid;
   position: absolute;
-  animation: wave 3s infinite alternate;
+  animation: wave 3s 0s infinite alternate;
   transform: rotate(-84.5deg);
 }
 #footer > .footer__mid > div:nth-of-type(4) .wave:nth-child(1) {
@@ -3248,7 +3283,7 @@ table {
   height: 11.4125rem;
   bottom: -5.1875rem;
   left: 0.29375rem;
-  animation-delay: 75ms;
+  animation-delay: 0.075s;
   border-color: transparent transparent #66818a #66818a;
   border-radius: 11.4125rem;
 }
@@ -3257,7 +3292,7 @@ table {
   height: 10.825rem;
   bottom: -4.9204545455rem;
   left: 0.5875rem;
-  animation-delay: 150ms;
+  animation-delay: 0.15s;
   border-color: transparent transparent rgba(102, 129, 138, 0.9047619048) rgba(102, 129, 138, 0.9047619048);
   border-radius: 10.825rem;
 }
@@ -3266,7 +3301,7 @@ table {
   height: 10.2375rem;
   bottom: -4.6534090909rem;
   left: 0.88125rem;
-  animation-delay: 225ms;
+  animation-delay: 0.225s;
   border-color: transparent transparent rgba(102, 129, 138, 0.8571428571) rgba(102, 129, 138, 0.8571428571);
   border-radius: 10.2375rem;
 }
@@ -3275,7 +3310,7 @@ table {
   height: 9.65rem;
   bottom: -4.3863636364rem;
   left: 1.175rem;
-  animation-delay: 300ms;
+  animation-delay: 0.3s;
   border-color: transparent transparent rgba(102, 129, 138, 0.8095238095) rgba(102, 129, 138, 0.8095238095);
   border-radius: 9.65rem;
 }
@@ -3284,7 +3319,7 @@ table {
   height: 9.0625rem;
   bottom: -4.1193181818rem;
   left: 1.46875rem;
-  animation-delay: 375ms;
+  animation-delay: 0.375s;
   border-color: transparent transparent rgba(102, 129, 138, 0.7619047619) rgba(102, 129, 138, 0.7619047619);
   border-radius: 9.0625rem;
 }
@@ -3293,7 +3328,7 @@ table {
   height: 8.475rem;
   bottom: -3.8522727273rem;
   left: 1.7625rem;
-  animation-delay: 450ms;
+  animation-delay: 0.45s;
   border-color: transparent transparent rgba(102, 129, 138, 0.7142857143) rgba(102, 129, 138, 0.7142857143);
   border-radius: 8.475rem;
 }
@@ -3302,7 +3337,7 @@ table {
   height: 7.8875rem;
   bottom: -3.5852272727rem;
   left: 2.05625rem;
-  animation-delay: 525ms;
+  animation-delay: 0.525s;
   border-color: transparent transparent rgba(102, 129, 138, 0.6666666667) rgba(102, 129, 138, 0.6666666667);
   border-radius: 7.8875rem;
 }
@@ -3311,7 +3346,7 @@ table {
   height: 7.3rem;
   bottom: -3.3181818182rem;
   left: 2.35rem;
-  animation-delay: 600ms;
+  animation-delay: 0.6s;
   border-color: transparent transparent rgba(102, 129, 138, 0.619047619) rgba(102, 129, 138, 0.619047619);
   border-radius: 7.3rem;
 }
@@ -3320,7 +3355,7 @@ table {
   height: 6.7125rem;
   bottom: -3.0511363636rem;
   left: 2.64375rem;
-  animation-delay: 675ms;
+  animation-delay: 0.675s;
   border-color: transparent transparent rgba(102, 129, 138, 0.5714285714) rgba(102, 129, 138, 0.5714285714);
   border-radius: 6.7125rem;
 }
@@ -3329,7 +3364,7 @@ table {
   height: 6.125rem;
   bottom: -2.7840909091rem;
   left: 2.9375rem;
-  animation-delay: 750ms;
+  animation-delay: 0.75s;
   border-color: transparent transparent rgba(102, 129, 138, 0.5238095238) rgba(102, 129, 138, 0.5238095238);
   border-radius: 6.125rem;
 }
@@ -3338,7 +3373,7 @@ table {
   height: 5.5375rem;
   bottom: -2.5170454545rem;
   left: 3.23125rem;
-  animation-delay: 825ms;
+  animation-delay: 0.825s;
   border-color: transparent transparent rgba(102, 129, 138, 0.4761904762) rgba(102, 129, 138, 0.4761904762);
   border-radius: 5.5375rem;
 }
@@ -3347,7 +3382,7 @@ table {
   height: 4.95rem;
   bottom: -2.25rem;
   left: 3.525rem;
-  animation-delay: 900ms;
+  animation-delay: 0.9s;
   border-color: transparent transparent rgba(102, 129, 138, 0.4285714286) rgba(102, 129, 138, 0.4285714286);
   border-radius: 4.95rem;
 }
@@ -3356,7 +3391,7 @@ table {
   height: 4.3625rem;
   bottom: -1.9829545455rem;
   left: 3.81875rem;
-  animation-delay: 975ms;
+  animation-delay: 0.975s;
   border-color: transparent transparent rgba(102, 129, 138, 0.380952381) rgba(102, 129, 138, 0.380952381);
   border-radius: 4.3625rem;
 }
@@ -3365,7 +3400,7 @@ table {
   height: 3.775rem;
   bottom: -1.7159090909rem;
   left: 4.1125rem;
-  animation-delay: 1050ms;
+  animation-delay: 1.05s;
   border-color: transparent transparent rgba(102, 129, 138, 0.3333333333) rgba(102, 129, 138, 0.3333333333);
   border-radius: 3.775rem;
 }
@@ -3374,7 +3409,7 @@ table {
   height: 3.1875rem;
   bottom: -1.4488636364rem;
   left: 4.40625rem;
-  animation-delay: 1125ms;
+  animation-delay: 1.125s;
   border-color: transparent transparent rgba(102, 129, 138, 0.2857142857) rgba(102, 129, 138, 0.2857142857);
   border-radius: 3.1875rem;
 }
@@ -3383,7 +3418,7 @@ table {
   height: 2.6rem;
   bottom: -1.1818181818rem;
   left: 4.7rem;
-  animation-delay: 1200ms;
+  animation-delay: 1.2s;
   border-color: transparent transparent rgba(102, 129, 138, 0.2380952381) rgba(102, 129, 138, 0.2380952381);
   border-radius: 2.6rem;
 }
@@ -3392,7 +3427,7 @@ table {
   height: 2.0125rem;
   bottom: -0.9147727273rem;
   left: 4.99375rem;
-  animation-delay: 1275ms;
+  animation-delay: 1.275s;
   border-color: transparent transparent rgba(102, 129, 138, 0.1904761905) rgba(102, 129, 138, 0.1904761905);
   border-radius: 2.0125rem;
 }
@@ -3401,7 +3436,7 @@ table {
   height: 1.425rem;
   bottom: -0.6477272727rem;
   left: 5.2875rem;
-  animation-delay: 1350ms;
+  animation-delay: 1.35s;
   border-color: transparent transparent rgba(102, 129, 138, 0.1428571429) rgba(102, 129, 138, 0.1428571429);
   border-radius: 1.425rem;
 }
@@ -3410,7 +3445,7 @@ table {
   height: 0.8375rem;
   bottom: -0.3806818182rem;
   left: 5.58125rem;
-  animation-delay: 1425ms;
+  animation-delay: 1.425s;
   border-color: transparent transparent rgba(102, 129, 138, 0.0952380952) rgba(102, 129, 138, 0.0952380952);
   border-radius: 0.8375rem;
 }
@@ -3419,7 +3454,7 @@ table {
   height: 0.25rem;
   bottom: -0.1136363636rem;
   left: 5.875rem;
-  animation-delay: 1500ms;
+  animation-delay: 1.5s;
   border-color: transparent transparent rgba(102, 129, 138, 0.0476190476) rgba(102, 129, 138, 0.0476190476);
   border-radius: 0.25rem;
 }
@@ -3520,7 +3555,7 @@ table {
 #footer > .footer__mid > div:nth-of-type(7) > figure {
   width: 100%;
   height: 100%;
-  animation: cuberotation 6s linear infinite;
+  animation: cuberotation 6s 0s linear infinite;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -3544,31 +3579,31 @@ table {
   box-sizing: border-box;
   vertical-align: top;
   border-radius: 4px;
-  animation: cubeborder 6s ease infinite;
+  animation: cubeborder 6s 0s ease infinite;
 }
 #footer > .footer__mid > div:nth-of-type(7) > figure > .face.front {
   transform: translate3d(0, 0, 20px);
-  animation: cubefront 6s ease-in-out infinite;
+  animation: cubefront 6s 0s ease-in-out infinite;
 }
 #footer > .footer__mid > div:nth-of-type(7) > figure > .face.back {
   transform: rotateY(180deg) translate3d(0, 0, 20px);
-  animation: cubeback 6s ease-in-out infinite;
+  animation: cubeback 6s 0s ease-in-out infinite;
 }
 #footer > .footer__mid > div:nth-of-type(7) > figure > .face.left {
   transform: rotateY(-90deg) translate3d(0, 0, 20px);
-  animation: cubeleft 6s ease-in-out infinite;
+  animation: cubeleft 6s 0s ease-in-out infinite;
 }
 #footer > .footer__mid > div:nth-of-type(7) > figure > .face.right {
   transform: rotateY(90deg) translate3d(0, 0, 20px);
-  animation: cuberight 6s ease-in-out infinite;
+  animation: cuberight 6s 0s ease-in-out infinite;
 }
 #footer > .footer__mid > div:nth-of-type(7) > figure > .face.top {
   transform: rotateX(90deg) translate3d(0, 0, 20px);
-  animation: cubetop 6s ease-in-out infinite;
+  animation: cubetop 6s 0s ease-in-out infinite;
 }
 #footer > .footer__mid > div:nth-of-type(7) > figure > .face.bottom {
   transform: rotateX(-90deg) translate3d(0, 0, 20px);
-  animation: cubebottom 6s ease-in-out infinite;
+  animation: cubebottom 6s 0s ease-in-out infinite;
 }
 #footer > .footer__btm {
   position: relative;
@@ -3680,7 +3715,7 @@ table {
   border: 1px dotted var(--base-border);
   border: 1px dotted var(--font-color);
   border-radius: 50%;
-  animation: radarborderscale 10s ease-in-out infinite;
+  animation: radarborderscale 10s 0s ease-in-out infinite;
   box-shadow: 0 0 30px rgb(0, 0, 0) inset;
 }
 #footer > .footer__btm > div:nth-of-type(2) > .radarborder.radarborder1 {
@@ -4158,6 +4193,23 @@ table {
   100% {
     width: 95%;
     opacity: 1;
+  }
+}
+@keyframes contentMainMove {
+  to {
+    background-position: center center;
+  }
+  25% {
+    background-position: center 65%;
+  }
+  50% {
+    background-position: center center;
+  }
+  75% {
+    background-position: center 35%;
+  }
+  from {
+    background-position: center center;
   }
 }
 @keyframes spin3D {

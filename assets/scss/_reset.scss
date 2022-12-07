@@ -29,7 +29,7 @@
     --font-main6: "Kostar";
 }
 // $변수?
-$Alldelay: 3s;
+$Alldelay: 0s;
 
 // border-box 초기화
 *,
@@ -200,5 +200,30 @@ table {
     height: 3px;
     // border-radius: 5px;
     background: var(--base-border-cir);
-    animation: bdcirflash 2s infinite;
+    animation: bdcirflash $Alldelay + 2s infinite;
+}
+
+// cursor
+#cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    pointer-events: none;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 35px;
+        height: 35px;
+        background: url(../img/cursor_normal.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        z-index: 9999999;
+        pointer-events: none;
+    }
 }

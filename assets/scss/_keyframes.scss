@@ -300,7 +300,23 @@
         opacity: 1;
     }
 }
-
+@keyframes contentMainMove {
+    to {
+        background-position: center center;
+    }
+    25% {
+        background-position: center 65%;
+    }
+    50% {
+        background-position: center center;
+    }
+    75% {
+        background-position: center 35%;
+    }
+    from {
+        background-position: center center;
+    }
+}
 // main__btm
 @keyframes spin3D {
     from {

@@ -352,7 +352,7 @@
                     border-width: 1px;
                     border-style: solid;
                     position: absolute;
-                    animation: wave 3s infinite alternate;
+                    animation: wave 3s $Alldelay infinite alternate;
                     transform: rotate(-84.5deg);
                     // fun to customize, guaranteed. act now.
                     $a: 1; // alpha
@@ -374,7 +374,7 @@
                             height: $w;
                             bottom: $w/-2.2;
                             left: ($max-w - $w) / 2;
-                            animation-delay: $i * ($speed / $f);
+                            animation-delay: $Alldelay + ($i * ($speed / $f));
                             border-color: transparent transparent rgba($c, $a) rgba($c, $a);
                             border-radius: $w;
                         }
@@ -477,7 +477,7 @@
                     width: 100%;
                     height: 100%;
                     // background: #ccc;
-                    animation: cuberotation 6s linear infinite;
+                    animation: cuberotation 6s $Alldelay linear infinite;
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -499,31 +499,31 @@
                             box-sizing: border-box;
                             vertical-align: top;
                             border-radius: 4px;
-                            animation: cubeborder 6s ease infinite;
+                            animation: cubeborder 6s $Alldelay ease infinite;
                         }
                         &.front {
                             transform: translate3d(0, 0, 20px);
-                            animation: cubefront 6s ease-in-out infinite;
+                            animation: cubefront 6s $Alldelay ease-in-out infinite;
                         }
                         &.back {
                             transform: rotateY(180deg) translate3d(0, 0, 20px);
-                            animation: cubeback 6s ease-in-out infinite;
+                            animation: cubeback 6s $Alldelay ease-in-out infinite;
                         }
                         &.left {
                             transform: rotateY(-90deg) translate3d(0, 0, 20px);
-                            animation: cubeleft 6s ease-in-out infinite;
+                            animation: cubeleft 6s $Alldelay ease-in-out infinite;
                         }
                         &.right {
                             transform: rotateY(90deg) translate3d(0, 0, 20px);
-                            animation: cuberight 6s ease-in-out infinite;
+                            animation: cuberight 6s $Alldelay ease-in-out infinite;
                         }
                         &.top {
                             transform: rotateX(90deg) translate3d(0, 0, 20px);
-                            animation: cubetop 6s ease-in-out infinite;
+                            animation: cubetop 6s $Alldelay ease-in-out infinite;
                         }
                         &.bottom {
                             transform: rotateX(-90deg) translate3d(0, 0, 20px);
-                            animation: cubebottom 6s ease-in-out infinite;
+                            animation: cubebottom 6s $Alldelay ease-in-out infinite;
                         }
                     }
                 }
@@ -552,7 +552,7 @@
                     height: 1px;
                     opacity: 0;
                     background: var(--base-border2);
-                    animation: borderflash 4s 10s ease infinite;
+                    animation: borderflash 4s $Alldelay + 10s ease infinite;
                 }
                 &::after {
                     content: "";
@@ -563,7 +563,7 @@
                     height: 1px;
                     opacity: 0;
                     background: var(--base-border2);
-                    animation: borderflash 4s 10s ease infinite;
+                    animation: borderflash 4s $Alldelay + 10s ease infinite;
                 }
                 > div {
                     padding: 5px 0;
@@ -574,7 +574,7 @@
                             text-align: center;
                             @include emdeco;
                             padding: 4px 10px;
-                            animation: footerdescflash 4s 10s ease infinite;
+                            animation: footerdescflash 4s $Alldelay + 10s ease infinite;
                         }
                     }
                     &:nth-of-type(2) {
@@ -643,7 +643,7 @@
                     border: 1px dotted var(--base-border);
                     border: 1px dotted var(--font-color);
                     border-radius: 50%;
-                    animation: radarborderscale 10s ease-in-out infinite;
+                    animation: radarborderscale 10s $Alldelay ease-in-out infinite;
                     box-shadow: 0 0 30px rgba(0, 0, 0, 1) inset;
                     &.radarborder1 {
                         width: 0%;
@@ -652,22 +652,22 @@
                     &.radarborder2 {
                         width: 0%;
                         height: 0%;
-                        animation-delay: 2s;
+                        animation-delay: $Alldelay + 2s;
                     }
                     &.radarborder3 {
                         width: 0%;
                         height: 0%;
-                        animation-delay: 4s;
+                        animation-delay: $Alldelay + 4s;
                     }
                     &.radarborder4 {
                         width: 0%;
                         height: 0%;
-                        animation-delay: 6s;
+                        animation-delay: $Alldelay + 6s;
                     }
                     &.radarborder5 {
                         width: 0%;
                         height: 0%;
-                        animation-delay: 8s;
+                        animation-delay: $Alldelay + 8s;
                     }
                 }
                 > .blip {
@@ -690,29 +690,29 @@
                     &.blip-1 {
                         bottom: 40px;
                         right: 87px;
-                        animation-delay: 3.2s;
+                        animation-delay: $Alldelay + 3.2s;
                     }
                     &.blip-2 {
                         bottom: 86px;
                         left: 35px;
-                        animation-delay: 4.8s;
+                        animation-delay: $Alldelay + 4.8s;
                     }
 
                     &.blip-3 {
                         bottom: 67px;
                         left: 62px;
-                        animation-delay: 6s;
+                        animation-delay: $Alldelay + 6s;
                     }
 
                     &.blip-4 {
                         top: 40px;
                         right: 50px;
-                        animation-delay: 4.8s;
+                        animation-delay: $Alldelay + 4.8s;
                     }
                     &.blip-5 {
                         bottom: 15px;
                         right: 35px;
-                        animation-delay: 8.7s;
+                        animation-delay: $Alldelay + 8.7s;
                     }
                 }
 
@@ -737,7 +737,7 @@
                     transform-origin: right bottom;
 
                     /* Animation properties */
-                    animation-delay: 0s;
+                    animation-delay: $Alldelay + 0s;
                     animation-timing-function: linear;
                     animation-duration: 8s;
                     animation-fill-mode: none;

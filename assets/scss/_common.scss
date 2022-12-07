@@ -3,6 +3,8 @@ html {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    position: relative;
+    cursor: none;
 }
 body {
     background: url(../img/background.jpg);
@@ -13,4 +15,5 @@ body {
     width: 100%;
     font-family: var(--font-main);
     overflow-x: hidden;
+    overflow-y: hidden;
 }
