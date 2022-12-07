@@ -45,12 +45,15 @@ body {
 *,
 *::before,
 *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 html {
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
@@ -112,6 +115,9 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
   border-radius: 0;
   font-size: var(--font-size);
 }
@@ -187,8 +193,7 @@ table {
   width: 3px;
   height: 3px;
   background: var(--base-border-cir);
-  -webkit-animation: bdcirflash 2s infinite;
-          animation: bdcirflash 2s infinite;
+  animation: bdcirflash 2s infinite;
 }
 
 @font-face {
@@ -257,8 +262,7 @@ table {
   border-top: 1px solid var(--base-border);
   position: relative;
   opacity: 0;
-  -webkit-animation: Startheadertop 0.6s forwards;
-          animation: Startheadertop 0.6s forwards;
+  animation: Startheadertop 0.6s forwards;
 }
 #header .profileWrap > span:nth-of-type(1) {
   left: auto;
@@ -325,7 +329,6 @@ table {
 #header .profileWrap .logoWrap .logo > .glitch > .glitch__img {
   width: 100%;
   height: 100%;
-  background-image: url(https://cdn.pixabay.com/photo/2022/04/02/20/22/robot-7107688_960_720.png);
   background-image: url("../img/logo2.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -340,26 +343,20 @@ table {
   opacity: 0;
 }
 #header .profileWrap .logoWrap .logo > .glitch > .glitch__img:nth-child(n+2) {
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
 }
 #header .profileWrap .logoWrap .logo > .glitch > .glitch__img:nth-child(2) {
   background-color: transparent;
   background-blend-mode: difference;
-  -webkit-animation-name: glitch-anim-1;
-          animation-name: glitch-anim-1;
+  animation-name: glitch-anim-1;
 }
 #header .profileWrap .logoWrap .logo > .glitch > .glitch__img:nth-child(3) {
   background-color: transparent;
   background-blend-mode: difference;
-  -webkit-animation-name: glitch-anim-2;
-          animation-name: glitch-anim-2;
+  animation-name: glitch-anim-2;
 }
 #header .profileWrap .logoWrap .logo > .glitch > .glitch__img:nth-child(4) {
   width: 60%;
@@ -367,15 +364,13 @@ table {
   margin: 0 auto;
   background-color: var(--font-color3);
   background-blend-mode: overlay;
-  -webkit-animation-name: glitch-anim-3;
-          animation-name: glitch-anim-3;
+  animation-name: glitch-anim-3;
 }
 #header .profileWrap .logoWrap .logo > .glitch > .glitch__img:nth-child(5) {
   width: 80%;
   background-color: transparent;
   background-blend-mode: color;
-  -webkit-animation-name: glitch-anim-flash;
-          animation-name: glitch-anim-flash;
+  animation-name: glitch-anim-flash;
 }
 #header .profileWrap .logoWrap .logo > span:nth-last-of-type(1) {
   height: 20%;
@@ -619,8 +614,6 @@ table {
 }
 #header .profileWrap .infoWrap .headerInfoDesc > div:nth-of-type(1) {
   height: 14%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   position: relative;
   border-bottom: 1px solid var(--base-border);
@@ -714,8 +707,7 @@ table {
   border-top: 1px solid var(--base-border);
   position: relative;
   opacity: 0;
-  -webkit-animation: Startheadermid 0.6s 0.6s forwards;
-          animation: Startheadermid 0.6s 0.6s forwards;
+  animation: Startheadermid 0.6s 0.6s forwards;
 }
 #header .headerContWrap > div:nth-of-type(1) {
   padding: 10px 7px;
@@ -800,8 +792,7 @@ table {
   border-top: 8px solid var(--font-color3);
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  -webkit-animation: techgraphtarget 3s 1s infinite ease-out;
-          animation: techgraphtarget 3s 1s infinite ease-out;
+  animation: techgraphtarget 3s 1s infinite ease-out;
 }
 #header .headerContWrap > div:nth-of-type(2) > div:nth-child(1) > div > div {
   position: absolute;
@@ -812,8 +803,7 @@ table {
   background: var(--font-color2);
   border-left: 1px solid var(--base-border2);
   border-color: var(--font-color3);
-  -webkit-animation: techgraphBar 3s 1s infinite ease-out;
-          animation: techgraphBar 3s 1s infinite ease-out;
+  animation: techgraphBar 3s 1s infinite ease-out;
 }
 #header .headerContWrap > div:nth-of-type(2) > div:nth-child(1) > span:nth-of-type(2) {
   left: auto;
@@ -920,8 +910,7 @@ table {
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_js {
   width: 0%;
-  -webkit-animation: graphjs 1.5s ease-out forwards;
-          animation: graphjs 1.5s ease-out forwards;
+  animation: graphjs 1.5s ease-out forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_js::after {
   content: "";
@@ -939,13 +928,11 @@ table {
   right: -15px;
   font-size: 1rem;
   opacity: 0;
-  -webkit-animation: graphjsCount 1.5s forwards;
-          animation: graphjsCount 1.5s forwards;
+  animation: graphjsCount 1.5s forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_css {
   width: 0%;
-  -webkit-animation: graphcss 1.5s 1s ease-out forwards;
-          animation: graphcss 1.5s 1s ease-out forwards;
+  animation: graphcss 1.5s 1s ease-out forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_css::after {
   content: "";
@@ -961,13 +948,11 @@ table {
   right: -15px;
   font-size: 1rem;
   opacity: 0;
-  -webkit-animation: graphcssCount 1.5s 1s forwards;
-          animation: graphcssCount 1.5s 1s forwards;
+  animation: graphcssCount 1.5s 1s forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_php {
   width: 0%;
-  -webkit-animation: graphphp 1.5s 2s ease-out forwards;
-          animation: graphphp 1.5s 2s ease-out forwards;
+  animation: graphphp 1.5s 2s ease-out forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_php::after {
   content: "";
@@ -983,13 +968,11 @@ table {
   right: -15px;
   font-size: 1rem;
   opacity: 0;
-  -webkit-animation: graphphpCount 1.5s 2s forwards;
-          animation: graphphpCount 1.5s 2s forwards;
+  animation: graphphpCount 1.5s 2s forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_react {
   width: 0%;
-  -webkit-animation: graphreact 1.5s 3s ease-out forwards;
-          animation: graphreact 1.5s 3s ease-out forwards;
+  animation: graphreact 1.5s 3s ease-out forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_react::after {
   content: "";
@@ -1005,13 +988,11 @@ table {
   right: -15px;
   font-size: 1rem;
   opacity: 0;
-  -webkit-animation: graphreactCount 1.5s 3s forwards;
-          animation: graphreactCount 1.5s 3s forwards;
+  animation: graphreactCount 1.5s 3s forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_vue {
   width: 0%;
-  -webkit-animation: graphvue 1.5s 4s ease-out forwards;
-          animation: graphvue 1.5s 4s ease-out forwards;
+  animation: graphvue 1.5s 4s ease-out forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div .graph .graphBar.graphBar_vue::after {
   content: "";
@@ -1027,8 +1008,7 @@ table {
   right: -15px;
   font-size: 1rem;
   opacity: 0;
-  -webkit-animation: graphvueCount 1.5s 4s forwards;
-          animation: graphvueCount 1.5s 4s forwards;
+  animation: graphvueCount 1.5s 4s forwards;
 }
 #header .headerContWrap > div:nth-of-type(3) > div > span:nth-of-type(2) {
   top: auto;
@@ -1073,8 +1053,6 @@ table {
 }
 #header .headerLastWrap > div:nth-child(1) > p {
   display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   padding: 3px 10px;
   margin: 0 auto;
@@ -1357,11 +1335,11 @@ table {
 #header .headerLastWrap .music__wrap > .music__inner > .music__right .music__equal .graphic-equalizer .bars.bars-red {
   background: url(../img/equaltest-r.svg);
 }
-#header .headerLastWrap .music__wrap > .music__inner > .music__right .music__equal .graphic-equalizer .bars.bars-blue {
-  background: url(../img/equaltest-y.svg);
-}
 #header .headerLastWrap .music__wrap > .music__inner > .music__right .music__equal .graphic-equalizer .bars.bars-white {
   background: url(../img/equaltest-w.svg);
+}
+#header .headerLastWrap .music__wrap > .music__inner > .music__right .music__equal .graphic-equalizer .bars.bars-blue {
+  background: url(../img/equaltest-y.svg);
 }
 #header .headerLastWrap > span:nth-of-type(1) {
   left: -3px;
@@ -1453,8 +1431,6 @@ table {
   transform: translate(0, -15%);
 }
 #header .nomeanLine2Header > div:nth-of-type(2) {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   margin-right: 8px;
 }
@@ -1475,8 +1451,6 @@ table {
   transform: translate(0, -15%);
 }
 #header .nomeanLine2Header > div:nth-of-type(3) {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 }
 #header .nomeanLine2Header > div:nth-of-type(3) > span {
@@ -1499,8 +1473,6 @@ table {
   position: absolute;
   right: -2px;
   bottom: 0;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   text-align: right;
 }
@@ -1609,8 +1581,7 @@ table {
   width: 140%;
   height: 2px;
   border-radius: 50%;
-  -webkit-animation: contentcircle__stick 50s linear infinite;
-          animation: contentcircle__stick 50s linear infinite;
+  animation: contentcircle__stick 50s linear infinite;
 }
 #main .main__left .Mleft__top > div:nth-of-type(2), #main .main__left .Mleft__top > div:nth-of-type(3) {
   font-size: 0.2rem;
@@ -1991,8 +1962,7 @@ table {
   text-transform: uppercase;
   font-family: var(--font-main6);
   cursor: pointer;
-  -webkit-animation: ListName 1.6s forwards;
-          animation: ListName 1.6s forwards;
+  animation: ListName 1.6s forwards;
 }
 #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL li:hover, #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL li.active {
   color: var(--font-color5);
@@ -2004,16 +1974,13 @@ table {
   margin-top: 10px;
 }
 #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL li:nth-of-type(2) {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL li:nth-of-type(3) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL li:nth-of-type(4) {
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
+  animation-delay: 0.9s;
 }
 #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL2 {
   width: 100%;
@@ -2050,16 +2017,13 @@ table {
   margin-top: 10px;
 }
 #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL2 li:nth-of-type(2) {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL2 li:nth-of-type(3) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(2) div > .mainListUL2 li:nth-of-type(4) {
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
+  animation-delay: 0.9s;
 }
 #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(3) {
   width: 100%;
@@ -2214,8 +2178,7 @@ table {
   position: relative;
   margin: 0 auto;
   margin-top: -10px;
-  -webkit-animation: spinner-boxScale 6s infinite;
-          animation: spinner-boxScale 6s infinite;
+  animation: spinner-boxScale 6s infinite;
 }
 #main .main__left .Mleft__btm .spinner-box .leo {
   position: absolute;
@@ -2229,31 +2192,27 @@ table {
   height: 220%;
   border: 1px solid var(--font-color5);
   box-shadow: inset 0px 0px 13px var(--base-border);
-  -webkit-animation: spin3D 5s linear 0.2s infinite;
-          animation: spin3D 5s linear 0.2s infinite;
+  animation: spin3D 5s linear 0.2s infinite;
 }
 #main .main__left .Mleft__btm .spinner-box .green-orbit {
   width: 180%;
   height: 180%;
   border: 1px solid var(--font-color);
-  -webkit-animation: spin3D 6s linear 0s infinite;
-          animation: spin3D 6s linear 0s infinite;
+  animation: spin3D 6s linear 0s infinite;
 }
 #main .main__left .Mleft__btm .spinner-box .red-orbit {
   width: 150%;
   height: 150%;
   border: 1px solid var(--font-color2);
   box-shadow: inset 0px 0px 6px var(--font-color3);
-  -webkit-animation: spin3D 4s linear 0s infinite;
-          animation: spin3D 4s linear 0s infinite;
+  animation: spin3D 4s linear 0s infinite;
 }
 #main .main__left .Mleft__btm .spinner-box .white-orbit {
   width: 100%;
   height: 100%;
   border: 2px solid var(--font-color5);
   box-shadow: inset 0px 0px 6px var(--font-color);
-  -webkit-animation: spin3D 7s linear 0s infinite;
-          animation: spin3D 7s linear 0s infinite;
+  animation: spin3D 7s linear 0s infinite;
 }
 #main .main__left .Mleft__btm .spinner-box .w1 {
   transform: rotate3D(1, 1, 1, 90deg);
@@ -2447,7 +2406,7 @@ table {
 #main .main__right .Mright__top > .Mright__top3 > div > p > em:nth-of-type(1) {
   margin-right: -2px;
   color: #dfdfdf;
-  text-shadow: 0px 0px 3px rgba(223, 223, 223, 0.8745098039);
+  text-shadow: 0px 0px 5px rgba(223, 223, 223, 0.8745098039);
 }
 #main .main__right .Mright__top > .Mright__top3 > div > p > em:nth-of-type(2) {
   font-size: 0.7rem;
@@ -2622,6 +2581,13 @@ table {
 #main .main__right .Mright__btm > div:nth-of-type(1) .content_desc > span {
   display: block;
 }
+#main .main__right .Mright__btm > div:nth-of-type(1) .content_desc > span.main_desc_intro {
+  position: absolute;
+  bottom: 2px;
+  right: 0px;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
 #main .main__right .Mright__btm > div:nth-of-type(1) .content_desc > span em {
   color: var(--font-color2);
 }
@@ -2664,7 +2630,7 @@ table {
   text-align: center;
 }
 #main .main__right .Mright__btm > div:nth-of-type(2) .content_title .content_title_big {
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 3rem;
   font-family: var(--font-main5);
   position: relative;
@@ -3264,8 +3230,7 @@ table {
   border-width: 1px;
   border-style: solid;
   position: absolute;
-  -webkit-animation: wave 3s infinite alternate;
-          animation: wave 3s infinite alternate;
+  animation: wave 3s infinite alternate;
   transform: rotate(-84.5deg);
 }
 #footer > .footer__mid > div:nth-of-type(4) .wave:nth-child(1) {
@@ -3273,8 +3238,7 @@ table {
   height: 11.4125rem;
   bottom: -5.1875rem;
   left: 0.29375rem;
-  -webkit-animation-delay: 75ms;
-          animation-delay: 75ms;
+  animation-delay: 75ms;
   border-color: transparent transparent #66818a #66818a;
   border-radius: 11.4125rem;
 }
@@ -3283,8 +3247,7 @@ table {
   height: 10.825rem;
   bottom: -4.9204545455rem;
   left: 0.5875rem;
-  -webkit-animation-delay: 150ms;
-          animation-delay: 150ms;
+  animation-delay: 150ms;
   border-color: transparent transparent rgba(102, 129, 138, 0.9047619048) rgba(102, 129, 138, 0.9047619048);
   border-radius: 10.825rem;
 }
@@ -3293,8 +3256,7 @@ table {
   height: 10.2375rem;
   bottom: -4.6534090909rem;
   left: 0.88125rem;
-  -webkit-animation-delay: 225ms;
-          animation-delay: 225ms;
+  animation-delay: 225ms;
   border-color: transparent transparent rgba(102, 129, 138, 0.8571428571) rgba(102, 129, 138, 0.8571428571);
   border-radius: 10.2375rem;
 }
@@ -3303,8 +3265,7 @@ table {
   height: 9.65rem;
   bottom: -4.3863636364rem;
   left: 1.175rem;
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
+  animation-delay: 300ms;
   border-color: transparent transparent rgba(102, 129, 138, 0.8095238095) rgba(102, 129, 138, 0.8095238095);
   border-radius: 9.65rem;
 }
@@ -3313,8 +3274,7 @@ table {
   height: 9.0625rem;
   bottom: -4.1193181818rem;
   left: 1.46875rem;
-  -webkit-animation-delay: 375ms;
-          animation-delay: 375ms;
+  animation-delay: 375ms;
   border-color: transparent transparent rgba(102, 129, 138, 0.7619047619) rgba(102, 129, 138, 0.7619047619);
   border-radius: 9.0625rem;
 }
@@ -3323,8 +3283,7 @@ table {
   height: 8.475rem;
   bottom: -3.8522727273rem;
   left: 1.7625rem;
-  -webkit-animation-delay: 450ms;
-          animation-delay: 450ms;
+  animation-delay: 450ms;
   border-color: transparent transparent rgba(102, 129, 138, 0.7142857143) rgba(102, 129, 138, 0.7142857143);
   border-radius: 8.475rem;
 }
@@ -3333,8 +3292,7 @@ table {
   height: 7.8875rem;
   bottom: -3.5852272727rem;
   left: 2.05625rem;
-  -webkit-animation-delay: 525ms;
-          animation-delay: 525ms;
+  animation-delay: 525ms;
   border-color: transparent transparent rgba(102, 129, 138, 0.6666666667) rgba(102, 129, 138, 0.6666666667);
   border-radius: 7.8875rem;
 }
@@ -3343,8 +3301,7 @@ table {
   height: 7.3rem;
   bottom: -3.3181818182rem;
   left: 2.35rem;
-  -webkit-animation-delay: 600ms;
-          animation-delay: 600ms;
+  animation-delay: 600ms;
   border-color: transparent transparent rgba(102, 129, 138, 0.619047619) rgba(102, 129, 138, 0.619047619);
   border-radius: 7.3rem;
 }
@@ -3353,8 +3310,7 @@ table {
   height: 6.7125rem;
   bottom: -3.0511363636rem;
   left: 2.64375rem;
-  -webkit-animation-delay: 675ms;
-          animation-delay: 675ms;
+  animation-delay: 675ms;
   border-color: transparent transparent rgba(102, 129, 138, 0.5714285714) rgba(102, 129, 138, 0.5714285714);
   border-radius: 6.7125rem;
 }
@@ -3363,8 +3319,7 @@ table {
   height: 6.125rem;
   bottom: -2.7840909091rem;
   left: 2.9375rem;
-  -webkit-animation-delay: 750ms;
-          animation-delay: 750ms;
+  animation-delay: 750ms;
   border-color: transparent transparent rgba(102, 129, 138, 0.5238095238) rgba(102, 129, 138, 0.5238095238);
   border-radius: 6.125rem;
 }
@@ -3373,8 +3328,7 @@ table {
   height: 5.5375rem;
   bottom: -2.5170454545rem;
   left: 3.23125rem;
-  -webkit-animation-delay: 825ms;
-          animation-delay: 825ms;
+  animation-delay: 825ms;
   border-color: transparent transparent rgba(102, 129, 138, 0.4761904762) rgba(102, 129, 138, 0.4761904762);
   border-radius: 5.5375rem;
 }
@@ -3383,8 +3337,7 @@ table {
   height: 4.95rem;
   bottom: -2.25rem;
   left: 3.525rem;
-  -webkit-animation-delay: 900ms;
-          animation-delay: 900ms;
+  animation-delay: 900ms;
   border-color: transparent transparent rgba(102, 129, 138, 0.4285714286) rgba(102, 129, 138, 0.4285714286);
   border-radius: 4.95rem;
 }
@@ -3393,8 +3346,7 @@ table {
   height: 4.3625rem;
   bottom: -1.9829545455rem;
   left: 3.81875rem;
-  -webkit-animation-delay: 975ms;
-          animation-delay: 975ms;
+  animation-delay: 975ms;
   border-color: transparent transparent rgba(102, 129, 138, 0.380952381) rgba(102, 129, 138, 0.380952381);
   border-radius: 4.3625rem;
 }
@@ -3403,8 +3355,7 @@ table {
   height: 3.775rem;
   bottom: -1.7159090909rem;
   left: 4.1125rem;
-  -webkit-animation-delay: 1050ms;
-          animation-delay: 1050ms;
+  animation-delay: 1050ms;
   border-color: transparent transparent rgba(102, 129, 138, 0.3333333333) rgba(102, 129, 138, 0.3333333333);
   border-radius: 3.775rem;
 }
@@ -3413,8 +3364,7 @@ table {
   height: 3.1875rem;
   bottom: -1.4488636364rem;
   left: 4.40625rem;
-  -webkit-animation-delay: 1125ms;
-          animation-delay: 1125ms;
+  animation-delay: 1125ms;
   border-color: transparent transparent rgba(102, 129, 138, 0.2857142857) rgba(102, 129, 138, 0.2857142857);
   border-radius: 3.1875rem;
 }
@@ -3423,8 +3373,7 @@ table {
   height: 2.6rem;
   bottom: -1.1818181818rem;
   left: 4.7rem;
-  -webkit-animation-delay: 1200ms;
-          animation-delay: 1200ms;
+  animation-delay: 1200ms;
   border-color: transparent transparent rgba(102, 129, 138, 0.2380952381) rgba(102, 129, 138, 0.2380952381);
   border-radius: 2.6rem;
 }
@@ -3433,8 +3382,7 @@ table {
   height: 2.0125rem;
   bottom: -0.9147727273rem;
   left: 4.99375rem;
-  -webkit-animation-delay: 1275ms;
-          animation-delay: 1275ms;
+  animation-delay: 1275ms;
   border-color: transparent transparent rgba(102, 129, 138, 0.1904761905) rgba(102, 129, 138, 0.1904761905);
   border-radius: 2.0125rem;
 }
@@ -3443,8 +3391,7 @@ table {
   height: 1.425rem;
   bottom: -0.6477272727rem;
   left: 5.2875rem;
-  -webkit-animation-delay: 1350ms;
-          animation-delay: 1350ms;
+  animation-delay: 1350ms;
   border-color: transparent transparent rgba(102, 129, 138, 0.1428571429) rgba(102, 129, 138, 0.1428571429);
   border-radius: 1.425rem;
 }
@@ -3453,8 +3400,7 @@ table {
   height: 0.8375rem;
   bottom: -0.3806818182rem;
   left: 5.58125rem;
-  -webkit-animation-delay: 1425ms;
-          animation-delay: 1425ms;
+  animation-delay: 1425ms;
   border-color: transparent transparent rgba(102, 129, 138, 0.0952380952) rgba(102, 129, 138, 0.0952380952);
   border-radius: 0.8375rem;
 }
@@ -3463,8 +3409,7 @@ table {
   height: 0.25rem;
   bottom: -0.1136363636rem;
   left: 5.875rem;
-  -webkit-animation-delay: 1500ms;
-          animation-delay: 1500ms;
+  animation-delay: 1500ms;
   border-color: transparent transparent rgba(102, 129, 138, 0.0476190476) rgba(102, 129, 138, 0.0476190476);
   border-radius: 0.25rem;
 }
@@ -3565,8 +3510,7 @@ table {
 #footer > .footer__mid > div:nth-of-type(7) > figure {
   width: 100%;
   height: 100%;
-  -webkit-animation: cuberotation 6s linear infinite;
-          animation: cuberotation 6s linear infinite;
+  animation: cuberotation 6s linear infinite;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -3590,38 +3534,31 @@ table {
   box-sizing: border-box;
   vertical-align: top;
   border-radius: 4px;
-  -webkit-animation: cubeborder 6s ease infinite;
-          animation: cubeborder 6s ease infinite;
+  animation: cubeborder 6s ease infinite;
 }
 #footer > .footer__mid > div:nth-of-type(7) > figure > .face.front {
   transform: translate3d(0, 0, 20px);
-  -webkit-animation: cubefront 6s ease-in-out infinite;
-          animation: cubefront 6s ease-in-out infinite;
+  animation: cubefront 6s ease-in-out infinite;
 }
 #footer > .footer__mid > div:nth-of-type(7) > figure > .face.back {
   transform: rotateY(180deg) translate3d(0, 0, 20px);
-  -webkit-animation: cubeback 6s ease-in-out infinite;
-          animation: cubeback 6s ease-in-out infinite;
+  animation: cubeback 6s ease-in-out infinite;
 }
 #footer > .footer__mid > div:nth-of-type(7) > figure > .face.left {
   transform: rotateY(-90deg) translate3d(0, 0, 20px);
-  -webkit-animation: cubeleft 6s ease-in-out infinite;
-          animation: cubeleft 6s ease-in-out infinite;
+  animation: cubeleft 6s ease-in-out infinite;
 }
 #footer > .footer__mid > div:nth-of-type(7) > figure > .face.right {
   transform: rotateY(90deg) translate3d(0, 0, 20px);
-  -webkit-animation: cuberight 6s ease-in-out infinite;
-          animation: cuberight 6s ease-in-out infinite;
+  animation: cuberight 6s ease-in-out infinite;
 }
 #footer > .footer__mid > div:nth-of-type(7) > figure > .face.top {
   transform: rotateX(90deg) translate3d(0, 0, 20px);
-  -webkit-animation: cubetop 6s ease-in-out infinite;
-          animation: cubetop 6s ease-in-out infinite;
+  animation: cubetop 6s ease-in-out infinite;
 }
 #footer > .footer__mid > div:nth-of-type(7) > figure > .face.bottom {
   transform: rotateX(-90deg) translate3d(0, 0, 20px);
-  -webkit-animation: cubebottom 6s ease-in-out infinite;
-          animation: cubebottom 6s ease-in-out infinite;
+  animation: cubebottom 6s ease-in-out infinite;
 }
 #footer > .footer__btm {
   position: relative;
@@ -3646,8 +3583,7 @@ table {
   height: 1px;
   opacity: 0;
   background: var(--base-border2);
-  -webkit-animation: borderflash 4s 10s ease infinite;
-          animation: borderflash 4s 10s ease infinite;
+  animation: borderflash 4s 10s ease infinite;
 }
 #footer > .footer__btm > div:nth-of-type(1)::after {
   content: "";
@@ -3658,8 +3594,7 @@ table {
   height: 1px;
   opacity: 0;
   background: var(--base-border2);
-  -webkit-animation: borderflash 4s 10s ease infinite;
-          animation: borderflash 4s 10s ease infinite;
+  animation: borderflash 4s 10s ease infinite;
 }
 #footer > .footer__btm > div:nth-of-type(1) > div {
   padding: 5px 0;
@@ -3677,8 +3612,7 @@ table {
   box-shadow: inset 0px 0px 2px #54d9f7;
   font-size: 0.85rem;
   padding: 4px 10px;
-  -webkit-animation: footerdescflash 4s 10s ease infinite;
-          animation: footerdescflash 4s 10s ease infinite;
+  animation: footerdescflash 4s 10s ease infinite;
 }
 #footer > .footer__btm > div:nth-of-type(1) > div:nth-of-type(2) {
   width: 34%;
@@ -3736,8 +3670,7 @@ table {
   border: 1px dotted var(--base-border);
   border: 1px dotted var(--font-color);
   border-radius: 50%;
-  -webkit-animation: radarborderscale 10s ease-in-out infinite;
-          animation: radarborderscale 10s ease-in-out infinite;
+  animation: radarborderscale 10s ease-in-out infinite;
   box-shadow: 0 0 30px rgb(0, 0, 0) inset;
 }
 #footer > .footer__btm > div:nth-of-type(2) > .radarborder.radarborder1 {
@@ -3747,26 +3680,22 @@ table {
 #footer > .footer__btm > div:nth-of-type(2) > .radarborder.radarborder2 {
   width: 0%;
   height: 0%;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  animation-delay: 2s;
 }
 #footer > .footer__btm > div:nth-of-type(2) > .radarborder.radarborder3 {
   width: 0%;
   height: 0%;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
+  animation-delay: 4s;
 }
 #footer > .footer__btm > div:nth-of-type(2) > .radarborder.radarborder4 {
   width: 0%;
   height: 0%;
-  -webkit-animation-delay: 6s;
-          animation-delay: 6s;
+  animation-delay: 6s;
 }
 #footer > .footer__btm > div:nth-of-type(2) > .radarborder.radarborder5 {
   width: 0%;
   height: 0%;
-  -webkit-animation-delay: 8s;
-          animation-delay: 8s;
+  animation-delay: 8s;
 }
 #footer > .footer__btm > div:nth-of-type(2) > .blip {
   position: absolute;
@@ -3778,46 +3707,36 @@ table {
   transform-origin: 50% 50%;
   opacity: 0;
   /* Common animation properties */
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-duration: 8s;
-          animation-duration: 8s;
-  -webkit-animation-fill-mode: none;
-          animation-fill-mode: none;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-name: blipper;
-          animation-name: blipper;
+  animation-timing-function: ease;
+  animation-duration: 8s;
+  animation-fill-mode: none;
+  animation-iteration-count: infinite;
+  animation-name: blipper;
 }
 #footer > .footer__btm > div:nth-of-type(2) > .blip.blip-1 {
   bottom: 40px;
   right: 87px;
-  -webkit-animation-delay: 3.2s;
-          animation-delay: 3.2s;
+  animation-delay: 3.2s;
 }
 #footer > .footer__btm > div:nth-of-type(2) > .blip.blip-2 {
   bottom: 86px;
   left: 35px;
-  -webkit-animation-delay: 4.8s;
-          animation-delay: 4.8s;
+  animation-delay: 4.8s;
 }
 #footer > .footer__btm > div:nth-of-type(2) > .blip.blip-3 {
   bottom: 67px;
   left: 62px;
-  -webkit-animation-delay: 6s;
-          animation-delay: 6s;
+  animation-delay: 6s;
 }
 #footer > .footer__btm > div:nth-of-type(2) > .blip.blip-4 {
   top: 40px;
   right: 50px;
-  -webkit-animation-delay: 4.8s;
-          animation-delay: 4.8s;
+  animation-delay: 4.8s;
 }
 #footer > .footer__btm > div:nth-of-type(2) > .blip.blip-5 {
   bottom: 15px;
   right: 35px;
-  -webkit-animation-delay: 8.7s;
-          animation-delay: 8.7s;
+  animation-delay: 8.7s;
 }
 #footer > .footer__btm > div:nth-of-type(2) > .sweep {
   position: absolute;
@@ -3830,18 +3749,12 @@ table {
   /* rectangle rotated around bottom right corner */
   transform-origin: right bottom;
   /* Animation properties */
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-duration: 8s;
-          animation-duration: 8s;
-  -webkit-animation-fill-mode: none;
-          animation-fill-mode: none;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-name: sweeper;
-          animation-name: sweeper;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+  animation-duration: 8s;
+  animation-fill-mode: none;
+  animation-iteration-count: infinite;
+  animation-name: sweeper;
 }
 #footer .nomeanLineFooter {
   border-top: 1px solid var(--base-border);
@@ -3947,37 +3860,6 @@ table {
   transform: translate(0, -15%);
 }
 
-@-webkit-keyframes borderflash {
-  0% {
-    background: var(--base-border2);
-    opacity: 0;
-  }
-  30% {
-    background: var(--base-border2);
-    opacity: 1;
-  }
-  60% {
-    background: var(--base-border2);
-    opacity: 0;
-  }
-  70% {
-    background: var(--base-border2);
-    opacity: 1;
-  }
-  85% {
-    background: var(--base-border2);
-    opacity: 0;
-  }
-  90% {
-    background: var(--base-border2);
-    opacity: 1;
-  }
-  100% {
-    background: var(--base-border2);
-    opacity: 0;
-  }
-}
-
 @keyframes borderflash {
   0% {
     background: var(--base-border2);
@@ -4008,78 +3890,17 @@ table {
     opacity: 0;
   }
 }
-@-webkit-keyframes glitch-anim-1 {
-  0% {
-    opacity: 1;
-    transform: translate3d(10px, 0, 0);
-    -webkit-clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%);
-            clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%);
-  }
-  2% {
-    -webkit-clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%);
-            clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%);
-  }
-  4% {
-    -webkit-clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%);
-            clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%);
-  }
-  6% {
-    -webkit-clip-path: polygon(0 1%, 100% 1%, 100% 2%, 0 2%);
-    clip-path: polygon(0 1%, 100% 1%, 100% 2%, 0 2%);
-  }
-  8% {
-    -webkit-clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
-    clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
-  }
-  10% {
-    -webkit-clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
-    clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
-  }
-  12% {
-    -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
-    clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
-  }
-  14% {
-    -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
-    clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
-  }
-  16% {
-    -webkit-clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
-    clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
-  }
-  18% {
-    -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
-    clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
-  }
-  20% {
-    -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
-    clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
-  }
-  21.9% {
-    opacity: 1;
-    transform: translate3d(10px, 0, 0);
-  }
-  22%, 100% {
-    opacity: 0;
-    transform: translate3d(0, 0, 0);
-    -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0);
-    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
-  }
-}
 @keyframes glitch-anim-1 {
   0% {
     opacity: 1;
     transform: translate3d(10px, 0, 0);
-    -webkit-clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%);
-            clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%);
+    clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%);
   }
   2% {
-    -webkit-clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%);
-            clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%);
+    clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%);
   }
   4% {
-    -webkit-clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%);
-            clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%);
+    clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%);
   }
   6% {
     -webkit-clip-path: polygon(0 1%, 100% 1%, 100% 2%, 0 2%);
@@ -4116,64 +3937,6 @@ table {
   21.9% {
     opacity: 1;
     transform: translate3d(10px, 0, 0);
-  }
-  22%, 100% {
-    opacity: 0;
-    transform: translate3d(0, 0, 0);
-    -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0);
-    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
-  }
-}
-@-webkit-keyframes glitch-anim-2 {
-  0% {
-    opacity: 1;
-    transform: translate3d(-10px, 0, 0);
-    -webkit-clip-path: polygon(0 25%, 100% 25%, 100% 30%, 0 30%);
-    clip-path: polygon(0 25%, 100% 25%, 100% 30%, 0 30%);
-  }
-  3% {
-    -webkit-clip-path: polygon(0 3%, 100% 3%, 100% 3%, 0 3%);
-    clip-path: polygon(0 3%, 100% 3%, 100% 3%, 0 3%);
-  }
-  5% {
-    -webkit-clip-path: polygon(0 5%, 100% 5%, 100% 20%, 0 20%);
-    clip-path: polygon(0 5%, 100% 5%, 100% 20%, 0 20%);
-  }
-  7% {
-    -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
-    clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
-  }
-  9% {
-    -webkit-clip-path: polygon(0 40%, 100% 40%, 100% 40%, 0 40%);
-    clip-path: polygon(0 40%, 100% 40%, 100% 40%, 0 40%);
-  }
-  11% {
-    -webkit-clip-path: polygon(0 52%, 100% 52%, 100% 59%, 0 59%);
-    clip-path: polygon(0 52%, 100% 52%, 100% 59%, 0 59%);
-  }
-  13% {
-    -webkit-clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
-    clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
-  }
-  15% {
-    -webkit-clip-path: polygon(0 75%, 100% 75%, 100% 75%, 0 75%);
-    clip-path: polygon(0 75%, 100% 75%, 100% 75%, 0 75%);
-  }
-  17% {
-    -webkit-clip-path: polygon(0 65%, 100% 65%, 100% 40%, 0 40%);
-    clip-path: polygon(0 65%, 100% 65%, 100% 40%, 0 40%);
-  }
-  19% {
-    -webkit-clip-path: polygon(0 45%, 100% 45%, 100% 50%, 0 50%);
-    clip-path: polygon(0 45%, 100% 45%, 100% 50%, 0 50%);
-  }
-  20% {
-    -webkit-clip-path: polygon(0 14%, 100% 14%, 100% 33%, 0 33%);
-    clip-path: polygon(0 14%, 100% 14%, 100% 33%, 0 33%);
-  }
-  21.9% {
-    opacity: 1;
-    transform: translate3d(-10px, 0, 0);
   }
   22%, 100% {
     opacity: 0;
@@ -4232,96 +3995,6 @@ table {
   21.9% {
     opacity: 1;
     transform: translate3d(-10px, 0, 0);
-  }
-  22%, 100% {
-    opacity: 0;
-    transform: translate3d(0, 0, 0);
-    -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0);
-    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
-  }
-}
-@-webkit-keyframes glitch-anim-3 {
-  0% {
-    opacity: 1;
-    transform: translate3d(0, -5px, 0) scale3d(-1, -1, 1);
-    -webkit-clip-path: polygon(0 1%, 100% 1%, 100% 3%, 0 3%);
-    clip-path: polygon(0 1%, 100% 1%, 100% 3%, 0 3%);
-  }
-  1.5% {
-    -webkit-clip-path: polygon(0 10%, 100% 10%, 100% 9%, 0 9%);
-    clip-path: polygon(0 10%, 100% 10%, 100% 9%, 0 9%);
-  }
-  2% {
-    -webkit-clip-path: polygon(0 5%, 100% 5%, 100% 6%, 0 6%);
-    clip-path: polygon(0 5%, 100% 5%, 100% 6%, 0 6%);
-  }
-  2.5% {
-    -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
-    clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%);
-  }
-  3% {
-    -webkit-clip-path: polygon(0 10%, 100% 10%, 100% 10%, 0 10%);
-    clip-path: polygon(0 10%, 100% 10%, 100% 10%, 0 10%);
-  }
-  5% {
-    -webkit-clip-path: polygon(0 30%, 100% 30%, 100% 25%, 0 25%);
-    clip-path: polygon(0 30%, 100% 30%, 100% 25%, 0 25%);
-  }
-  5.5% {
-    -webkit-clip-path: polygon(0 15%, 100% 15%, 100% 16%, 0 16%);
-    clip-path: polygon(0 15%, 100% 15%, 100% 16%, 0 16%);
-  }
-  7% {
-    -webkit-clip-path: polygon(0 40%, 100% 40%, 100% 39%, 0 39%);
-    clip-path: polygon(0 40%, 100% 40%, 100% 39%, 0 39%);
-  }
-  8% {
-    -webkit-clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
-    clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
-  }
-  9% {
-    -webkit-clip-path: polygon(0 60%, 100% 60%, 100% 55%, 0 55%);
-    clip-path: polygon(0 60%, 100% 60%, 100% 55%, 0 55%);
-  }
-  10.5% {
-    -webkit-clip-path: polygon(0 30%, 100% 30%, 100% 31%, 0 31%);
-    clip-path: polygon(0 30%, 100% 30%, 100% 31%, 0 31%);
-  }
-  11% {
-    -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 69%, 0 69%);
-    clip-path: polygon(0 70%, 100% 70%, 100% 69%, 0 69%);
-  }
-  13% {
-    -webkit-clip-path: polygon(0 40%, 100% 40%, 100% 41%, 0 41%);
-    clip-path: polygon(0 40%, 100% 40%, 100% 41%, 0 41%);
-  }
-  14% {
-    -webkit-clip-path: polygon(0 80%, 100% 80%, 100% 75%, 0 75%);
-    clip-path: polygon(0 80%, 100% 80%, 100% 75%, 0 75%);
-  }
-  14.5% {
-    -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 51%, 0 51%);
-    clip-path: polygon(0 50%, 100% 50%, 100% 51%, 0 51%);
-  }
-  15% {
-    -webkit-clip-path: polygon(0 90%, 100% 90%, 100% 90%, 0 90%);
-    clip-path: polygon(0 90%, 100% 90%, 100% 90%, 0 90%);
-  }
-  16% {
-    -webkit-clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
-    clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%);
-  }
-  18% {
-    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 99%, 0 99%);
-    clip-path: polygon(0 100%, 100% 100%, 100% 99%, 0 99%);
-  }
-  20% {
-    -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 71%, 0 71%);
-    clip-path: polygon(0 70%, 100% 70%, 100% 71%, 0 71%);
-  }
-  21.9% {
-    opacity: 1;
-    transform: translate3d(0, -5px, 0) scale3d(-1, -1, 1);
   }
   22%, 100% {
     opacity: 0;
@@ -4420,16 +4093,6 @@ table {
     clip-path: polygon(0 0, 0 0, 0 0, 0 0);
   }
 }
-@-webkit-keyframes glitch-anim-flash {
-  0%, 5% {
-    opacity: 0.2;
-    transform: translate3d(10px, 5px, 0);
-  }
-  5.5%, 100% {
-    opacity: 0;
-    transform: translate3d(0, 0, 0);
-  }
-}
 @keyframes glitch-anim-flash {
   0%, 5% {
     opacity: 0.2;
@@ -4438,32 +4101,6 @@ table {
   5.5%, 100% {
     opacity: 0;
     transform: translate3d(0, 0, 0);
-  }
-}
-@-webkit-keyframes contentcircle__stick {
-  0% {
-    transform: translate(-15%, -1px) rotate(0deg);
-  }
-  20% {
-    transform: translate(-15%, -1px) rotate(45deg);
-  }
-  25% {
-    transform: translate(-15%, -1px) rotate(45deg);
-  }
-  60% {
-    transform: translate(-15%, -1px) rotate(90deg);
-  }
-  65% {
-    transform: translate(-15%, -1px) rotate(90deg);
-  }
-  80% {
-    transform: translate(-15%, -1px) rotate(210deg);
-  }
-  85% {
-    transform: translate(-15%, -1px) rotate(220deg);
-  }
-  100% {
-    transform: translate(-15%, -1px) rotate(360deg);
   }
 }
 @keyframes contentcircle__stick {
@@ -4492,27 +4129,6 @@ table {
     transform: translate(-15%, -1px) rotate(360deg);
   }
 }
-@-webkit-keyframes ListName {
-  0% {
-    width: 0%;
-    border-right: 10px solid #abded5;
-    border-left: 10px solid #abded5;
-    color: rgba(171, 222, 213, 0);
-  }
-  5% {
-    opacity: 1;
-  }
-  40% {
-    color: rgba(171, 222, 213, 0);
-  }
-  95% {
-    color: rgba(171, 222, 213, 0.6352941176);
-  }
-  100% {
-    width: 95%;
-    opacity: 1;
-  }
-}
 @keyframes ListName {
   0% {
     width: 0%;
@@ -4534,31 +4150,12 @@ table {
     opacity: 1;
   }
 }
-@-webkit-keyframes spin3D {
-  from {
-    transform: rotate3d(0.5, 0.5, 0.5, 360deg);
-  }
-  to {
-    transform: rotate3d(0deg);
-  }
-}
 @keyframes spin3D {
   from {
     transform: rotate3d(0.5, 0.5, 0.5, 360deg);
   }
   to {
     transform: rotate3d(0deg);
-  }
-}
-@-webkit-keyframes spinner-boxScale {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
   }
 }
 @keyframes spinner-boxScale {
@@ -4570,23 +4167,6 @@ table {
   }
   100% {
     transform: scale(1);
-  }
-}
-@-webkit-keyframes footerdescflash {
-  5% {
-    text-shadow: none;
-  }
-  20% {
-    text-shadow: 0px 0px 3px snow;
-  }
-  40% {
-    text-shadow: 0px 0px 3px snow;
-  }
-  80% {
-    text-shadow: none;
-  }
-  100% {
-    text-shadow: 0px 0px 3px snow;
   }
 }
 @keyframes footerdescflash {
@@ -4606,14 +4186,6 @@ table {
     text-shadow: 0px 0px 3px snow;
   }
 }
-@-webkit-keyframes graphjs {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 88%;
-  }
-}
 @keyframes graphjs {
   0% {
     width: 0;
@@ -4622,29 +4194,7 @@ table {
     width: 88%;
   }
 }
-@-webkit-keyframes graphjsCount {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes graphjsCount {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes graphcssCount {
   0% {
     opacity: 0;
   }
@@ -4666,29 +4216,7 @@ table {
     opacity: 1;
   }
 }
-@-webkit-keyframes graphphpCount {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes graphphpCount {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes graphreactCount {
   0% {
     opacity: 0;
   }
@@ -4710,17 +4238,6 @@ table {
     opacity: 1;
   }
 }
-@-webkit-keyframes graphvueCount {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes graphvueCount {
   0% {
     opacity: 0;
@@ -4732,28 +4249,12 @@ table {
     opacity: 1;
   }
 }
-@-webkit-keyframes graphcss {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 95%;
-  }
-}
 @keyframes graphcss {
   0% {
     width: 0;
   }
   100% {
     width: 95%;
-  }
-}
-@-webkit-keyframes graphphp {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 70%;
   }
 }
 @keyframes graphphp {
@@ -4764,14 +4265,6 @@ table {
     width: 70%;
   }
 }
-@-webkit-keyframes graphreact {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 50%;
-  }
-}
 @keyframes graphreact {
   0% {
     width: 0;
@@ -4780,40 +4273,12 @@ table {
     width: 50%;
   }
 }
-@-webkit-keyframes graphvue {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 80%;
-  }
-}
 @keyframes graphvue {
   0% {
     width: 0;
   }
   100% {
     width: 80%;
-  }
-}
-@-webkit-keyframes techgraphBar {
-  0% {
-    width: 30%;
-  }
-  20% {
-    width: 35%;
-  }
-  50% {
-    width: 40%;
-  }
-  60% {
-    width: 30%;
-  }
-  70% {
-    width: 24%;
-  }
-  100% {
-    width: 30%;
   }
 }
 @keyframes techgraphBar {
@@ -4836,26 +4301,6 @@ table {
     width: 30%;
   }
 }
-@-webkit-keyframes techgraphtarget {
-  0% {
-    right: 30%;
-  }
-  40% {
-    right: 25%;
-  }
-  60% {
-    right: 30%;
-  }
-  75% {
-    right: 33%;
-  }
-  88% {
-    right: 24%;
-  }
-  100% {
-    right: 30%;
-  }
-}
 @keyframes techgraphtarget {
   0% {
     right: 30%;
@@ -4876,22 +4321,9 @@ table {
     right: 30%;
   }
 }
-@-webkit-keyframes wave {
-  to {
-    transform: rotate(135deg);
-  }
-}
 @keyframes wave {
   to {
     transform: rotate(135deg);
-  }
-}
-@-webkit-keyframes cuberotation {
-  from {
-    transform: rotateY(0) rotateX(0);
-  }
-  to {
-    transform: rotateY(-360deg) rotateX(360deg);
   }
 }
 @keyframes cuberotation {
@@ -4900,17 +4332,6 @@ table {
   }
   to {
     transform: rotateY(-360deg) rotateX(360deg);
-  }
-}
-@-webkit-keyframes cubefront {
-  from {
-    transform: translate3d(0, 0, 20px) scale(1);
-  }
-  50% {
-    transform: translate3d(0, 0, 50px) scale(1.3);
-  }
-  to {
-    transform: translate3d(0, 0, 20px) scale(1);
   }
 }
 @keyframes cubefront {
@@ -4924,17 +4345,6 @@ table {
     transform: translate3d(0, 0, 20px) scale(1);
   }
 }
-@-webkit-keyframes cubeback {
-  from {
-    transform: rotateY(180deg) translate3d(0, 0, 20px) scale(1);
-  }
-  50% {
-    transform: rotateY(180deg) translate3d(0, 0, 50px) scale(1.3);
-  }
-  to {
-    transform: rotateY(180deg) translate3d(0, 0, 20px) scale(1);
-  }
-}
 @keyframes cubeback {
   from {
     transform: rotateY(180deg) translate3d(0, 0, 20px) scale(1);
@@ -4944,17 +4354,6 @@ table {
   }
   to {
     transform: rotateY(180deg) translate3d(0, 0, 20px) scale(1);
-  }
-}
-@-webkit-keyframes cubeleft {
-  from {
-    transform: rotateY(-90deg) translate3d(0, 0, 20px) scale(1);
-  }
-  50% {
-    transform: rotateY(-90deg) translate3d(0, 0, 50px) scale(1.3);
-  }
-  to {
-    transform: rotateY(-90deg) translate3d(0, 0, 20px) scale(1);
   }
 }
 @keyframes cubeleft {
@@ -4968,17 +4367,6 @@ table {
     transform: rotateY(-90deg) translate3d(0, 0, 20px) scale(1);
   }
 }
-@-webkit-keyframes cuberight {
-  from {
-    transform: rotateY(90deg) translate3d(0, 0, 20px) scale(1);
-  }
-  50% {
-    transform: rotateY(90deg) translate3d(0, 0, 50px) scale(1.3);
-  }
-  to {
-    transform: rotateY(90deg) translate3d(0, 0, 20px) scale(1);
-  }
-}
 @keyframes cuberight {
   from {
     transform: rotateY(90deg) translate3d(0, 0, 20px) scale(1);
@@ -4988,17 +4376,6 @@ table {
   }
   to {
     transform: rotateY(90deg) translate3d(0, 0, 20px) scale(1);
-  }
-}
-@-webkit-keyframes cubetop {
-  from {
-    transform: rotateX(90deg) translate3d(0, 0, 20px) scale(1);
-  }
-  50% {
-    transform: rotateX(90deg) translate3d(0, 0, 50px) scale(1.3);
-  }
-  to {
-    transform: rotateX(90deg) translate3d(0, 0, 20px) scale(1);
   }
 }
 @keyframes cubetop {
@@ -5012,17 +4389,6 @@ table {
     transform: rotateX(90deg) translate3d(0, 0, 20px) scale(1);
   }
 }
-@-webkit-keyframes cubebottom {
-  from {
-    transform: rotateX(-90deg) translate3d(0, 0, 20px) scale(1);
-  }
-  50% {
-    transform: rotateX(-90deg) translate3d(0, 0, 50px) scale(1.3);
-  }
-  to {
-    transform: rotateX(-90deg) translate3d(0, 0, 20px) scale(1);
-  }
-}
 @keyframes cubebottom {
   from {
     transform: rotateX(-90deg) translate3d(0, 0, 20px) scale(1);
@@ -5032,21 +4398,6 @@ table {
   }
   to {
     transform: rotateX(-90deg) translate3d(0, 0, 20px) scale(1);
-  }
-}
-@-webkit-keyframes cubeborder {
-  0% {
-    opacity: 0.3;
-    border-color: var(--base-border);
-  }
-  50% {
-    border-radius: 2px;
-    opacity: 0.5;
-    border-color: #68856e;
-  }
-  100% {
-    opacity: 0.3;
-    border-color: var(--base-border);
   }
 }
 @keyframes cubeborder {
@@ -5064,32 +4415,12 @@ table {
     border-color: var(--base-border);
   }
 }
-@-webkit-keyframes sweeper {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 @keyframes sweeper {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes radarborderscale {
-  from {
-    width: 0%;
-    height: 0%;
-    opacity: 1;
-  }
-  to {
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;
   }
 }
 @keyframes radarborderscale {
@@ -5102,32 +4433,6 @@ table {
     width: 100%;
     height: 100%;
     opacity: 0.1;
-  }
-}
-@-webkit-keyframes blipper {
-  0% {
-    opacity: 0;
-  }
-  35% {
-    opacity: 0;
-  }
-  45% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 0;
-  }
-  55% {
-    opacity: 0.5;
-  }
-  60% {
-    opacity: 0;
-  }
-  65% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
   }
 }
 @keyframes blipper {
@@ -5156,23 +4461,6 @@ table {
     opacity: 0;
   }
 }
-@-webkit-keyframes bdcirflash {
-  0% {
-    opacity: 0.2;
-  }
-  20% {
-    opacity: 1;
-  }
-  35% {
-    opacity: 0.2;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.2;
-  }
-}
 @keyframes bdcirflash {
   0% {
     opacity: 0.2;
@@ -5190,29 +4478,7 @@ table {
     opacity: 0.2;
   }
 }
-@-webkit-keyframes Startheadertop {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes Startheadertop {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes Startheadermid {
   0% {
     opacity: 0;
   }

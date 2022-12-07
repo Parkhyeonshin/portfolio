@@ -2,6 +2,7 @@
 let bars = document.querySelectorAll(".bars");
 let barHeight = 1.5;
 let multiplier = 28;
+let musicvolume = 10;
 
 // 시간 출력
 function printTime() {
@@ -88,6 +89,7 @@ document.querySelector(".music__control").addEventListener("click", () => {
         document.querySelector(".music__control > div > p").textContent = "ON";
         document.querySelector(".music__control > div > p").style.color = "var(--font-color3)";
         musicAudio.play();
+        barHeight = 1.5;
         for (let i = 0; i < multiplier; i++) {
             equalizer(bars[i], 0);
         }
@@ -115,10 +117,6 @@ function AudioPlay(i) {
             equalizer(bars[i], 0);
         }
     }
-    barHeight = 1.5;
-    for (let i = 0; i < multiplier; i++) {
-        equalizer(bars[i], 0);
-    }
 }
 function AudioStop() {
     musicAudio.pause();
@@ -132,8 +130,8 @@ function getRandomInt(min, max) {
 }
 function equalizer(object, prevHeight) {
     let j = getRandomInt(1, multiplier);
-    TweenMax.to(object, 0.45, {
-        height: barHeight * j,
+    TweenMax.to(object, 1.5, {
+        height: barHeight * (musicvolume / 9) * j,
         ease: SteppedEase.config(j - prevHeight),
         onComplete: equalizer,
         onCompleteParams: [object, j],

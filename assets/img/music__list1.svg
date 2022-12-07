@@ -1,7 +1,10 @@
-<svg width="52" height="39" viewBox="0 0 52 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="52" height="39" rx="3.25" fill="#66818A"/>
-<line x1="26" y1="1.53897e-07" x2="26" y2="39" stroke="black" stroke-width="6.5"/>
-<line y1="19.5" x2="52" y2="19.5" stroke="black" stroke-width="6.5"/>
-<circle cx="26" cy="19.5" r="13" fill="black"/>
-<rect x="19.5" y="13" width="13" height="13" rx="6.5" fill="#66818A"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150px" height="150px" viewBox="0 0 26 20" version="1.1">
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(40%,50.588235%,54.117647%);fill-opacity:1;" d="M 1.625 0 L 24.375 0 C 25.273438 0 26 0.746094 26 1.667969 L 26 18.332031 C 26 19.253906 25.273438 20 24.375 20 L 1.625 20 C 0.726562 20 0 19.253906 0 18.332031 L 0 1.667969 C 0 0.746094 0.726562 0 1.625 0 Z M 1.625 0 "/>
+<path style="fill:none;stroke-width:6.5;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:4;" d="M 26 0 L 26 39 " transform="matrix(0.5,0,0,0.512821,0,0)"/>
+<path style="fill:none;stroke-width:6.5;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:4;" d="M 0 19.5 L 52 19.5 " transform="matrix(0.5,0,0,0.512821,0,0)"/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 19.5 10 C 19.5 13.683594 16.589844 16.667969 13 16.667969 C 9.410156 16.667969 6.5 13.683594 6.5 10 C 6.5 6.316406 9.410156 3.332031 13 3.332031 C 16.589844 3.332031 19.5 6.316406 19.5 10 Z M 19.5 10 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(40%,50.588235%,54.117647%);fill-opacity:1;" d="M 13 6.667969 C 14.796875 6.667969 16.25 8.160156 16.25 10 C 16.25 11.839844 14.796875 13.332031 13 13.332031 C 11.203125 13.332031 9.75 11.839844 9.75 10 C 9.75 8.160156 11.203125 6.667969 13 6.667969 Z M 13 6.667969 "/>
+</g>
 </svg>

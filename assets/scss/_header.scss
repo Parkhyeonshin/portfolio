@@ -85,7 +85,7 @@ $bar-height: 10px;
                     > .glitch__img {
                         width: 100%;
                         height: 100%;
-                        background-image: url(https://cdn.pixabay.com/photo/2022/04/02/20/22/robot-7107688_960_720.png);
+                        // background-image: url(https://cdn.pixabay.com/photo/2022/04/02/20/22/robot-7107688_960_720.png);
                         background-image: url("../img/logo2.png");
                         background-size: contain;
                         background-repeat: no-repeat;
@@ -1095,13 +1095,9 @@ $bar-height: 10px;
                             // margin-left: -($multiplier * $bar-width) / 3.6;
                             .bars {
                                 width: 5px;
-                                // border: 1px solid var(--font-color2);
                                 height: 10px;
                                 position: absolute;
-                                // background: var(--base-border2);
-                                // background: url(../img/equalFree.svg);
                                 background: url(../img/equaltest-g.svg);
-                                // background: url(../img/eqtest2.png);
                                 opacity: 0.8;
                                 bottom: 0;
                                 @for $i from 1 to $multiplier + 1 {
@@ -1116,18 +1112,15 @@ $bar-height: 10px;
                                 // }
                                 &.bars-red {
                                     // background-position: center bottom;
-                                    // background-position: -7px 0;
                                     background: url(../img/equaltest-r.svg);
-                                }
-                                &.bars-blue {
-                                    // background-position: right bottom;
-                                    // background-position: -15px 0;
-                                    background: url(../img/equaltest-y.svg);
                                 }
                                 &.bars-white {
                                     // background-position: right bottom;
-                                    // background-position: -23px 0;
                                     background: url(../img/equaltest-w.svg);
+                                }
+                                &.bars-blue {
+                                    // background-position: right bottom;
+                                    background: url(../img/equaltest-y.svg);
                                 }
                             }
                         }

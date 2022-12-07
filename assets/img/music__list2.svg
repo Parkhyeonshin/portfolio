@@ -1,7 +1,10 @@
-<svg width="53" height="39" viewBox="0 0 53 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.75" width="52" height="39" rx="3.25" fill="#66818A"/>
-<line x1="26.75" y1="1.53897e-07" x2="26.75" y2="39" stroke="black" stroke-width="6.5"/>
-<line x1="0.75" y1="19.5" x2="52.75" y2="19.5" stroke="black" stroke-width="6.5"/>
-<circle cx="26.75" cy="19.5" r="13" fill="#FA6949"/>
-<rect x="20.25" y="13" width="13" height="13" rx="6.5" fill="#66818A"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150px" height="150px" viewBox="0 0 27 20" version="1.1">
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(40%,50.588235%,54.117647%);fill-opacity:1;" d="M 2.039062 0 L 25.21875 0 C 26.132812 0 26.871094 0.746094 26.871094 1.667969 L 26.871094 18.332031 C 26.871094 19.253906 26.132812 20 25.21875 20 L 2.039062 20 C 1.125 20 0.382812 19.253906 0.382812 18.332031 L 0.382812 1.667969 C 0.382812 0.746094 1.125 0 2.039062 0 Z M 2.039062 0 "/>
+<path style="fill:none;stroke-width:6.5;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:4;" d="M 26.753038 0 L 26.753038 39 " transform="matrix(0.509434,0,0,0.512821,0,0)"/>
+<path style="fill:none;stroke-width:6.5;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:4;" d="M 0.751447 19.5 L 52.746962 19.5 " transform="matrix(0.509434,0,0,0.512821,0,0)"/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(98.039216%,41.176471%,28.627451%);fill-opacity:1;" d="M 20.25 10 C 20.25 13.683594 17.285156 16.667969 13.628906 16.667969 C 9.96875 16.667969 7.003906 13.683594 7.003906 10 C 7.003906 6.316406 9.96875 3.332031 13.628906 3.332031 C 17.285156 3.332031 20.25 6.316406 20.25 10 Z M 20.25 10 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(40%,50.588235%,54.117647%);fill-opacity:1;" d="M 13.628906 6.667969 C 15.457031 6.667969 16.9375 8.160156 16.9375 10 C 16.9375 11.839844 15.457031 13.332031 13.628906 13.332031 C 11.796875 13.332031 10.316406 11.839844 10.316406 10 C 10.316406 8.160156 11.796875 6.667969 13.628906 6.667969 Z M 13.628906 6.667969 "/>
+</g>
 </svg>
