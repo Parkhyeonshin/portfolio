@@ -995,17 +995,17 @@
             > div {
                 width: 100%;
                 height: 100%;
-                border: 1px solid #cbe5e2b2;
-                border: 1px solid var(--base-border);
+                // border: 1px solid #cbe5e2b2;
+                // border: 1px solid var(--base-border);
                 padding: 1%;
                 > .contentsWrap {
-                    border: 1px solid var(--base-border);
+                    // border: 1px solid var(--base-border);
                     width: 100%;
                     height: 100%;
                     background: #000;
                     position: relative;
                     overflow: hidden;
-                    &::after {
+                    &::before {
                         content: "";
                         position: absolute;
                         top: 0;
@@ -1016,6 +1016,20 @@
                         // background: url(https://i.pinimg.com/originals/50/f6/b5/50f6b5d9b90459dcae2f7fcdb82f0ce5.gif);
                         opacity: 0.1;
                         pointer-events: none;
+                        z-index: 3;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: url(../img/mapLayout.png);
+                        background-repeat: no-repeat;
+                        background-size: 100% 100%;
+                        pointer-events: none;
+                        z-index: 6;
                     }
                     > .contentChange {
                         position: absolute;
@@ -1052,7 +1066,9 @@
                             left: 0;
                             width: 0%;
                             height: 100%;
-                            background: url(https://i.pinimg.com/originals/be/f0/5e/bef05e397070e9ef000065c27778656c.gif);
+                            // background: url(https://i.pinimg.com/originals/be/f0/5e/bef05e397070e9ef000065c27778656c.gif);
+                            background: url(https://i.pinimg.com/564x/3f/ac/5b/3fac5b57a08cd4ec769b02d99cce39c3.jpg);
+                            background: url(https://i.pinimg.com/564x/32/03/cb/3203cba48db78e6804764de23e741375.jpg);
                             background-repeat: no-repeat;
                             // background-size: 100% 100%;
                             background-size: cover;
@@ -1070,7 +1086,7 @@
                             > .AboutMeCont {
                                 width: 100%;
                                 height: 100%;
-                                background: silver;
+                                // background: silver;
                             }
                         }
                     }
@@ -1078,7 +1094,7 @@
                         width: 100%;
                         height: 100%;
                         position: relative;
-                        background: #f5f5f5;
+                        // background: #f5f5f5;
                     }
 
                     // > .AboutMe {
