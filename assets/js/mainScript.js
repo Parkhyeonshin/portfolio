@@ -80,11 +80,10 @@ document.querySelector(".music__control").addEventListener("click", () => {
         document.querySelector(".music__control").classList.remove("active");
         document.querySelector(".music__control > div > p").textContent = "OFF";
         document.querySelector(".music__control > div > p").style.color = "#444";
-        TweenMax.pauseAll();
+        // TweenMax.pauseAll(); 지원중단됐대 ;
         document.querySelectorAll(".bars").forEach((element) => {
             element.style.height = "10px";
         });
-
         musicAudio.pause();
     } else {
         document.querySelector(".music__control").classList.add("active");
@@ -152,8 +151,6 @@ window.onload = function () {
 
     // scrollItStart(100, contentframe);
 };
-
-
 
 // 나는 너무 멀리온거야 ~~~
 // // 메인리스트 클릭

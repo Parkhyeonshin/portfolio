@@ -539,7 +539,7 @@
                         &:nth-of-type(3) {
                             width: 100%;
                             height: 15px;
-                            overflow: hidden;
+                            overflow-x: hidden;
                             > div {
                                 width: 200%;
                                 display: flex;
@@ -567,7 +567,7 @@
                                     &:nth-of-type(2) {
                                         > p {
                                             display: block;
-                                            font-size: 0.2rem;
+                                            font-size: 0.8rem;
                                             transform: scale(1);
                                             color: var(--font-color2);
                                             font-family: var(--font-main3);
@@ -1010,7 +1010,6 @@
             > div {
                 width: 100%;
                 height: 100%;
-                // border: 1px solid #cbe5e2b2;
                 // border: 1px solid var(--base-border);
                 padding: 1%;
                 > .contentsWrap {
@@ -1020,38 +1019,68 @@
                     background: #000;
                     position: relative;
                     overflow: hidden;
-                    &::before {
-                        content: "";
+                    > .contentOverlay {
                         position: absolute;
                         top: 0;
                         left: 0;
                         width: 100%;
                         height: 100%;
-                        background: url(https://i.pinimg.com/originals/e2/ca/51/e2ca511664a6f9cf2c5d9f92328534ae.gif);
-                        // background: url(https://i.pinimg.com/originals/50/f6/b5/50f6b5d9b90459dcae2f7fcdb82f0ce5.gif);
-                        opacity: 0.1;
-                        pointer-events: none;
-                        z-index: 3;
-                    }
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background: url(../img/mapLayout.png);
+                        background: url(../img/main__overlay_cover.png);
                         background-repeat: no-repeat;
-                        background-size: 100% 100%;
+                        background-size: 105% 105%;
+                        background-position: center;
                         pointer-events: none;
-                        z-index: 6;
+                        z-index: 22;
+                        opacity: 0;
+                        transition: opacity 0.5s ease;
+                        &.active {
+                            opacity: 1;
+                        }
+                    }
+                    > .contentNoise {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 0%;
+                        height: 0%;
+                        background: url(https://i.pinimg.com/originals/e2/ca/51/e2ca511664a6f9cf2c5d9f92328534ae.gif);
+                        background-attachment: fixed;
+                        pointer-events: none;
+                        z-index: 21;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                        animation: noisecancle 0.7s linear;
+                        &.active {
+                            width: 100%;
+                            height: 100%;
+                            opacity: 0.1;
+                        }
+                    }
+
+                    > .contentOverlayLine {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: url(../img/main__overlay_line.png);
+                        background-repeat: no-repeat;
+                        background-size: 105% 105%;
+                        background-position: center;
+                        pointer-events: none;
+                        z-index: 20;
+                        opacity: 0;
+                        transition: opacity 0.5s ease;
+                        &.active {
+                            opacity: 1;
+                        }
                     }
                     > .contentChange {
                         position: absolute;
-                        top: 0;
+                        top: -10px;
                         left: 0;
                         width: 100%;
-                        height: 2%;
+                        height: 1%;
                         background: var(--font-color5);
                         border-right: 1px solid var(--font-color5);
                         border-left: 1px solid var(--font-color5);
@@ -1093,6 +1122,7 @@
                             background-position: center center;
                             // background-attachment: fixed;
                             animation: contentMainMove 120s $Alldelay linear infinite;
+                            display: none;
                             &.active {
                                 width: 100%;
                                 // transition: width 1.3s ease;
@@ -1101,11 +1131,30 @@
                         > .AboutMe {
                             width: 100%;
                             height: 100%;
+                            padding: 5% 10%;
                             position: relative;
+                            display: flex;
+                            align-items: center;
                             > .AboutMeCont {
                                 width: 100%;
                                 height: 100%;
-                                // background: silver;
+                                display: flex;
+                                align-items: center;
+                                .AboutPhoto {
+                                    @include bordertop2;
+                                    @include borderleft2;
+                                    @include borderright2;
+                                    @include borderbottom2;
+                                    width: 38%;
+                                    height: 100%;
+
+                                    border-radius: 3px;
+                                }
+                                .AboutDesc {
+                                    width: 60%;
+                                    height: 100%;
+                                    border-radius: 3px;
+                                }
                             }
                         }
                     }

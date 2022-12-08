@@ -2062,7 +2062,7 @@ table {
 #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(3) {
   width: 100%;
   height: 15px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(3) > div {
   width: 200%;
@@ -2087,7 +2087,7 @@ table {
 }
 #main .main__left .Mleft__mid > div:nth-of-type(4) > div:nth-of-type(3) > div > div:nth-of-type(2) > p {
   display: block;
-  font-size: 0.2rem;
+  font-size: 0.8rem;
   transform: scale(1);
   color: var(--font-color2);
   font-family: var(--font-main3);
@@ -2511,37 +2511,67 @@ table {
   position: relative;
   overflow: hidden;
 }
-#main .main__right .Mright__mid > div > .contentsWrap::before {
-  content: "";
+#main .main__right .Mright__mid > div > .contentsWrap > .contentOverlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(https://i.pinimg.com/originals/e2/ca/51/e2ca511664a6f9cf2c5d9f92328534ae.gif);
-  opacity: 0.1;
-  pointer-events: none;
-  z-index: 3;
-}
-#main .main__right .Mright__mid > div > .contentsWrap::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url(../img/mapLayout.png);
+  background: url(../img/main__overlay_cover.png);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 105% 105%;
+  background-position: center;
   pointer-events: none;
-  z-index: 6;
+  z-index: 22;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+#main .main__right .Mright__mid > div > .contentsWrap > .contentOverlay.active {
+  opacity: 1;
+}
+#main .main__right .Mright__mid > div > .contentsWrap > .contentNoise {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 0%;
+  background: url(https://i.pinimg.com/originals/e2/ca/51/e2ca511664a6f9cf2c5d9f92328534ae.gif);
+  background-attachment: fixed;
+  pointer-events: none;
+  z-index: 21;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: noisecancle 0.7s linear;
+}
+#main .main__right .Mright__mid > div > .contentsWrap > .contentNoise.active {
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+}
+#main .main__right .Mright__mid > div > .contentsWrap > .contentOverlayLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/main__overlay_line.png);
+  background-repeat: no-repeat;
+  background-size: 105% 105%;
+  background-position: center;
+  pointer-events: none;
+  z-index: 20;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+#main .main__right .Mright__mid > div > .contentsWrap > .contentOverlayLine.active {
+  opacity: 1;
 }
 #main .main__right .Mright__mid > div > .contentsWrap > .contentChange {
   position: absolute;
-  top: 0;
+  top: -10px;
   left: 0;
   width: 100%;
-  height: 2%;
+  height: 1%;
   background: var(--font-color5);
   border-right: 1px solid var(--font-color5);
   border-left: 1px solid var(--font-color5);
@@ -2577,6 +2607,7 @@ table {
   background-size: cover;
   background-position: center center;
   animation: contentMainMove 120s 0s linear infinite;
+  display: none;
 }
 #main .main__right .Mright__mid > div > .contentsWrap > .ContDescWrap > .contentMain.active {
   width: 100%;
@@ -2584,11 +2615,30 @@ table {
 #main .main__right .Mright__mid > div > .contentsWrap > .ContDescWrap > .AboutMe {
   width: 100%;
   height: 100%;
+  padding: 5% 10%;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 #main .main__right .Mright__mid > div > .contentsWrap > .ContDescWrap > .AboutMe > .AboutMeCont {
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+}
+#main .main__right .Mright__mid > div > .contentsWrap > .ContDescWrap > .AboutMe > .AboutMeCont .AboutPhoto {
+  border-top: 1px solid var(--base-border2);
+  border-left: 1px solid var(--base-border2);
+  border-right: 1px solid var(--base-border2);
+  border-bottom: 1px solid var(--base-border2);
+  width: 38%;
+  height: 100%;
+  border-radius: 3px;
+}
+#main .main__right .Mright__mid > div > .contentsWrap > .ContDescWrap > .AboutMe > .AboutMeCont .AboutDesc {
+  width: 60%;
+  height: 100%;
+  border-radius: 3px;
 }
 #main .main__right .Mright__mid > div > .contentsWrap > .sitelistCont {
   width: 100%;
@@ -4210,6 +4260,20 @@ table {
   }
   from {
     background-position: center center;
+  }
+}
+@keyframes noisecancle {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
+  99% {
+    width: 0%;
+    height: 100%;
+  }
+  100% {
+    width: 0%;
+    height: 0%;
   }
 }
 @keyframes spin3D {
