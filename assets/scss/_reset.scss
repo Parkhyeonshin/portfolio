@@ -208,12 +208,11 @@ table {
     position: absolute;
     top: 0;
     left: 0;
-    width: 0px;
-    height: 0px;
+    width: fit-content;
+    height: fit-content;
     pointer-events: none;
 
-    &::after {
-        content: "";
+    .cursorpointer {
         position: absolute;
         top: 0;
         left: 0;
@@ -225,5 +224,34 @@ table {
         background-size: cover;
         z-index: 9999999;
         pointer-events: none;
+    }
+    .cursordesc {
+        position: absolute;
+        top: 0;
+        left: 30px;
+        width: fit-content;
+        height: fit-content;
+        display: inline-block;
+        padding: 0px;
+        z-index: 9999998;
+        > div {
+            display: inline-block;
+            width: fit-content;
+            width: 0px;
+            height: fit-content;
+            background: rgba(0, 0, 0, 1);
+            display: none;
+            > span {
+                // opacity: 0;
+                display: none;
+                color: var(--font-color5);
+                text-shadow: -1px 0 var(--font-color), 0 1px var(--font-color), 1px 0 var(--font-color), 0 -1px #000;
+                &.active {
+                    // opacity: 1;
+                    display: inline-block;
+                    // transition: all 0.5s ease;
+                }
+            }
+        }
     }
 }

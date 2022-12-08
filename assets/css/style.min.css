@@ -203,12 +203,11 @@ table {
   position: absolute;
   top: 0;
   left: 0;
-  width: 0px;
-  height: 0px;
+  width: fit-content;
+  height: fit-content;
   pointer-events: none;
 }
-#cursor::after {
-  content: "";
+#cursor .cursorpointer {
   position: absolute;
   top: 0;
   left: 0;
@@ -220,6 +219,32 @@ table {
   background-size: cover;
   z-index: 9999999;
   pointer-events: none;
+}
+#cursor .cursordesc {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: fit-content;
+  height: fit-content;
+  display: inline-block;
+  padding: 0px;
+  z-index: 9999998;
+}
+#cursor .cursordesc > div {
+  display: inline-block;
+  width: fit-content;
+  width: 0px;
+  height: fit-content;
+  background: rgb(0, 0, 0);
+  display: none;
+}
+#cursor .cursordesc > div > span {
+  display: none;
+  color: var(--font-color5);
+  text-shadow: -1px 0 var(--font-color), 0 1px var(--font-color), 1px 0 var(--font-color), 0 -1px #000;
+}
+#cursor .cursordesc > div > span.active {
+  display: inline-block;
 }
 
 @font-face {
@@ -2606,8 +2631,8 @@ table {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  animation: contentMainMove 120s 0s linear infinite;
   display: none;
+  animation: contentMainMove 120s 0s linear infinite;
 }
 #main .main__right .Mright__mid > div > .contentsWrap > .ContDescWrap > .contentMain.active {
   width: 100%;
@@ -2619,6 +2644,7 @@ table {
   position: relative;
   display: flex;
   align-items: center;
+  display: none;
 }
 #main .main__right .Mright__mid > div > .contentsWrap > .ContDescWrap > .AboutMe > .AboutMeCont {
   width: 100%;
@@ -2644,6 +2670,10 @@ table {
   width: 100%;
   height: 100%;
   position: relative;
+}
+#main .main__right .Mright__mid > div > .contentsWrap > .sitelistCont .siteImg {
+  width: 100%;
+  height: 100%;
 }
 #main .main__right .Mright__btm {
   width: 100%;

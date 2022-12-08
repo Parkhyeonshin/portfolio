@@ -14,7 +14,12 @@
         </script>
     </head>
     <body onselectstart="return false">
-        <div id="cursor"></div>
+        <div id="cursor">
+            <div class="cursorpointer"></div>
+            <div class="cursordesc">
+                <div>어쩌고저쩌고 설명이다</div>
+            </div>
+        </div>
         <header id="header">
             <div class="profileWrap">
                 <span class="bdcir"></span>
@@ -524,13 +529,33 @@
                                     </div>
                                 </div>
                                 <div class="sitelistCont">
-                                    <figure class="site0">
+                                    <figure class="siteImg site0">
                                         <figcaption>index site</figcaption>
-                                        <img src="./assets/img/" alt="index site" />
+                                        <img src="./assets/img/indexSite.png" alt="index site" />
                                     </figure>
-                                    <figure class="site1">
+                                    <figure class="siteImg site1">
                                         <figcaption>site예시1</figcaption>
-                                        <img src="" alt="" />
+                                        <img src="./assets/img/sitemaking.png" alt="site making" />
+                                    </figure>
+                                    <figure class="siteImg site2">
+                                        <figcaption>site예시2</figcaption>
+                                        <img src="./assets/img/gameSite.jpg" alt="game effect" />
+                                    </figure>
+                                    <figure class="siteImg site3">
+                                        <figcaption>site예시3</figcaption>
+                                        <img src="./assets/img/reactRefer.png" alt="React site" />
+                                    </figure>
+                                    <figure class="siteImg site4">
+                                        <figcaption>site예시4</figcaption>
+                                        <img src="./assets/img/reactYoutube.png" alt="React site2" />
+                                    </figure>
+                                    <figure class="siteImg site5">
+                                        <figcaption>site예시5</figcaption>
+                                        <img src="./assets/img/vueSite.png" alt="Vue site" />
+                                    </figure>
+                                    <figure class="siteImg site6">
+                                        <figcaption>site예시6</figcaption>
+                                        <img src="./assets/img/phpSite.png" alt="Php site" />
                                     </figure>
                                 </div>
                             </div>
@@ -852,14 +877,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
         <script src="./assets/js/mainScript.js"></script>
         <script src="./assets/js/contentScript.js"></script>
+        <script src="./assets/js/mouseControl.js"></script>
         <script>
             // 드래그 막기
             window.document.ondragstart = new Function("return false");
-            // cursor
-            const cursor = document.querySelector("#cursor");
-            window.addEventListener("mousemove", (e) => {
-                gsap.to(cursor, { duration: 0, left: e.pageX - 5, top: e.pageY - 5 });
-            });
         </script>
     </body>
 </html>
