@@ -5,7 +5,7 @@ const cursorInfo = {
     music: "오류로 인해 멈춤기능이 되지 않습니다. 이용에 참고해주세요",
     sitelist: "스크롤바는 감쳐놓았지만 기능은 잘 됩니다.",
 };
-let spanTimmer = 100;
+let spanTimmer = 70;
 let setTimeoutCtrl = 0;
 
 window.addEventListener("mousemove", (e) => {

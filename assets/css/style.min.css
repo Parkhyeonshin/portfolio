@@ -237,6 +237,7 @@ table {
   height: fit-content;
   background: rgb(0, 0, 0);
   display: none;
+  position: relative;
 }
 #cursor .cursordesc > div > span {
   display: none;
@@ -245,6 +246,15 @@ table {
 }
 #cursor .cursordesc > div > span.active {
   display: inline-block;
+}
+#cursor .cursordesc > div > span.active::before {
+  content: "";
+  position: absolute;
+  right: -13px;
+  width: 13px;
+  height: 100%;
+  background: var(--font-color5);
+  z-index: 9999998;
 }
 
 @font-face {
@@ -2528,6 +2538,63 @@ table {
   width: 100%;
   height: 100%;
   padding: 1%;
+  position: relative;
+}
+#main .main__right .Mright__mid > div > span {
+  position: absolute;
+  background: var(--base-border);
+  transition: all 0.8s ease-out;
+}
+#main .main__right .Mright__mid > div > span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+}
+#main .main__right .Mright__mid > div > span:nth-child(2) {
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 0%;
+}
+#main .main__right .Mright__mid > div > span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  height: 1px;
+}
+#main .main__right .Mright__mid > div > span:nth-child(4) {
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 0%;
+}
+#main .main__right .Mright__mid > div > span.active {
+  transition: all 0.8s ease-out;
+}
+#main .main__right .Mright__mid > div > span.active:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+#main .main__right .Mright__mid > div > span.active:nth-child(2) {
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+}
+#main .main__right .Mright__mid > div > span.active:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+}
+#main .main__right .Mright__mid > div > span.active:nth-child(4) {
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
 }
 #main .main__right .Mright__mid > div > .contentsWrap {
   width: 100%;
@@ -2535,6 +2602,67 @@ table {
   background: #000;
   position: relative;
   overflow: hidden;
+}
+#main .main__right .Mright__mid > div > .contentsWrap > span {
+  position: absolute;
+  background: var(--base-border);
+  transition: all 0.8s ease-out;
+  z-index: 3;
+}
+#main .main__right .Mright__mid > div > .contentsWrap > span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform: translateX(100%);
+}
+#main .main__right .Mright__mid > div > .contentsWrap > span:nth-child(2) {
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  transform: translateY(100%);
+}
+#main .main__right .Mright__mid > div > .contentsWrap > span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  transform: translateX(-100%);
+}
+#main .main__right .Mright__mid > div > .contentsWrap > span:nth-child(4) {
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  transform: translateY(-100%);
+}
+#main .main__right .Mright__mid > div > .contentsWrap > span.active {
+  transition: all 0.8s ease-out;
+}
+#main .main__right .Mright__mid > div > .contentsWrap > span.active:nth-child(1) {
+  top: 0px;
+  left: 0;
+  transform: translateX(0%);
+}
+#main .main__right .Mright__mid > div > .contentsWrap > span.active:nth-child(2) {
+  top: 0;
+  right: 0px;
+  width: 1px;
+  height: 100%;
+  transform: translateY(0%);
+}
+#main .main__right .Mright__mid > div > .contentsWrap > span.active:nth-child(3) {
+  bottom: 0px;
+  right: 0;
+  transform: translateX(0%);
+}
+#main .main__right .Mright__mid > div > .contentsWrap > span.active:nth-child(4) {
+  bottom: 0;
+  left: 0px;
+  width: 1px;
+  height: 100%;
+  transform: translateY(0%);
 }
 #main .main__right .Mright__mid > div > .contentsWrap > .contentOverlay {
   position: absolute;
@@ -2549,7 +2677,7 @@ table {
   pointer-events: none;
   z-index: 22;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 1s 0.5s ease;
 }
 #main .main__right .Mright__mid > div > .contentsWrap > .contentOverlay.active {
   opacity: 1;
@@ -2559,14 +2687,14 @@ table {
   top: 0;
   left: 0;
   width: 0%;
-  height: 0%;
+  height: 100%;
   background: url(https://i.pinimg.com/originals/e2/ca/51/e2ca511664a6f9cf2c5d9f92328534ae.gif);
   background-attachment: fixed;
   pointer-events: none;
   z-index: 21;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  opacity: 0.1;
   animation: noisecancle 0.7s linear;
+  transition: width 0.5s linear;
 }
 #main .main__right .Mright__mid > div > .contentsWrap > .contentNoise.active {
   width: 100%;
@@ -2586,7 +2714,7 @@ table {
   pointer-events: none;
   z-index: 20;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.7s ease;
 }
 #main .main__right .Mright__mid > div > .contentsWrap > .contentOverlayLine.active {
   opacity: 1;
@@ -2663,8 +2791,8 @@ table {
   border-radius: 3px;
 }
 #main .main__right .Mright__mid > div > .contentsWrap > .ContDescWrap > .siteImg {
-  width: 100%;
-  height: 100%;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
 }
 #main .main__right .Mright__mid > div > .contentsWrap > .ContDescWrap > .contactWrap {
   width: 100%;
@@ -2686,12 +2814,13 @@ table {
   display: flex;
 }
 #main .main__right .Mright__mid > div > .contentsWrap > .ContDescWrap > .contentWindow.active.siteImg {
-  display: block;
+  display: flex;
+  align-items: center;
 }
-#main .main__right .Mright__mid > div > .contentsWrap > .ContDescWrap > .contentWindow.active.siteImg > img {
+#main .main__right .Mright__mid > div > .contentsWrap > .ContDescWrap > .contentWindow.active.siteImg img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: 100%;
 }
 #main .main__right .Mright__btm {
   width: 100%;
@@ -4003,6 +4132,11 @@ table {
   transform: translate(0, -15%);
 }
 
+@keyframes mouseOverflicker {
+  50% {
+    opacity: 0;
+  }
+}
 @keyframes borderflash {
   0% {
     background: var(--base-border2);
@@ -4308,20 +4442,6 @@ table {
   }
   from {
     background-position: center center;
-  }
-}
-@keyframes noisecancle {
-  0% {
-    width: 100%;
-    height: 100%;
-  }
-  99% {
-    width: 0%;
-    height: 100%;
-  }
-  100% {
-    width: 0%;
-    height: 0%;
   }
 }
 @keyframes spin3D {

@@ -175,6 +175,27 @@ function contentSwitch(x) {
         e.classList.remove("active");
     });
     contentShow[x].classList.add("active");
+    if (x >= 2 && x <= arrowCountMax - 1) {
+        document.querySelector(".contentNoise").classList.remove("active");
+        document.querySelector(".contentOverlayLine").classList.remove("active");
+        document.querySelector(".contentOverlay").classList.remove("active");
+        document.querySelectorAll(".sitefunction > span").forEach((e, i) => {
+            e.classList.add("active");
+        });
+        document.querySelectorAll(".contentsWrap > span").forEach((e, i) => {
+            e.classList.add("active");
+        });
+    } else {
+        document.querySelector(".contentNoise").classList.add("active");
+        document.querySelector(".contentOverlayLine").classList.add("active");
+        document.querySelector(".contentOverlay").classList.add("active");
+        document.querySelectorAll(".sitefunction > span").forEach((e, i) => {
+            e.classList.remove("active");
+        });
+        document.querySelectorAll(".contentsWrap > span").forEach((e, i) => {
+            e.classList.remove("active");
+        });
+    }
 }
 
 contInner(0, 0, 0);

@@ -241,15 +241,26 @@ table {
             height: fit-content;
             background: rgba(0, 0, 0, 1);
             display: none;
+            position: relative;
             > span {
                 // opacity: 0;
                 display: none;
                 color: var(--font-color5);
                 text-shadow: -1px 0 var(--font-color), 0 1px var(--font-color), 1px 0 var(--font-color), 0 -1px #000;
+
                 &.active {
                     // opacity: 1;
                     display: inline-block;
                     // transition: all 0.5s ease;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        right: -13px;
+                        width: 13px;
+                        height: 100%;
+                        background: var(--font-color5);
+                        z-index: 9999998;
+                    }
                 }
             }
         }
