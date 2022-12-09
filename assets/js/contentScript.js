@@ -58,13 +58,11 @@ const contentTit = document.querySelector(".content_title_big");
 const contentSubtit = document.querySelector(".content_title_small");
 const contentPrev = document.querySelector(".contentPrev");
 const contentNext = document.querySelector(".contentNext");
-
+const contentShow = document.querySelectorAll(".contentWindow");
 let arrowCount = 0,
     arrowCountMax = mainlist.length + sitelist.length - 1;
-console.log("arrowCountMax = " + arrowCountMax);
 // 데이터입력 및 실질적인 동작 메인컨트롤?함수
 function contInner(x, y, z) {
-    console.log(x);
     contentDesc.innerHTML = constarray[x].desc;
     contentTit.textContent = constarray[x].tit;
     contentSubtit.textContent = constarray[x].subtit;
@@ -76,12 +74,14 @@ function contInner(x, y, z) {
         sitelist.forEach((siteelement) => {
             siteelement.classList.remove("active");
         });
+        contentSwitch(x);
     } else if (x >= 3 && x < arrowCountMax) {
         let siteindex = x - 3;
         sitelist.forEach((siteelement) => {
             siteelement.classList.remove("active");
         });
         sitelist[siteindex].classList.add("active");
+        contentSwitch(x);
     } else if (x == arrowCountMax) {
         mainlist.forEach((mainelement) => {
             mainelement.classList.remove("active");
@@ -90,6 +90,7 @@ function contInner(x, y, z) {
         sitelist.forEach((siteelement) => {
             siteelement.classList.remove("active");
         });
+        contentSwitch(x);
     }
 }
 
@@ -124,10 +125,13 @@ contentPrev.addEventListener("click", () => {
     if (arrowCount == 0) {
         arrowCount = arrowCountMax;
     } else {
+        console.log("감소실행전" + arrowCount);
         arrowCount--;
+        console.log("감소실행 후" + arrowCount);
         if (arrowCount == 2) {
+            console.log("카운트가2일때" + arrowCount);
             Nositelistactive();
-        } else if (arrowCountMax - 1) {
+        } else if (arrowCount == arrowCountMax - 1) {
             sitelistactive();
         }
     }
@@ -160,8 +164,17 @@ function Nositelistactive() {
     document.querySelector(".mainListUL2control").classList.remove("active");
 }
 
+// 사이트리스트-back버튼 누르기
 sitelistBack.addEventListener("click", () => {
     Nositelistactive();
 });
+
+// 사이트전환 함수
+function contentSwitch(x) {
+    contentShow.forEach((e) => {
+        e.classList.remove("active");
+    });
+    contentShow[x].classList.add("active");
+}
 
 contInner(0, 0, 0);
