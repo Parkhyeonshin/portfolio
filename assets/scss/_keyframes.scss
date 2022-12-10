@@ -1,3 +1,32 @@
+// site1 forwards
+@keyframes start1Ani {
+    100% {
+        opacity: 0;
+    }
+}
+
+// blinkText
+@keyframes blinkText {
+    50% {
+        opacity: 0;
+    }
+}
+// load
+@keyframes load {
+    0% {
+        filter: opacity(0);
+        background-color: #1a1a1a;
+    }
+    50% {
+        filter: opacity(0);
+        background-color: #1d1d1d;
+    }
+    100% {
+        filter: opacity(1);
+        background-color: #0c0c0c;
+    }
+}
+
 // mouseOverflicker
 @keyframes mouseOverflicker {
     50% {

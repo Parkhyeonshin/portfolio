@@ -30,3 +30,7 @@ Free Download / Stream: http://ncs.io/TheFuture
 ## cursor 저작권
 
 https://www.flaticon.com/kr/free-icon/cursor_3771673?related_id=3771673&origin=search
+
+## audio재생이슈
+
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=miksora&logNo=221378758367

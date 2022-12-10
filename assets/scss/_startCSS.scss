@@ -1,0 +1,54 @@
+#StartWindow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #0c0c0c;
+    width: 100%;
+    height: 100vh;
+    z-index: 99999;
+    animation: load 0.5s ease-in-out forwards;
+    > .start1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: var(--font-main6);
+        display: flex;
+        > span {
+            display: none;
+            min-width: 3px;
+            font-size: 20px;
+            &.active {
+                display: block;
+            }
+        }
+        .blinkText {
+            position: absolute;
+            opacity: 1;
+            width: 15px;
+            height: 100%;
+            background: var(--font-color2);
+            top: 0;
+            right: -15px;
+            z-index: 999999;
+            animation: blinkText 0.5s infinite step-end;
+        }
+        &.forwards {
+            animation: start1Ani 1s ease-out forwards;
+        }
+    }
+    > .start2 {
+        display: none;
+        &.active {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: var(--font-main6);
+            display: block;
+            > div {
+                
+            }
+        }
+    }
+}
