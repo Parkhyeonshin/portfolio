@@ -387,22 +387,19 @@ table {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-#StartWindow > .start3 > .start3__name {
-  font-family: var(--font-main3);
   text-align: center;
+  font-family: var(--font-main5);
 }
 #StartWindow > .start3 > .start3__pic {
   width: 17vw;
   height: 17vw;
   min-width: 150px;
   min-height: 150px;
-  background: #fff;
+  background: url(../img/start3back.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 16px;
 }
-#StartWindow > .start3 > .start3__desc {
-  text-align: center;
-}
-
 #header {
   width: 19%;
   min-width: 350px;
