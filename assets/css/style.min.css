@@ -364,14 +364,45 @@ table {
 #StartWindow > .start2 {
   display: none;
 }
+#StartWindow > .start2 > div {
+  font-family: var(--font-main3);
+  text-transform: uppercase;
+  font-size: 3vw;
+  opacity: 0;
+  color: var(--font-color2);
+}
 #StartWindow > .start2.active {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: var(--font-main6);
   display: block;
 }
+#StartWindow > .start2.active > div {
+  -webkit-animation: start2Ani 2s forwards;
+          animation: start2Ani 2s forwards;
+}
+#StartWindow > .start3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#StartWindow > .start3 > .start3__name {
+  font-family: var(--font-main3);
+  text-align: center;
+}
+#StartWindow > .start3 > .start3__pic {
+  width: 17vw;
+  height: 17vw;
+  min-width: 150px;
+  min-height: 150px;
+  background: #fff;
+}
+#StartWindow > .start3 > .start3__desc {
+  text-align: center;
+}
+
 #header {
   width: 19%;
   min-width: 350px;
@@ -4302,6 +4333,76 @@ table {
 }
 
 @keyframes start1Ani {
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes start2Ani {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  74% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  86% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0;
+  }
+  93% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes start2Ani {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  74% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  86% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0;
+  }
+  93% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 1;
+  }
   100% {
     opacity: 0;
   }

@@ -4,6 +4,42 @@
         opacity: 0;
     }
 }
+// site2 forwards
+@keyframes start2Ani {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    65% {
+        opacity: 0;
+    }
+    74% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    85% {
+        opacity: 1;
+    }
+    86% {
+        opacity: 0;
+    }
+    92% {
+        opacity: 0;
+    }
+    93% {
+        opacity: 1;
+    }
+    97% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 
 // blinkText
 @keyframes blinkText {

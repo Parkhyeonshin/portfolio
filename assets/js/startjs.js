@@ -20,7 +20,7 @@ window.onload = function () {
     }, 1000);
     setTimeout(() => {
         startfunc2();
-    }, 5000);
+    }, 5500);
 };
 
 function startfunc1() {
@@ -66,7 +66,7 @@ function startfunc1() {
             nowMonth = "Dec.";
             break;
     }
-    let splitText = `${nowDay}. ${nowMonth} ${nowYear} ...사이트 접근 감지`;
+    let splitText = `${nowDay}. ${nowMonth} ${nowYear} ...접근 요청`;
     let splitWrap = splitText.split("").join('</span><span aria-hidden = "true">');
     splitWrap = "<span aria-hidden = 'true'>" + splitWrap + "</span><div class = 'blinkText'></div>";
     start1.innerHTML = splitWrap;
@@ -85,10 +85,10 @@ function startfunc1() {
     }, StartWindow.querySelectorAll(".start1 > span").length * 165);
     setTimeout(() => {
         StartWindow.querySelector(".start1").style.display = "none";
-    }, StartWindow.querySelectorAll(".start1 > span").length * 185);
-    console.log(StartWindow.querySelectorAll(".start1 > span").length * 185);
+    }, StartWindow.querySelectorAll(".start1 > span").length * 225);
+    console.log(StartWindow.querySelectorAll(".start1 > span").length * 225);
 }
 
 function startfunc2() {
-    
+    StartWindow.querySelector(".start2").classList.add("active");
 }
