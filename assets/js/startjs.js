@@ -34,6 +34,9 @@ window.onload = function () {
     setTimeout(() => {
         startfunc3_4();
     }, 18075 + 3000);
+    setTimeout(() => {
+        startfuncMain()
+    }, 22000);
 };
 
 function startfunc1() {
@@ -111,10 +114,10 @@ function startfunc3() {
     start3.classList.add("active"); // 디플블락만
     setTimeout(() => {
         let introAudio = new Audio();
-        introAudio.src = "../audio/Laser1.mp3";
-        introAudio.volume = 0.6;
+        introAudio.src = "https://parkhyeonshin.github.io/portfolio/assets/audio/Laser1.mp3";
+        introAudio.volume = 0.8;
         introAudio.play();
-    }, 4800);
+    }, 4200);
 }
 
 function startfunc3_2() {
@@ -142,10 +145,18 @@ function startfunc3_3() {
 }
 function startfunc3_4() {
     start3.classList.add("passive");
+    // setTimeout(() => {
+    //     let introAudio = new Audio();
+    //     introAudio.src = "https://parkhyeonshin.github.io/portfolio/assets/audio/Laser14.mp3";
+    //     introAudio.volume = 0.2;
+    //     introAudio.play();
+    // }, 3200);
     setTimeout(() => {
-        let introAudio = new Audio();
-        introAudio.src = "../audio/Laser1.mp3";
-        introAudio.volume = 0.6;
-        introAudio.play();
-    }, 4800);
+        StartWindow.style.display='none';
+    }, 7500);
+}
+
+
+function startfuncMain(){
+
 }

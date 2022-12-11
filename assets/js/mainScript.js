@@ -145,11 +145,7 @@ function equalizer(object, prevHeight) {
 //     setTimeout(() => {
 //         graphCountfunc();
 //     }, 6000);
-//     // musicAudio.muted = true;
-//     // musicAudio.play();
-//     // musicAudio.muted = false;
 
-//     // scrollItStart(100, contentframe);
 // };
 
 // 나는 너무 멀리온거야 ~~~

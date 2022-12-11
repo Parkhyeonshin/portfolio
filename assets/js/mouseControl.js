@@ -2,7 +2,7 @@
 const cursor = document.querySelector("#cursor");
 const cursordesc = document.querySelector(".cursordesc > div");
 const cursorInfo = {
-    music: "오류로 인해 멈춤기능이 되지 않습니다. 이용에 참고해주세요",
+    music: "오류 있슴다...누르면 겁나게 버벅일지도?",
     sitelist: "스크롤바는 감쳐놓았지만 기능은 잘 됩니다.",
 };
 let spanTimmer = 70;
@@ -13,7 +13,8 @@ window.addEventListener("mousemove", (e) => {
 });
 // 커서이벤트발생할것
 document.querySelector(".headerLastWrap").addEventListener("mouseenter", () => {
-    cursorInfoactive("music");
+    let x = cursorInfo.music;
+    cursorInfoactive(x);
 });
 document.querySelector(".headerLastWrap").addEventListener("mouseleave", () => {
     cursorInfoLeave();
@@ -21,7 +22,7 @@ document.querySelector(".headerLastWrap").addEventListener("mouseleave", () => {
 
 // 커서이벤트발생함수
 function cursorInfoactive(name) {
-    let splitText = cursorInfo.music;
+    let splitText = name;
     let splitWrap = splitText.split("").join('</span><span aria-hidden = "true">');
     splitWrap = "<span aria-hidden = 'true'>" + splitWrap + "</span>";
     cursordesc.innerHTML = splitWrap;
