@@ -73,3 +73,24 @@
     font-style: italic;
     font-display: swap;
 }
+// neuronitalic
+@font-face {
+    font-family: "Neuron";
+    src: url("../fonts/NeuronItalic.eot");
+    src: url("../fonts/NeuronItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/NeuronItalic.woff2") format("woff2"),
+        url("../fonts/NeuronItalic.woff") format("woff"), url("../fonts/NeuronItalic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+// Quantum
+@font-face {
+    font-family: "Quantum";
+    src: url("../fonts/QuantumRegular.eot");
+    src: url("../fonts/QuantumRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/QuantumRegular.woff2") format("woff2"),
+        url("../fonts/QuantumRegular.woff") format("woff"), url("../fonts/QuantumRegular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
