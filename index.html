@@ -459,7 +459,7 @@
                                 <ul class="mainListUL active">
                                     <li class="active">Main</li>
                                     <li>About Me</li>
-                                    <li>site list</li>
+                                    <li class="siteMouseInfo">site list</li>
                                     <li>contact</li>
                                 </ul>
                                 <ul class="mainListUL2">
@@ -588,6 +588,13 @@
                             <div class="contentOverlay active"></div>
                             <div class="contentNoise active"></div>
                             <div class="contentOverlayLine active"></div>
+                            <a class="contentLink" href="#" target="_blank">
+                                <p>
+                                    SITE VIEW
+                                    <br />
+                                    <em>Click AnyWhere</em>
+                                </p>
+                            </a>
                             <div class="ContDescWrap">
                                 <div class="contentMain active contentWindow"></div>
                                 <div class="AboutMe contentWindow">
@@ -605,6 +612,9 @@
                                                     <div>SINGLE DATA</div>
                                                 </div>
                                                 <div class="AboutMeModal__head_top2">
+                                                    <div>
+                                                        <p class="AboutMeModal__close">Close</p>
+                                                    </div>
                                                     <span class="bdcir"></span>
                                                     <span class="bdcir"></span>
                                                 </div>
@@ -1018,8 +1028,6 @@
         <script>
             // 드래그 막기
             window.document.ondragstart = new Function("return false");
-
-            // $(".AboutMeModal").draggable();
         </script>
     </body>
 </html>

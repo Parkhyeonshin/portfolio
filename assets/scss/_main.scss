@@ -1166,13 +1166,13 @@
                         background-attachment: fixed;
                         pointer-events: none;
                         z-index: 21;
-                        opacity: 0.1;
+                        opacity: 0.3;
                         animation: noisecancle 0.7s linear;
                         transition: width 0.5s linear;
                         &.active {
                             width: 100%;
                             height: 100%;
-                            opacity: 0.1;
+                            opacity: 0.2;
                         }
                     }
 
@@ -1192,6 +1192,52 @@
                         transition: opacity 0.7s ease;
                         &.active {
                             opacity: 1;
+                        }
+                    }
+                    > .contentLink {
+                        position: absolute;
+                        display: block;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 30;
+                        display: flex;
+                        align-items: center;
+                        display: none;
+                        &.active {
+                            display: flex;
+                        }
+                        &:hover {
+                            backdrop-filter: blur(4px);
+                            transition: all 0.4s ease;
+                            background: rgba(0, 0, 0, 0.7);
+                            cursor: none;
+                            > p {
+                                transform: scale(1);
+                                opacity: 1;
+                            }
+                        }
+                        &:not(:hover) {
+                            > p {
+                                transition: all 0.2s ease;
+                            }
+                        }
+                        > p {
+                            display: block;
+                            width: fit-content;
+                            margin: 0 auto;
+                            font-size: 1.5rem;
+                            text-shadow: 0px 0px 4px var(--font-color2);
+                            opacity: 0;
+                            transform: scale(3);
+                            transition: all 1s cubic-bezier(0.41, 0.78, 0.19, 1.13);
+                            text-align: center;
+                            > em {
+                                font-size: 1rem;
+                                color: var(--base-border);
+                                text-shadow: none;
+                            }
                         }
                     }
                     > .contentChange {
@@ -1248,18 +1294,30 @@
                             position: relative;
                             display: flex;
                             align-items: center;
-                            background: rgb(196, 196, 132);
+                            background: url(https://i.pinimg.com/564x/32/03/cb/3203cba48db78e6804764de23e741375.jpg);
+                            // background: url(https://i.pinimg.com/564x/50/ba/e1/50bae1fde6a4d9f8db48df17276946a6.jpg);
+                            // background: url(https://i.pinimg.com/originals/82/c2/db/82c2db5788aceb54f66ac364a811ea5c.gif);
+                            // background: url(https://i.pinimg.com/originals/ac/be/5d/acbe5d6dbcb3e69eb23bc7de16bf3c6b.gif);
+                            background-repeat: no-repeat;
+                            // background-size: 100% 100%;
+                            background-size: cover;
+                            background-position: center center;
                             display: none;
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background: rgba(0, 0, 0, 0.8);
+                            }
                             > .AboutMeCont {
                                 width: 100%;
                                 height: 100%;
                                 display: flex;
                                 align-items: center;
                                 .AboutPhoto {
-                                    @include bordertop2;
-                                    @include borderleft2;
-                                    @include borderright2;
-                                    @include borderbottom2;
                                     width: 38%;
                                     height: 100%;
 
@@ -1268,32 +1326,40 @@
                                 .AboutDesc {
                                     width: 60%;
                                     height: 100%;
-                                    border-radius: 3px;
                                 }
                             }
                             > .AboutMeModal {
                                 position: fixed;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                                width: 50%;
-                                height: 70%;
-                                min-width: 800px;
-                                min-height: 680px;
+                                top: 0%;
+                                left: 0%;
+                                width: 100%;
+                                height: 100%;
                                 padding: 1%;
-                                background: rgba(0, 0, 0, 0.7);
+                                background: rgba(0, 0, 0, 0.8);
                                 z-index: 600;
+                                display: none;
+                                align-items: center;
+                                &.active {
+                                    display: flex;
+                                }
                                 > .AboutMeModal__Cont {
                                     position: relative;
-                                    width: 100%;
-                                    height: 100%;
+                                    width: 50%;
+                                    height: 70%;
+                                    min-width: 800px;
+                                    min-height: 680px;
+                                    padding: 1.5%;
                                     display: flex;
+                                    margin: 0 auto;
                                     flex-wrap: wrap;
                                     justify-content: space-between;
                                     align-items: center;
                                     align-content: space-between;
-                                    background : url(../img/background.jpg);
-                                    background: rgba(0,0,0,0.6);
+                                    background: url(../img/background.jpg);
+                                    background: rgba(0, 0, 0, 0.6);
+                                    box-shadow: 0 0 1px var(--font-color), 0px 0px 5px 1px var(--font-color);
+                                    border-radius: 10px;
+
                                     > .AboutMeModal__head {
                                         @include borderbottom;
                                         width: 100%;
@@ -1328,6 +1394,22 @@
                                             @include bordertop;
                                             width: 35%;
                                             position: relative;
+                                            display: flex;
+                                            align-items: flex-end;
+                                            justify-content: flex-end;
+                                            padding: 0.5%;
+                                            > div {
+                                                text-transform: uppercase;
+                                                font-family: var(--font-main7);
+                                                font-size: 1.5rem;
+                                                padding: 4px 10px;
+                                                background: var(--base-border);
+                                                border-radius: 5px;
+                                                border: 1px solid var(--font-color);
+                                                > p {
+                                                    color: var(--font-color2);
+                                                }
+                                            }
                                             > .bdcir {
                                                 &:nth-of-type(2) {
                                                     @include bdcir2;
@@ -1350,11 +1432,11 @@
                                             width: 100%;
                                             height: 100%;
                                             border-radius: 5px;
-                                            box-shadow: 0px 0px 5px var(--font-color2);
+                                            box-shadow: 0px 0px 5px var(--font-color);
                                             background: url(../img/aboutme1.png);
                                             background-size: contain;
                                             background-position: center center;
-                                            background-attachment: fixed;
+                                            // background-attachment: fixed;
                                         }
                                     }
                                     > .AboutMeModal__main {
@@ -1449,7 +1531,6 @@
                             width: 100%;
                             height: 100%;
                             position: relative;
-                            background: #f5f5f5;
                         }
                         > .contentWindow {
                             display: none;
@@ -1472,40 +1553,9 @@
                                         object-fit: 100%;
                                     }
                                 }
-                                // &.siteImg {
-                                //     //ifram버전
-                                //     display: block;
-                                //     > img {
-                                //         width: 100%;
-                                //         height: 100%;
-                                //         object-fit: cover;
-                                //     }
-                                // }
                             }
                         }
                     }
-
-                    // > .AboutMe {
-                    // }
-                    // > .sitelist__1 {
-                    //     position: absolute;
-                    //     top: 0;
-                    //     left: 0;
-                    //     width: 100%;
-                    //     height: 100%;
-                    //     background: transparent;
-                    //     // background: url(../img/image48.jpg);
-                    //     // background-repeat: no-repeat;
-                    //     // background-size: 100% 100%;
-                    //     // background-size: cover;
-                    //     // background-position: 50% 50%;
-                    //     // display: none;
-                    //     > iframe {
-                    //         width: 100%;
-                    //         height: 0%;
-                    //         overflow: hidden;
-                    //     }
-                    // }
                 }
             }
         }

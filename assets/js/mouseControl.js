@@ -3,7 +3,7 @@ const cursor = document.querySelector("#cursor");
 const cursordesc = document.querySelector(".cursordesc > div");
 const cursorInfo = {
     music: "오류 있슴다...누르면 겁나게 버벅일지도?",
-    sitelist: "스크롤바는 감쳐놓았지만 기능은 잘 됩니다.",
+    sitelist: "화면 클릭하시면 원본사이트이동 가능합니다",
 };
 let spanTimmer = 70;
 let setTimeoutCtrl = 0;
@@ -17,6 +17,13 @@ document.querySelector(".headerLastWrap").addEventListener("mouseenter", () => {
     cursorInfoactive(x);
 });
 document.querySelector(".headerLastWrap").addEventListener("mouseleave", () => {
+    cursorInfoLeave();
+});
+document.querySelector(".siteMouseInfo").addEventListener("mouseenter", () => {
+    let x = cursorInfo.sitelist;
+    cursorInfoactive(x);
+});
+document.querySelector(".siteMouseInfo").addEventListener("mouseleave", () => {
     cursorInfoLeave();
 });
 
@@ -39,7 +46,6 @@ function spanSplit() {
     //     }, spanTimmer);
     // });
     document.querySelectorAll(".cursordesc > div > span").forEach((span, idx) => {
-        console.log(span);
         setTimeoutCtrl = setTimeout(() => {
             span.classList.add("active");
             // document.querySelector(".cursordesc > div").style.width = 15 * idx + "px";
