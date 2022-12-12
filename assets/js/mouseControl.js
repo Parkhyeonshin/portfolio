@@ -26,6 +26,7 @@ function cursorInfoactive(name) {
     let splitWrap = splitText.split("").join('</span><span aria-hidden = "true">');
     splitWrap = "<span aria-hidden = 'true'>" + splitWrap + "</span>";
     cursordesc.innerHTML = splitWrap;
+    document.querySelector(".cursorblink").classList.add("active");
     spanSplit();
 }
 
@@ -42,7 +43,7 @@ function spanSplit() {
         setTimeoutCtrl = setTimeout(() => {
             span.classList.add("active");
             // document.querySelector(".cursordesc > div").style.width = 15 * idx + "px";
-            document.querySelector(".cursordesc > div").style.width = "fit-content";
+            // document.querySelector(".cursordesc > div").style.width = "fit-content";
             document.querySelector(".cursordesc > div").style.display = "flex";
         }, idx * spanTimmer);
     });
@@ -55,6 +56,6 @@ function cursorInfoLeave() {
     clearTimeout(setTimeoutCtrl);
     setTimeout(() => {
         document.querySelector(".cursordesc > div").style.display = "none";
-        document.querySelector(".cursordesc > div").style.width = 0 + "px";
     }, 500);
+    document.querySelector(".cursorblink").classList.add("active");
 }
