@@ -346,7 +346,6 @@ table {
   z-index: 99999;
   -webkit-animation: load 0.5s ease-in-out forwards;
           animation: load 0.5s ease-in-out forwards;
-  display: none;
 }
 #StartWindow > .start1 {
   position: absolute;
