@@ -35,7 +35,7 @@ window.onload = function () {
         startfunc3_4();
     }, 18075 + 3000);
     setTimeout(() => {
-        startfuncMain()
+        startfuncMain();
     }, 22000);
 };
 
@@ -152,11 +152,8 @@ function startfunc3_4() {
     //     introAudio.play();
     // }, 3200);
     setTimeout(() => {
-        StartWindow.style.display='none';
+        StartWindow.style.display = "none";
     }, 7500);
 }
 
-
-function startfuncMain(){
-
-}
+function startfuncMain() {}

@@ -50,6 +50,9 @@ const constarray = [
         desc: `<span> 이래도 안넘어와? 곤란한데...</span>`,
     },
 ];
+const AboutInfo = [
+    `안녕하세요 저는 신입 프론트엔드 개발자 박현신 입니다. 흰 화면이 코드를 통해 하나씩 채워지는 것을 직관적으로 확인할 수 있어 프론트엔드 라는 직업이 더 매력적으로 느껴졌고 원하는 것을 직접 이뤘을 때 너무나도 성취감이 있고 흥미롭게 다가왔습니다. 아직은 서툴고 부족하기에 많이 배워야하고 더 많은 노력이 필요하다는 것을 알고 있습니다. 실패에 두려워하지 않고, 항상 노력하며 끊임없이 공부하고 센스있는 프론트엔드 개발자가 되겠습니다.`,
+];
 const mainlist = document.querySelectorAll(".mainListUL > li");
 const sitelist = document.querySelectorAll(".mainListUL2 > li");
 const sitelistBack = document.querySelector(".listBack");
@@ -66,7 +69,7 @@ function contInner(x, y, z) {
     contentDesc.innerHTML = constarray[x].desc;
     contentTit.textContent = constarray[x].tit;
     contentSubtit.textContent = constarray[x].subtit;
-    if (x == 0 || x == 1 || x == 2) {
+    if (x == 0 || x == 2) {
         mainlist.forEach((mainelement) => {
             mainelement.classList.remove("active");
         });
@@ -75,6 +78,16 @@ function contInner(x, y, z) {
             siteelement.classList.remove("active");
         });
         contentSwitch(x);
+    } else if (x == 1) {
+        mainlist.forEach((mainelement) => {
+            mainelement.classList.remove("active");
+        });
+        mainlist[x].classList.add("active");
+        sitelist.forEach((siteelement) => {
+            siteelement.classList.remove("active");
+        });
+        contentSwitch(x);
+        AboutInfoWrite(0);
     } else if (x >= 3 && x < arrowCountMax) {
         let siteindex = x - 3;
         sitelist.forEach((siteelement) => {
@@ -176,7 +189,7 @@ function contentSwitch(x) {
     });
     contentShow[x].classList.add("active");
     if (x >= 2 && x <= arrowCountMax - 1) {
-        document.querySelector(".contentNoise").classList.remove("active");
+        // document.querySelector(".contentNoise").classList.remove("active");
         document.querySelector(".contentOverlayLine").classList.remove("active");
         document.querySelector(".contentOverlay").classList.remove("active");
         document.querySelectorAll(".sitefunction > span").forEach((e, i) => {
@@ -186,7 +199,7 @@ function contentSwitch(x) {
             e.classList.add("active");
         });
     } else {
-        document.querySelector(".contentNoise").classList.add("active");
+        // document.querySelector(".contentNoise").classList.add("active");
         document.querySelector(".contentOverlayLine").classList.add("active");
         document.querySelector(".contentOverlay").classList.add("active");
         document.querySelectorAll(".sitefunction > span").forEach((e, i) => {
@@ -199,3 +212,15 @@ function contentSwitch(x) {
 }
 
 contInner(0, 0, 0);
+
+function AboutInfoWrite(count) {
+    let splitText = AboutInfo[count];
+    let splitWrap = splitText.split("").join('</span><span aria-hidden = "true">');
+    splitWrap = "<span aria-hidden = 'true'>" + splitWrap + "</span><div class = 'blinkText'></div>";
+    document.querySelector(".AboutMeModal__desc").innerHTML = splitWrap;
+    document.querySelectorAll(".AboutMeModal__desc > span").forEach((span, idx) => {
+        setTimeout(() => {
+            span.classList.add("active");
+        }, idx * 30);
+    });
+}
