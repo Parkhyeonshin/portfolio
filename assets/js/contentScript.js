@@ -2,7 +2,7 @@ const constarray = [
     {
         tit: `MAIN`,
         subtit: `intro`,
-        desc: `<span>환영합니다.</span><span> 왼쪽의 '<em>Project List</em>'의 목록을 클릭하시거나,</span><span> <em>하단의 화살표</em>를 클릭하시면 감상이 가능합니다 :)</span><span class='main_desc_intro'>영화 <em>'오블리비언'</em>에 나오는 스크린화면을 컨셉삼아 만들어봤습니다.</span> `,
+        desc: `<span>환영합니다.</span><span> 왼쪽의 '<em>Site List</em>'의 목록을 클릭하시거나,</span><span> <em>하단의 화살표</em>를 클릭하시면 감상이 가능합니다 :)</span><span>진행상태 : '-ing'</span><span class='main_desc_intro'>영화 <em>'오블리비언'</em>에 나오는 스크린화면을 컨셉삼아 만들어봤습니다.</span> `,
     },
     {
         tit: `ABOUT ME`,
@@ -55,7 +55,7 @@ const constarray = [
     {
         tit: `contact`,
         subtit: `trust me`,
-        desc: `<span> 현타와서 못해먹겠다~~~~</span>`,
+        desc: `<span> 준비중...</span>`,
     },
 ];
 const AboutInfo = [
@@ -210,6 +210,14 @@ function contentSwitch(x) {
         document.querySelectorAll(".contentsWrap > span").forEach((e, i) => {
             e.classList.add("active");
         });
+    } else if (x == arrowCountMax) {
+        document.querySelector(".contentOverlayLine").classList.remove("active");
+        // document.querySelectorAll(".sitefunction > span").forEach((e, i) => {
+        //     e.classList.add("active");
+        // });
+        // document.querySelectorAll(".contentsWrap > span").forEach((e, i) => {
+        //     e.classList.add("active");
+        // });
     } else {
         // document.querySelector(".contentNoise").classList.add("active");
         document.querySelector(".contentOverlayLine").classList.add("active");

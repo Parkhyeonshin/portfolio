@@ -390,10 +390,12 @@
                     animation: start3__glitch_Reverse 2s 2s forwards;
                     .glitch__line1,
                     .glitch__line3 {
+                        width: 100%;
                         animation: glitch__line1_Reverse 0.5s 1.8s forwards;
                     }
                     .glitch__line2,
                     .glitch__line4 {
+                        height: 100%;
                         animation: glitch__line2_Reverse 0.5s 1.8s forwards;
                     }
                 }
@@ -405,10 +407,13 @@
                 > .start3__pic_backInside {
                     .start3__pic_backInside__line1,
                     .start3__pic_backInside__line3 {
+                        width: 100%;
+
                         animation: start3__pic_backInside__line1_Reverse 0.5s 0.5s forwards;
                     }
                     .start3__pic_backInside__line2,
                     .start3__pic_backInside__line4 {
+                        height: 100%;
                         animation: start3__pic_backInside__line2_Reverse 0.5s 0.5s forwards;
                     }
                 }
