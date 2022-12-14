@@ -153,9 +153,8 @@ function startfunc3_4() {
     // }, 3200);
     setTimeout(() => {
         StartWindow.style.display = "none";
+        document.querySelector(".pswp__preloader__icn").style.animation = "none";
     }, 7500);
 }
-
-
 
 function startfuncMain() {}

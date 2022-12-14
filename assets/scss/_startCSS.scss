@@ -9,6 +9,54 @@
     animation: load 0.5s ease-in-out forwards;
     // display: none;
     // 디플논은 편집중에꺼놓기 ㅇㅇ
+
+    > .pswp__preloader__icn {
+        opacity: 0.75;
+        width: 1.2vw;
+        height: 1.2vw;
+        margin: 0.5vw;
+        animation: clockwise 500ms linear infinite;
+        .pswp__preloader__donut--fake {
+            box-sizing: border-box;
+
+            width: 1.2vw;
+            height: 1.2vw;
+
+            border: 2px solid red;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            background: none;
+            margin: 0;
+        }
+        .pswp__preloader__donut {
+            box-sizing: border-box;
+
+            width: 1.2vw;
+            height: 1.2vw;
+
+            border: 2px solid var(--base-border2);
+            border-radius: 50%;
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            background: none;
+            margin: 0;
+
+            animation: donut-rotate 1000ms cubic-bezier(0.4, 0, 0.22, 1) infinite;
+        }
+    }
+
     > .start1 {
         position: absolute;
         top: 50%;
@@ -591,5 +639,26 @@
     100% {
         opacity: 0;
         transform: translate(-50%, -50%) scale(0.95);
+    }
+}
+
+//
+@keyframes clockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes donut-rotate {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(-140deg);
+    }
+    100% {
+        transform: rotate(0);
     }
 }
