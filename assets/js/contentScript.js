@@ -2,7 +2,7 @@ const constarray = [
     {
         tit: `MAIN`,
         subtit: `intro`,
-        desc: `<span>환영합니다.</span><span> 왼쪽의 '<em>Site List</em>'의 목록을 클릭하시거나,</span><span> <em>하단의 화살표</em>를 클릭하시면 감상이 가능합니다 :)</span><span>진행상태 : '-ing'</span><span class='main_desc_intro'>영화 <em>'오블리비언'</em>에 나오는 스크린화면을 컨셉삼아 만들어봤습니다.</span> `,
+        desc: `<span>환영합니다.</span><span> 왼쪽의 '<em>Site List</em>'의 목록을 클릭하시거나,</span><span> <em>하단의 화살표</em>를 클릭하시면 감상이 가능합니다 :)</span><span>진행상태 : '-ing', 반응형 : '-ing'</span><span class='main_desc_intro'>영화 <em>'오블리비언'</em>에 나오는 스크린화면을 컨셉삼아 만들어봤습니다.</span> `,
     },
     {
         tit: `ABOUT ME`,
@@ -55,7 +55,7 @@ const constarray = [
     {
         tit: `contact`,
         subtit: `trust me`,
-        desc: `<span> 준비중...</span>`,
+        desc: `<div class='contIconGroup'><div class="phoneIcon">Phone<div></div></div><a target='_blank' href="https://github.com/Parkhyeonshin" class="gitIcon">GitHub<div></div></a><a href="https://sshin4882.tistory.com/" class="blogIcon" target='_blank'>Blog<div></div></a><a href="mailto:sshin4882@naver.com"  target='_blank' class="mailIcon">E-Mail<div></div></a></div>`,
     },
 ];
 const AboutInfo = [
@@ -72,6 +72,10 @@ const contentNext = document.querySelector(".contentNext");
 const contentShow = document.querySelectorAll(".contentWindow");
 const AboutClose = document.querySelectorAll(".AboutMeModal__close");
 const SiteLink = document.querySelector(".contentLink");
+// const PhoneBtn = document.querySelector(".phoneIcon");
+// const GitBtn = document.querySelector(".gitIcon");
+// const BlogBtn = document.querySelector(".blogIcon");
+// const EmaileBtn = document.querySelector(".mailIcon");
 let arrowCount = 0,
     arrowCountMax = mainlist.length + sitelist.length - 1;
 // 데이터입력 및 실질적인 동작 메인컨트롤?함수
@@ -116,6 +120,7 @@ function contInner(x, y, z) {
             siteelement.classList.remove("active");
         });
         contentSwitch(x);
+        contacthover();
     }
 }
 
@@ -211,7 +216,8 @@ function contentSwitch(x) {
             e.classList.add("active");
         });
     } else if (x == arrowCountMax) {
-        document.querySelector(".contentOverlayLine").classList.remove("active");
+        // document.querySelector(".contentOverlayLine").classList.remove("active");
+        // document.querySelector(".contentOverlay").classList.remove("active");
         // document.querySelectorAll(".sitefunction > span").forEach((e, i) => {
         //     e.classList.add("active");
         // });
@@ -267,3 +273,130 @@ SiteLink.addEventListener("click", (x) => {
     console.log(arrowCount);
     window.open(constarray[arrowCount].link);
 });
+// contact
+function contacthover() {
+    document.querySelector(".gitIcon").addEventListener("mouseenter", () => {
+        document.querySelector(".GitImg").classList.add("active");
+    });
+    document.querySelector(".gitIcon").addEventListener("mouseleave", () => {
+        document.querySelector(".GitImg").classList.remove("active");
+    });
+    document.querySelector(".blogIcon").addEventListener("mouseenter", () => {
+        document.querySelector(".BlogImg").classList.add("active");
+    });
+    document.querySelector(".blogIcon").addEventListener("mouseleave", () => {
+        document.querySelector(".BlogImg").classList.remove("active");
+    });
+    document.querySelector(".phoneIcon").addEventListener("mouseenter", () => {
+        document.querySelector(".phoneNum").classList.add("active");
+    });
+    document.querySelector(".phoneIcon").addEventListener("mouseleave", () => {
+        document.querySelector(".phoneNum").classList.remove("active");
+    });
+}
+// contact__threejs
+class Stage {
+    constructor() {
+        this.renderParam = {
+            width: window.innerWidth,
+            height: window.innerHeight,
+        };
+        this.cameraParam = {
+            fov: 125,
+            near: 1,
+            far: 20000,
+        };
+        this.scene = null;
+        this.rederer = null;
+        this.camera = null;
+        this.mesh = null;
+        this.init();
+    }
+    init() {
+        this._setScene();
+        this._setRender();
+        this._setCamera();
+        this._setMesh();
+        this._setFog();
+        this._update();
+        this._render();
+        onresize = this._resize.bind(this);
+    }
+    _setScene() {
+        this.scene = new THREE.Scene();
+    }
+    _setRender() {
+        this.renderer = new THREE.WebGLRenderer({
+            canvas: document.getElementById("webgl"),
+            antialias: true,
+            alpha: true,
+        });
+        this.renderer.setSize(this.renderParam.width, this.renderParam.height);
+        this.renderer.setPixelRatio(window.devicePixelRatio > 1 ? 2 : 1);
+    }
+    _setCamera() {
+        this.camera = new THREE.PerspectiveCamera(
+            this.cameraParam.fov,
+            this.renderParam.width / this.renderParam.height,
+            this.cameraParam.near,
+            this.cameraParam.far
+        );
+        this.camera.position.set(-200, 0, 185);
+        this.camera.lookAt(new THREE.Vector3(0, 0, -100));
+    }
+    _setMesh() {
+        // const geometry = new THREE.BoxGeometry(3, 3, 3, 4, 4, 4);
+        // const material = new THREE.MeshStandardMaterial({ color: 0xff0000 });
+        // this.mesh = new THREE.Mesh(geometry, material);
+        // this.mesh.position.set(0, 0, 0);
+        // this.scene.add(this.mesh);
+
+        const vertices = [];
+        const size = 2000;
+        const length = 7000;
+        const geometry = new THREE.BufferGeometry();
+        const material = new THREE.PointsMaterial({
+            color: 0xffffff,
+            size: 1,
+        });
+        for (let i = 0; i < length; i++) {
+            const x = size * (Math.random() - 0.5);
+            const y = size * (Math.random() - 0.5);
+            const z = size * (Math.random() - 0.5);
+
+            vertices.push(x, y, z);
+        }
+        geometry.setAttribute("position", new THREE.Float32BufferAttribute(vertices, 3));
+        this.mesh = new THREE.Points(geometry, material);
+        this.scene.add(this.mesh);
+    }
+    _setFog() {
+        this.scene.fog = new THREE.Fog(0xffffff, 50, 200);
+    }
+    _update() {
+        // this.mesh.rotation.x += -0.001;
+        // this.mesh.rotation.y += 0.00021;
+        // this.mesh.rotation.z += 0.0001;
+        let rotation = 0;
+        const radian = (rotation * Math.PI) / 180;
+        rotation += 0.1;
+        this.camera.position.x = 3000 * Math.sin(rotation);
+        this.camera.position.z = 1000 * Math.cos(rotation);
+        // this.camera.position.y = 2200 * Math.cos(rotation);
+        this.mesh.rotation.z += 0.001;
+        this.mesh.rotation.x += 0.001;
+    }
+    _render() {
+        this._update();
+        this.renderer.render(this.scene, this.camera);
+        requestAnimationFrame(this._render.bind(this));
+    }
+    _resize() {
+        this.camera.aspect = window.innerWidth / window.innerHeight;
+        this.camera.updateProjectionMatrix();
+        this.renderer.setSize(window.innerWidth, window.innerHeight);
+    }
+}
+(() => {
+    const stage = new Stage();
+})();

@@ -34,3 +34,9 @@ https://www.flaticon.com/kr/free-icon/cursor_3771673?related_id=3771673&origin=s
 ## audio재생이슈
 
 https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=miksora&logNo=221378758367
+
+## 개선사항
+
+: 로딩중일 때 진행현황 알 수 있게  
+: 로딩 마지막에 커지고 한섹션씩 사라지면서 (인트로 이후 메인 나오는거 컨트롤)  
+: 사이트 보기 누르면 소스보기 ㅇㅇㅇ?(페이지트랜지션)
