@@ -2,7 +2,7 @@
 const cursor = document.querySelector("#cursor");
 const cursordesc = document.querySelector(".cursordesc > div");
 const cursorInfo = {
-    music: "종료 안되는 오류 수정중에 있습니다...",
+    music: "오디오 스펙트럼 종료 안되는 오류 수정중에 있습니다...",
     sitelist: "화면 클릭하시면 원본사이트이동 가능합니다",
 };
 let spanTimmer = 70;

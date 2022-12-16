@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background: url(../img/background.jpg);
+  background: #0c0c0c;
   color: var(--font-color);
   display: flex;
   justify-content: space-between;
@@ -330,7 +330,11 @@ table {
   font-style: normal;
   font-display: swap;
 }
-#StartWindow {
+#section1 {
+  width: 0;
+  height: 0;
+}
+#section1 #StartWindow {
   position: fixed;
   top: 0;
   left: 0;
@@ -340,14 +344,14 @@ table {
   z-index: 99999;
   animation: load 0.5s ease-in-out forwards;
 }
-#StartWindow > .pswp__preloader__icn {
+#section1 #StartWindow > .pswp__preloader__icn {
   opacity: 0.75;
   width: 1.2vw;
   height: 1.2vw;
   margin: 0.5vw;
   animation: clockwise 500ms linear infinite;
 }
-#StartWindow > .pswp__preloader__icn .pswp__preloader__donut--fake {
+#section1 #StartWindow > .pswp__preloader__icn .pswp__preloader__donut--fake {
   box-sizing: border-box;
   width: 1.2vw;
   height: 1.2vw;
@@ -359,7 +363,7 @@ table {
   background: none;
   margin: 0;
 }
-#StartWindow > .pswp__preloader__icn .pswp__preloader__donut {
+#section1 #StartWindow > .pswp__preloader__icn .pswp__preloader__donut {
   box-sizing: border-box;
   width: 1.2vw;
   height: 1.2vw;
@@ -377,7 +381,7 @@ table {
   margin: 0;
   animation: donut-rotate 1000ms cubic-bezier(0.4, 0, 0.22, 1) infinite;
 }
-#StartWindow > .start1 {
+#section1 #StartWindow > .start1 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -385,15 +389,15 @@ table {
   font-family: var(--font-main6);
   display: flex;
 }
-#StartWindow > .start1 > span {
+#section1 #StartWindow > .start1 > span {
   display: none;
   min-width: 3px;
   font-size: 20px;
 }
-#StartWindow > .start1 > span.active {
+#section1 #StartWindow > .start1 > span.active {
   display: block;
 }
-#StartWindow > .start1 .blinkText {
+#section1 #StartWindow > .start1 .blinkText {
   position: absolute;
   opacity: 1;
   width: 15px;
@@ -404,30 +408,30 @@ table {
   z-index: 999999;
   animation: blinkText 0.5s infinite step-end;
 }
-#StartWindow > .start1.forwards {
+#section1 #StartWindow > .start1.forwards {
   animation: start1Ani 1s ease-out forwards;
 }
-#StartWindow > .start2 {
+#section1 #StartWindow > .start2 {
   display: none;
 }
-#StartWindow > .start2 > div {
+#section1 #StartWindow > .start2 > div {
   font-family: var(--font-main3);
   text-transform: uppercase;
   font-size: 3vw;
   opacity: 0;
   color: var(--font-color2);
 }
-#StartWindow > .start2.active {
+#section1 #StartWindow > .start2.active {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: block;
 }
-#StartWindow > .start2.active > div {
+#section1 #StartWindow > .start2.active > div {
   animation: start2Ani 2s forwards;
 }
-#StartWindow > .start3 {
+#section1 #StartWindow > .start3 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -437,7 +441,7 @@ table {
   font-size: 2.2vw;
   display: none;
 }
-#StartWindow > .start3 > .start3__pic {
+#section1 #StartWindow > .start3 > .start3__pic {
   width: 17vw;
   height: 17vw;
   min-width: 290px;
@@ -452,7 +456,7 @@ table {
   border: 2px solid var(--font-color);
   position: relative;
 }
-#StartWindow > .start3 > .start3__pic > .glitch {
+#section1 #StartWindow > .start3 > .start3__pic > .glitch {
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -460,7 +464,7 @@ table {
   position: relative;
   opacity: 0;
 }
-#StartWindow > .start3 > .start3__pic > .glitch > .glitch__img {
+#section1 #StartWindow > .start3 > .start3__pic > .glitch > .glitch__img {
   width: 100%;
   height: 100%;
   background-image: url(../img/test-img.jpg);
@@ -473,26 +477,26 @@ table {
   top: 0;
   left: -2px;
 }
-#StartWindow > .start3 > .start3__pic > .glitch > .glitch__img:nth-child(n+2) {
+#section1 #StartWindow > .start3 > .start3__pic > .glitch > .glitch__img:nth-child(n+2) {
   opacity: 0;
 }
-#StartWindow > .start3 > .start3__pic > .glitch > .glitch__img:nth-child(n+2) {
+#section1 #StartWindow > .start3 > .start3__pic > .glitch > .glitch__img:nth-child(n+2) {
   animation-duration: 3s;
   animation-delay: 1s;
   animation-timing-function: ease;
   animation-iteration-count: infinite;
 }
-#StartWindow > .start3 > .start3__pic > .glitch > .glitch__img:nth-child(2) {
+#section1 #StartWindow > .start3 > .start3__pic > .glitch > .glitch__img:nth-child(2) {
   background-color: transparent;
   background-blend-mode: difference;
   animation-name: glitch-anim-1;
 }
-#StartWindow > .start3 > .start3__pic > .glitch > .glitch__img:nth-child(3) {
+#section1 #StartWindow > .start3 > .start3__pic > .glitch > .glitch__img:nth-child(3) {
   background-color: transparent;
   background-blend-mode: difference;
   animation-name: glitch-anim-2;
 }
-#StartWindow > .start3 > .start3__pic > .glitch > .glitch__img:nth-child(4) {
+#section1 #StartWindow > .start3 > .start3__pic > .glitch > .glitch__img:nth-child(4) {
   width: 100%;
   left: 0%;
   margin: 0 auto;
@@ -500,13 +504,13 @@ table {
   background-blend-mode: overlay;
   animation-name: glitch-anim-3;
 }
-#StartWindow > .start3 > .start3__pic > .glitch > .glitch__img:nth-child(5) {
+#section1 #StartWindow > .start3 > .start3__pic > .glitch > .glitch__img:nth-child(5) {
   width: 100%;
   background-color: transparent;
   background-blend-mode: color;
   animation-name: glitch-anim-flash;
 }
-#StartWindow > .start3 > .start3__pic > .glitch > .glitch__line1 {
+#section1 #StartWindow > .start3 > .start3__pic > .glitch > .glitch__line1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -514,7 +518,7 @@ table {
   height: 2px;
   background: var(--font-color);
 }
-#StartWindow > .start3 > .start3__pic > .glitch > .glitch__line2 {
+#section1 #StartWindow > .start3 > .start3__pic > .glitch > .glitch__line2 {
   position: absolute;
   top: 0;
   right: 0;
@@ -522,7 +526,7 @@ table {
   height: 100%;
   background: var(--font-color);
 }
-#StartWindow > .start3 > .start3__pic > .glitch > .glitch__line3 {
+#section1 #StartWindow > .start3 > .start3__pic > .glitch > .glitch__line3 {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -530,7 +534,7 @@ table {
   height: 2px;
   background: var(--font-color);
 }
-#StartWindow > .start3 > .start3__pic > .glitch > .glitch__line4 {
+#section1 #StartWindow > .start3 > .start3__pic > .glitch > .glitch__line4 {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -538,7 +542,7 @@ table {
   height: 100%;
   background: var(--font-color);
 }
-#StartWindow > .start3 > .start3__pic > .start3__plus {
+#section1 #StartWindow > .start3 > .start3__pic > .start3__plus {
   position: absolute;
   top: -3px;
   left: calc(0% - 1px);
@@ -548,7 +552,7 @@ table {
   transform: translateX(-50%);
   background: var(--font-color3);
 }
-#StartWindow > .start3 > .start3__pic > .start3__plus::after {
+#section1 #StartWindow > .start3 > .start3__pic > .start3__plus::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -559,23 +563,23 @@ table {
   transform: translate(-50%, -50%);
   background: var(--font-color3);
 }
-#StartWindow > .start3 > .start3__pic > .start3__plus.start3__plus2 {
+#section1 #StartWindow > .start3 > .start3__pic > .start3__plus.start3__plus2 {
   left: auto;
   right: calc(0% - 1px);
   transform: translateX(50%);
 }
-#StartWindow > .start3 > .start3__pic > .start3__plus.start3__plus3 {
+#section1 #StartWindow > .start3 > .start3__pic > .start3__plus.start3__plus3 {
   top: auto;
   bottom: -2px;
 }
-#StartWindow > .start3 > .start3__pic > .start3__plus.start3__plus4 {
+#section1 #StartWindow > .start3 > .start3__pic > .start3__plus.start3__plus4 {
   top: auto;
   bottom: -2px;
   left: auto;
   right: calc(0% - 1px);
   transform: translateX(50%);
 }
-#StartWindow > .start3 > .start3__pic .start3__pic_back {
+#section1 #StartWindow > .start3 > .start3__pic .start3__pic_back {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -587,7 +591,7 @@ table {
   border: 3px solid var(--font-color);
   opacity: 0.3;
 }
-#StartWindow > .start3 > .start3__pic .start3__pic_back > .start3__plus {
+#section1 #StartWindow > .start3 > .start3__pic .start3__pic_back > .start3__plus {
   position: absolute;
   top: -3px;
   left: calc(0% - 1px);
@@ -597,7 +601,7 @@ table {
   transform: translateX(-50%);
   background: var(--font-color3);
 }
-#StartWindow > .start3 > .start3__pic .start3__pic_back > .start3__plus::after {
+#section1 #StartWindow > .start3 > .start3__pic .start3__pic_back > .start3__plus::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -608,23 +612,23 @@ table {
   transform: translate(-50%, -50%);
   background: var(--font-color3);
 }
-#StartWindow > .start3 > .start3__pic .start3__pic_back > .start3__plus.start3__plus2 {
+#section1 #StartWindow > .start3 > .start3__pic .start3__pic_back > .start3__plus.start3__plus2 {
   left: auto;
   right: calc(0% - 1px);
   transform: translateX(50%);
 }
-#StartWindow > .start3 > .start3__pic .start3__pic_back > .start3__plus.start3__plus3 {
+#section1 #StartWindow > .start3 > .start3__pic .start3__pic_back > .start3__plus.start3__plus3 {
   top: auto;
   bottom: -2px;
 }
-#StartWindow > .start3 > .start3__pic .start3__pic_back > .start3__plus.start3__plus4 {
+#section1 #StartWindow > .start3 > .start3__pic .start3__pic_back > .start3__plus.start3__plus4 {
   top: auto;
   bottom: -2px;
   left: auto;
   right: calc(0% - 1px);
   transform: translateX(50%);
 }
-#StartWindow > .start3 > .start3__pic .start3__pic_backInside {
+#section1 #StartWindow > .start3 > .start3__pic .start3__pic_backInside {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -635,38 +639,38 @@ table {
   transform: translate(-50%, -50%);
   opacity: 0.3;
 }
-#StartWindow > .start3 > .start3__pic .start3__pic_backInside > div {
+#section1 #StartWindow > .start3 > .start3__pic .start3__pic_backInside > div {
   background: var(--font-color);
 }
-#StartWindow > .start3 > .start3__pic .start3__pic_backInside > div.start3__pic_backInside__line1 {
+#section1 #StartWindow > .start3 > .start3__pic .start3__pic_backInside > div.start3__pic_backInside__line1 {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 2px;
 }
-#StartWindow > .start3 > .start3__pic .start3__pic_backInside > div.start3__pic_backInside__line2 {
+#section1 #StartWindow > .start3 > .start3__pic .start3__pic_backInside > div.start3__pic_backInside__line2 {
   position: absolute;
   top: 0;
   right: 0;
   width: 2px;
   height: 100%;
 }
-#StartWindow > .start3 > .start3__pic .start3__pic_backInside > div.start3__pic_backInside__line3 {
+#section1 #StartWindow > .start3 > .start3__pic .start3__pic_backInside > div.start3__pic_backInside__line3 {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 2px;
 }
-#StartWindow > .start3 > .start3__pic .start3__pic_backInside > div.start3__pic_backInside__line4 {
+#section1 #StartWindow > .start3 > .start3__pic .start3__pic_backInside > div.start3__pic_backInside__line4 {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 2px;
   height: 100%;
 }
-#StartWindow > .start3 > .start3__name {
+#section1 #StartWindow > .start3 > .start3__name {
   display: flex;
   margin: 0 auto;
   text-align: center;
@@ -678,14 +682,14 @@ table {
   left: 50%;
   transform: translateX(-50%);
 }
-#StartWindow > .start3 > .start3__name > span {
+#section1 #StartWindow > .start3 > .start3__name > span {
   display: none;
   min-width: 5px;
 }
-#StartWindow > .start3 > .start3__name > span.active {
+#section1 #StartWindow > .start3 > .start3__name > span.active {
   display: block;
 }
-#StartWindow > .start3 > .start3__desc {
+#section1 #StartWindow > .start3 > .start3__desc {
   display: flex;
   width: fit-content;
   margin: 0 auto;
@@ -698,84 +702,105 @@ table {
   left: 50%;
   transform: translateX(-50%);
 }
-#StartWindow > .start3 > .start3__desc > span {
+#section1 #StartWindow > .start3 > .start3__desc > span {
   display: none;
   min-width: 5px;
 }
-#StartWindow > .start3 > .start3__desc > span.active {
+#section1 #StartWindow > .start3 > .start3__desc > span.active {
   display: block;
 }
-#StartWindow > .start3.active {
+#section1 #StartWindow > .start3.active {
   display: block;
 }
-#StartWindow > .start3.active > .start3__pic {
+#section1 #StartWindow > .start3.active > .start3__pic {
   animation: start3__pic 2s forwards cubic-bezier(0.24, 1.15, 1, 0.98);
 }
-#StartWindow > .start3.active > .start3__pic > .glitch {
+#section1 #StartWindow > .start3.active > .start3__pic > .glitch {
   animation: start3__glitch 2s 4s forwards;
 }
-#StartWindow > .start3.active > .start3__pic > .glitch .glitch__line1,
-#StartWindow > .start3.active > .start3__pic > .glitch .glitch__line3 {
+#section1 #StartWindow > .start3.active > .start3__pic > .glitch .glitch__line1,
+#section1 #StartWindow > .start3.active > .start3__pic > .glitch .glitch__line3 {
   width: 0;
   animation: glitch__line1 0.5s 4.8s forwards;
 }
-#StartWindow > .start3.active > .start3__pic > .glitch .glitch__line2,
-#StartWindow > .start3.active > .start3__pic > .glitch .glitch__line4 {
+#section1 #StartWindow > .start3.active > .start3__pic > .glitch .glitch__line2,
+#section1 #StartWindow > .start3.active > .start3__pic > .glitch .glitch__line4 {
   height: 0;
   animation: glitch__line2 0.5s 4.8s forwards;
 }
-#StartWindow > .start3.active > .start3__pic > .start3__pic_back {
+#section1 #StartWindow > .start3.active > .start3__pic > .start3__pic_back {
   opacity: 0;
   animation: start3__pic_back 1s 2.5s forwards;
 }
-#StartWindow > .start3.active > .start3__pic > .start3__pic_backInside .start3__pic_backInside__line1,
-#StartWindow > .start3.active > .start3__pic > .start3__pic_backInside .start3__pic_backInside__line3 {
+#section1 #StartWindow > .start3.active > .start3__pic > .start3__pic_backInside .start3__pic_backInside__line1,
+#section1 #StartWindow > .start3.active > .start3__pic > .start3__pic_backInside .start3__pic_backInside__line3 {
   width: 0;
   animation: start3__pic_backInside__line1 0.7s 5.2s forwards;
 }
-#StartWindow > .start3.active > .start3__pic > .start3__pic_backInside .start3__pic_backInside__line2,
-#StartWindow > .start3.active > .start3__pic > .start3__pic_backInside .start3__pic_backInside__line4 {
+#section1 #StartWindow > .start3.active > .start3__pic > .start3__pic_backInside .start3__pic_backInside__line2,
+#section1 #StartWindow > .start3.active > .start3__pic > .start3__pic_backInside .start3__pic_backInside__line4 {
   height: 0;
   animation: start3__pic_backInside__line2 0.7s 5.2s forwards;
 }
-#StartWindow > .start3.passive > .start3__name,
-#StartWindow > .start3.passive > .start3__desc {
+#section1 #StartWindow > .start3.passive > .start3__name,
+#section1 #StartWindow > .start3.passive > .start3__desc {
   opacity: 0;
   transition: opacity 0.7s ease;
 }
-#StartWindow > .start3.passive > .start3__pic {
+#section1 #StartWindow > .start3.passive > .start3__pic {
   animation: start3__pic_Reverse 2s 4s forwards cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-#StartWindow > .start3.passive > .start3__pic > .glitch {
+#section1 #StartWindow > .start3.passive > .start3__pic > .glitch {
   opacity: 1;
   animation: start3__glitch_Reverse 2s 2s forwards;
 }
-#StartWindow > .start3.passive > .start3__pic > .glitch .glitch__line1,
-#StartWindow > .start3.passive > .start3__pic > .glitch .glitch__line3 {
+#section1 #StartWindow > .start3.passive > .start3__pic > .glitch .glitch__line1,
+#section1 #StartWindow > .start3.passive > .start3__pic > .glitch .glitch__line3 {
   width: 100%;
   animation: glitch__line1_Reverse 0.5s 1.8s forwards;
 }
-#StartWindow > .start3.passive > .start3__pic > .glitch .glitch__line2,
-#StartWindow > .start3.passive > .start3__pic > .glitch .glitch__line4 {
+#section1 #StartWindow > .start3.passive > .start3__pic > .glitch .glitch__line2,
+#section1 #StartWindow > .start3.passive > .start3__pic > .glitch .glitch__line4 {
   height: 100%;
   animation: glitch__line2_Reverse 0.5s 1.8s forwards;
 }
-#StartWindow > .start3.passive > .start3__pic > .start3__pic_back {
+#section1 #StartWindow > .start3.passive > .start3__pic > .start3__pic_back {
   opacity: 0.3;
   transform: translate(-50%, -50%) scale(1);
   animation: start3__pic_back_Reverse 0.6s 1s forwards;
 }
-#StartWindow > .start3.passive > .start3__pic > .start3__pic_backInside .start3__pic_backInside__line1,
-#StartWindow > .start3.passive > .start3__pic > .start3__pic_backInside .start3__pic_backInside__line3 {
+#section1 #StartWindow > .start3.passive > .start3__pic > .start3__pic_backInside .start3__pic_backInside__line1,
+#section1 #StartWindow > .start3.passive > .start3__pic > .start3__pic_backInside .start3__pic_backInside__line3 {
   width: 100%;
   animation: start3__pic_backInside__line1_Reverse 0.5s 0.5s forwards;
 }
-#StartWindow > .start3.passive > .start3__pic > .start3__pic_backInside .start3__pic_backInside__line2,
-#StartWindow > .start3.passive > .start3__pic > .start3__pic_backInside .start3__pic_backInside__line4 {
+#section1 #StartWindow > .start3.passive > .start3__pic > .start3__pic_backInside .start3__pic_backInside__line2,
+#section1 #StartWindow > .start3.passive > .start3__pic > .start3__pic_backInside .start3__pic_backInside__line4 {
   height: 100%;
   animation: start3__pic_backInside__line2_Reverse 0.5s 0.5s forwards;
 }
 
+#section2 {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: url(../img/background.jpg);
+  display: flex;
+  justify-content: space-between;
+  animation: startsection2 6s forwards;
+}
+
+@keyframes startsection2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes start3__pic {
   0% {
     transform: scale(0.02);
@@ -858,9 +883,15 @@ table {
 @keyframes start3__pic_Reverse {
   0% {
     transform: scale(1);
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
   }
   100% {
-    transform: scale(0);
+    width: 130vw;
+    height: 150vh;
+    opacity: 0;
   }
 }
 @keyframes start3__glitch_Reverse {
@@ -943,8 +974,6 @@ table {
   border-bottom: 1px solid var(--base-border);
   border-top: 1px solid var(--base-border);
   position: relative;
-  opacity: 0;
-  animation: Startheadertop 0.6s 0s forwards;
 }
 #header .profileWrap > span:nth-of-type(1) {
   left: auto;
@@ -1388,8 +1417,6 @@ table {
   min-height: 390px;
   border-top: 1px solid var(--base-border);
   position: relative;
-  opacity: 0;
-  animation: Startheadermid 0.6s 0.6s forwards;
 }
 #header .headerContWrap > div:nth-of-type(1) {
   padding: 10px 7px;

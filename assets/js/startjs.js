@@ -33,7 +33,7 @@ window.onload = function () {
     }, 15000 + 1075);
     setTimeout(() => {
         startfunc3_4();
-    }, 18075 + 3000);
+    }, 18075 + 1000);
     setTimeout(() => {
         startfuncMain();
     }, 22000);
@@ -145,16 +145,11 @@ function startfunc3_3() {
 }
 function startfunc3_4() {
     start3.classList.add("passive");
-    // setTimeout(() => {
-    //     let introAudio = new Audio();
-    //     introAudio.src = "https://parkhyeonshin.github.io/portfolio/assets/audio/Laser14.mp3";
-    //     introAudio.volume = 0.2;
-    //     introAudio.play();
-    // }, 3200);
     setTimeout(() => {
         StartWindow.style.display = "none";
         document.querySelector(".pswp__preloader__icn").style.animation = "none";
-    }, 7500);
+        document.querySelector("#section1").style.display = "none";
+    }, 5000);
 }
 
 function startfuncMain() {}
